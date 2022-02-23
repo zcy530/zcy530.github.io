@@ -1,0 +1,565 @@
+<!DOCTYPE html><html lang="zn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><meta name="description" content="Database System Principles [ Nicole Zhang ] "><meta name="theme-color" content="#9dab86"><title>Database System Principles [ Nicole Zhang ] </title><style>@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(data:font/woff2;base64,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) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(data:font/woff2;base64,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BL3+M1K+NfPvjlJEHZTOrkYvtdprqx0Hka+W/IhsQoUJE0jsPVOhV2itgp3Wame8dsB73DeCOfp+FMSxp2At3aozP1zVQ/tmEpXdveum7kat3CaLXRcmTZHmOveMiqxSteCZOrGKmscOa9WycTUXtRFabrtts1Nb3e5qHtqWPMWtuEkMSdydcarhKoTcVXtBgujKwULbPFJvqywIzBjboUacECG6ajlIews5dBUMkJ/LYHa12gpRLEsBDAAA6raxOaTnbx4GG5J6hdn4twxT1DRvEQZvD6banOa3BbstVh48efHmw5cffwECBQkWIvK/LTbhIkSKEi1GrDjxEiRKkixFqjTpMmTKki1Hrjz5ChQqUqxEqTLlKlSqUq2e+hpoqJHGmmiqmeZhWGKoYfaZ7qXhxhtjnlWWxsBotw0xxWdfjDPDSEfc98l8q33z1XeLrXPKCeu10NJErZzR2kmnXXDWOee90sYVF12yQVsfTXLdVde088Y7o3TQXkedddLFQnb/qVGrq24cuuvhtZ5666WPfvraaZEB+htokLfe2+1GBDbalARuuueWzbbYboejttrmmBHW2O+AvUmRDMb6EEUsHHQoDskRjxRIiVRILev2qn1oaGpomZOB2z/jmn/eUk6tvaZda/5znbhPCguQ7wsEvd1strBI3OYR8ye01+ZO0jbH36oqKm37w90hl2v/wO5o3vIjtpoZx20H) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><script src="https://cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js" defer></script><script src="/js/paper.js" defer></script><script src="https://www.googletagmanager.com/gtag/js?id=xx-xxxxxxx-xx" async></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'xx-xxxxxxx-xx');</script><link rel="stylesheet" href="/css/tocbot.css"><script src="/js/tocbot.js" defer></script><script>window.addEventListener('DOMContentLoaded', () => {
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '.toc__content',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '.article__content',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+    orderedList: false,
+    collapseDepth: 2,
+  });
+})</script><link rel="preload" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"><meta name="generator" content="Hexo 6.0.0"></head><body><div class="mask-border"></div><div class="head"><div class="head__inner"><h1><a href="/">Nicole Zhang</a></h1><p>East China Normal University  |  Software Engineering  |  Bachelor 2023</p></div></div><div class="paper-container"><div class="main"><div class="location-bar"><div class="line-1"><div class="horizontal-line" style="height: 3px"></div></div><div class="line-2"><div class="horizontal-line" style="height: 1px"></div></div><p class="text">Database System Principles</p><div class="switch-button"><input class="container_toggle" type="checkbox" id="switch" name="mode"><label for="switch">Toggle</label></div><div class="line-3"><div class="horizontal-line" style="height: 1px"></div></div></div><div class="main__2-col"><article class="post-view__article"><div class="article__infomation"><div class="posts-item"><h2 class="posts-item__title"><a href="">Database System Principles</a></h2><span class="post__date">2021-07-21</span><a href="/tags/Database/"><span class="post__tags">#Database</span></a></div></div><div class="article__content"><h1 id="第2章-关系模型介绍"><a href="#第2章-关系模型介绍" class="headerlink" title="第2章 关系模型介绍"></a>第2章 关系模型介绍</h1><p>caiyi 2021&#x2F;5&#x2F;11</p>
+<h2 id="2-1-关系型数据库的结构"><a href="#2-1-关系型数据库的结构" class="headerlink" title="2.1 关系型数据库的结构"></a>2.1 关系型数据库的结构</h2><p><strong>关系</strong>(relation)：表</p>
+<p><strong>元组</strong>(tuple)：行</p>
+<p><strong>属性</strong>(attribute)：列</p>
+<p><strong>域</strong>(domin)：对于关系的每个属性，都存在一个允许取值的集合</p>
+<p>关系的所有属性的域都是原子的，被看作是不可再分的单元</p>
+<p><strong>关系模式</strong>(relation schema)：对于关系结构的抽象描述，由属性序列和各属性对应域组成</p>
+<p><strong>关系实例</strong>(relation instance)：一个关系的特定实例</p>
+<h2 id="2-2-码"><a href="#2-2-码" class="headerlink" title="2.2 码"></a>2.2 码</h2><p>一个关系中没有两个元组在所有属性值上都相等</p>
+<p><strong>超码</strong>(super key)：一个或多个属性的集合，可以唯一标识一个元组</p>
+<p><strong>候选码</strong>(candidate key) ：最小超码，不包括无关紧要的属性</p>
+<p><strong>主码</strong>(primary key)：用来在一个关系中区分不同元组的候选码</p>
+<p><strong>外码</strong>(primay key)：一个关系模式r1可能在它的属性中包括另一个关系模式r2的主码，r1称为外码依赖的参照关系，r2称为外码依赖的被参照关系</p>
+<p><strong>参照性关系</strong>(referential integrity constraint)：要求在参照关系中任意元组在特定属性上的取值必然等于被参照关系中某个元素在特定属性上的取值</p>
+<h2 id="2-3-模式图"><a href="#2-3-模式图" class="headerlink" title="2.3 模式图"></a>2.3 模式图</h2><p>每个关系用矩形表示，关系名字显示在矩形上方，矩形内列出各种属性</p>
+<p>主码属性用下划线标注，外码依赖用从参照关系的外码属性到被参照关系的主码属性之间的箭头来表示</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6115.PNG" alt="IMG_6115"></p>
+<h2 id="2-4-关系查询语言"><a href="#2-4-关系查询语言" class="headerlink" title="2.4 关系查询语言"></a>2.4 关系查询语言</h2><p>过程化语言：用户指导系统对数据库执行一系列操作以计算出结果，例如关系代数</p>
+<p>非过程化语言：只需描述信息不用给出获取信息的具体方法，例如关系演算TRC、域关系演算DRC</p>
+<h2 id="2-5-关系运算"><a href="#2-5-关系运算" class="headerlink" title="2.5 关系运算"></a>2.5 关系运算</h2><h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a><strong>基本操作</strong></h3><ul>
+<li><p><strong>选择(select)</strong> $\sigma$</p>
+<p>查询满足给定条件的元组（从行的角度）</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203247041.png" alt="image-20210609203247041"></p>
+</li>
+<li><p><strong>投影(project)</strong>  $\Pi$</p>
+<p>选出若干属性列组成新的关系（从列的角度）</p>
+<p>投影之后会取消重复的行</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203309795.png" alt="image-20210609203309795"></p>
+</li>
+<li><p><strong>并(union)</strong>  $\cup$</p>
+<p>先并再去重</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609202449131.png" alt="image-20210609202449131"></p>
+</li>
+<li><p><strong>交(set intersection)</strong> $\cap$</p>
+<p>两个表都有的元组</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609202504184.png" alt="image-20210609202504184"></p>
+</li>
+<li><p><strong>差(set difference)</strong>   $-$</p>
+<p>R有但S没有的关系元组</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609202529031.png" alt="image-20210609202529031"></p>
+</li>
+<li><p><strong>笛卡尔积(Cartesian product)</strong>  $×$</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609202543677.png" alt="image-20210609202543677"></p>
+</li>
+<li><p><strong>自然连接(natural join)</strong>  $\bowtie$</p>
+<p>从两个关系的笛卡尔积中，基于两个关系模式中都出现的属性上的相等性进行选择，最后去掉重复的列</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609202851972.png" alt="image-20210609202851972"></p>
+</li>
+<li><p><strong>除(division)</strong>  $÷$</p>
+<p>保留R中满足S的，而且R中列要去掉S的列</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609202907933.png" alt="image-20210609202907933"></p>
+</li>
+<li><p><strong>改名(rename)</strong>  $\rho$</p>
+<p>$\rho _{x(A1,A2,…An)}(E)$</p>
+<p>返回表达式E的结果，并赋给它名字x，同时将各属性更名为A1,A2,…An</p>
+<p>例子：找出大学里的最高工资</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203335581.png" alt="image-20210609203335581"></p>
+</li>
+<li><p><strong>赋值(assignment)</strong> $←$</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203415119.png" alt="image-20210609203415119"></p>
+<p>对于关系代数查询而言，赋值必须是赋给一个临时关系变量，对永久关系的赋值形成了对数据库的修改。</p>
+<p>注意：赋值运算不能增强关系代数的表达能力，但是可以使复杂查询的表达变得简单</p>
+</li>
+</ul>
+<h3 id="扩展的关系运算"><a href="#扩展的关系运算" class="headerlink" title="扩展的关系运算"></a>扩展的关系运算</h3><ul>
+<li><p><strong>广义投影</strong>  (Generalized Projection)</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203741577.png" alt="image-20210609203741577"></p>
+</li>
+<li><p><strong>聚集</strong>  (Aggregate Functions)   $\mathcal{G}$</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203652275.png" alt="image-20210609203652275"></p>
+</li>
+<li><p><strong>内连接&#x2F;外连接</strong></p>
+<p>内连接(Inner Join)：两个关系做自然连接时，连接的结果时满足条件的元组保留下来，不满足条件的元组被舍弃了</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609202925573.png" alt="image-20210609202925573"></p>
+<p>外连接(Outer Join)：如果把舍弃的元组也保留再结果关系中，而在其他属性上填null，叫做外连接</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609202947149.png" alt="image-20210609202947149"></p>
+<p>外连接分为左外连接和右外连接</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203004612.png" alt="image-20210609203004612"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203018908.png" alt="image-20210609203018908"></p>
+</li>
+</ul>
+<h2 id="2-6-课堂例题"><a href="#2-6-课堂例题" class="headerlink" title="2.6 课堂例题"></a>2.6 课堂例题</h2><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6097%20-%20%E5%89%AF%E6%9C%AC.PNG" alt="IMG_6097 - 副本"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203811287.png" alt="image-20210609203811287"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6097.PNG" alt="IMG_6097"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609203820939.png" alt="image-20210609203820939"></p>
+<h1 id="第7章-数据库设计和E-R模型"><a href="#第7章-数据库设计和E-R模型" class="headerlink" title="第7章 数据库设计和E-R模型"></a>第7章 数据库设计和E-R模型</h1><p>2021&#x2F;5&#x2F;11</p>
+<h2 id="7-1-设计步骤"><a href="#7-1-设计步骤" class="headerlink" title="7.1 设计步骤"></a>7.1 设计步骤</h2><p>需求分析</p>
+<p>概念结构设计   ER图或者是设计数据字典</p>
+<p>逻辑结构设计   把ER图转为逻辑模型</p>
+<p>物理结构设计   把逻辑模型转为物理模型</p>
+<p>数据库实施       写SQL代码</p>
+<h2 id="7-2-实体-联系模型"><a href="#7-2-实体-联系模型" class="headerlink" title="7.2 实体-联系模型"></a>7.2 实体-联系模型</h2><p>E-R模型的三个要素：实体集、联系集、属性</p>
+<ol>
+<li><p><strong>实体</strong>(entity)：在现实世界中存在并且区别于其他对象的事物或对象，</p>
+<p><strong>实体集</strong>(entity set)：相同类型即具有相同性质的实体集合，例如大学所有教师的集合instructor</p>
+</li>
+<li><p><strong>联系</strong>(relationship)：指多个实体间相互关联</p>
+<p><strong>联系集</strong>(relationship set)：相同类型联系的集合</p>
+<p><strong>多元联系集</strong>：相同的实体集可能会参与到多个联系集中</p>
+</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6107.PNG" alt="IMG_6107"></p>
+<ol start="3">
+<li><p><strong>实体属性</strong>：实体集中每个成员所拥有的描述性性质</p>
+<p><strong>描述性属性</strong>：例如考虑instructor和student之间的联系集advisor，可以将属性date与该联系关联</p>
+</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6102.PNG" alt="IMG_6102"></p>
+<pre><code> E-R模型中的属性可以按照如下的属性类型来进行划分：
+
+ **简单/复合属性**(simple/composite)：简单属性不能划分为更小的部分
+
+ **单值/多值属性**(single/multivalued)：一个学生只能有一个student_id，但可以有多个tele_number
+
+ **派生属性**(derived)：这类属性的值可以从别的相关属性或实体派生出来
+</code></pre>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6103.PNG" alt="IMG_6103"></p>
+<ol start="4">
+<li><p><strong>映射基数</strong>(mapping cardinality)：表示一个实体通过联系集可以相关联的实体的个数</p>
+<p>one-to-one：就任总统（总统，国家）</p>
+<p>one-to-many：分班情况（班级，学生）</p>
+<p>many-to-one：就医（病人，医生）</p>
+<p>many-to-many：选课（学生，课程）</p>
+</li>
+<li><p><strong>参与约束</strong></p>
+<p>全部参与：实体集E中的每个实体都参与到联系集R的至少一个联系中</p>
+<p>部分参与：实体集E中只有部分实体参与到R的联系中</p>
+<p>例如：在图7.5(a)中，B在联系集是全部参与，A是部分参与</p>
+<p>例如：每个student都要联系至少一个instructor，但是一个instructor不是一定要指导一个学生</p>
+</li>
+<li><p><strong>联系集的主码结构依赖于联系集的映射函数：</strong></p>
+<p>以instructor和student的联系集advisor举例</p>
+<p>one-to-one：由instructor和student两个候选码中的任意一个作为主码</p>
+<p>one-to-many：advisor的主码是student的主码</p>
+<p>many-to-one：advisor的主码是instructor的主码</p>
+<p>many-to-many：advisor的主码由instructor和student的并集组成<br><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6104.PNG" alt="IMG_6106"><br><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6105.PNG" alt="IMG_6106"></p>
+</li>
+</ol>
+<h2 id="7-3-E-R图构建"><a href="#7-3-E-R图构建" class="headerlink" title="7.3 E-R图构建"></a>7.3 E-R图构建</h2><ol>
+<li><p><strong>基本结构</strong></p>
+<p>菱形：联系集</p>
+<p>矩形：集的属性</p>
+<p>线段：将实体集连接到联系集</p>
+<p>虚线：将联系集属性连接到联系集</p>
+<p>双线：显示实体在联系集中的参与度</p>
+<p>双菱形：代表连接到弱实体集的标志性联系集</p>
+</li>
+<li><p><strong>映射基数</strong></p>
+<p>用双线表示</p>
+<p>用箭头表示</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6106.PNG" alt="IMG_6106"></p>
+<p>用线段上的l…h标注，l表示最小的映射基数，h表示最大的映射基数</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6107.PNG" alt="IMG_6107"></p>
+</li>
+<li><p><strong>复杂的属性</strong></p>
+<p>复合属性有name，address，street</p>
+<p>其中street的子属性包括street_number, street_name, apt_number</p>
+<p>多重属性有{phone_number}</p>
+<p>派生属性age()</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6108.PNG" alt="IMG_6108"></p>
+</li>
+<li><p><strong>角色</strong></p>
+<p>实体的角色有时不止有一个</p>
+<p>在菱形和矩形间的连线上进行标注表示角色</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6109.PNG" alt="IMG_6109"></p>
+</li>
+<li><p><strong>弱实体集</strong></p>
+<p><strong>弱实体集</strong>(week entity set)：实体集的所有属性都不足以形成主码</p>
+<p><strong>强实体集</strong>(strong entity set)：具有主码的实体集</p>
+<p><strong>标识性联系</strong>(identifying)：弱实体集必须与另一个称作<strong>标识</strong>或<strong>属主实体集</strong>的实体集关联才能有意义</p>
+<p>注意：强实体与弱实体的标识性联系联系只能是1：1或1：N，弱实体参与联系时应该是<strong>全部参与</strong></p>
+<p><strong>分辨符</strong>(discriminator)：区分弱实体集中的实体的方法</p>
+<p>弱实体集的主码由标识实体集的主码加上该弱实体集的分辨符构成</p>
+<p>弱实体集在E-R图中的表示：</p>
+<pre><code>    分辨符号用&lt;u&gt;虚线下划线&lt;/u&gt;标明，而不是实线
+
+    关联强弱实体集的联系集用&lt;u&gt;双菱形&lt;/u&gt;表示
+
+    弱实体与联系集之间画成&lt;u&gt;双线边&lt;/u&gt;，联系集画&lt;u&gt;指向强实体集的箭头&lt;/u&gt;
+</code></pre>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6110(20210508-133852).PNG" alt="IMG_6110(20210508-133852)"></p>
+</li>
+<li><p><strong>大学中的E-R图举例</strong></p>
+</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6111(20210508-175125).PNG" alt="IMG_6111(20210508-175125)"></p>
+<h2 id="7-4-E-R图转化为关系模型"><a href="#7-4-E-R图转化为关系模型" class="headerlink" title="7.4 E-R图转化为关系模型"></a>7.4 E-R图转化为关系模型</h2><ol>
+<li><p><strong>具有简单属性的强实体集的表示</strong></p>
+<p>指一对多中的多的实体集，强实体集的主码就是生成的模式的主码</p>
+<p>比如：图7-15   student( <u>ID</u>, name, tot_cred )</p>
+</li>
+<li><p><strong>具有复杂属性的强实体集的表示</strong></p>
+<p>如果是复合属性，将该属性用它的子属性们替代了</p>
+<p>例如：图7-11   instructor( ID, first_name, middle_initial, last_name, street_number, street_name,apt_number, city, state, zip_code, date_of_birth )</p>
+<p>如果是多值属性，新构建一个关系，包含这个多值属性，和它对应所在的实体集或联系集的主码</p>
+<p>例如：图7-11   instructor_phone( <u>ID</u>, <u>phone_number</u> )</p>
+</li>
+<li><p><strong>弱实体集的表示</strong></p>
+<p>主码由所依赖的强实体集的主码和弱实体集的分辨符组成</p>
+<p>例如：图7-15   section( <u>course_id</u>, <u>sec_id</u>, <u>semester</u>, <u>year</u> )</p>
+<p>级联删除：如果一个course实体被删除，那么所有与它相关联的section实体也被删除</p>
+</li>
+<li><p><strong>联系集的表示</strong></p>
+<p><strong>多对多</strong>的二元联系：该联系集属性自成一个关系，主码是参与实体集的主码的并集</p>
+<p><strong>一对多</strong>的二元联系：联系集的属性归到多的一方，少的一方的主码也要加到多的一方</p>
+<p><strong>一对一</strong>的二元联系：联系集的属性归到任意一方，另一方的主码也要加进去</p>
+<p>边上没有箭头的N元联系集：主码是所有实体集主码的并集</p>
+<p>边上有一个箭头的N元联系集：主码为不在箭头侧的实体集的主码</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6112.PNG" alt="IMG_6112"></p>
+<p><strong>模式的冗余</strong></p>
+<p>一般连接弱实体集与其所依赖的强实体集的联系集的模式是冗余的，在E-R图中省略</p>
+<p><strong>模式的合并</strong></p>
+<p>多对一的联系集的和多的那一方可以合并，主码是多的那一方的主码，少的一方的主码也要加到多的一方</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6116.PNG" alt="IMG_6116"></p>
+</li>
+</ol>
+<h2 id="7-5-E-R设计问题"><a href="#7-5-E-R设计问题" class="headerlink" title="7.5 E-R设计问题"></a>7.5 E-R设计问题</h2><p>一个对象不能同时作为实体和属性</p>
+<p>一个实体集不能与另一个实体集的属性相关联，只能实体与实体相关联</p>
+<h2 id="7-6-扩展的E-R属性"><a href="#7-6-扩展的E-R属性" class="headerlink" title="7.6 扩展的E-R属性"></a>7.6 扩展的E-R属性</h2><ol>
+<li><p><strong>特化</strong>(specialization)：在实体集内部进行分组的过程</p>
+<p>每个特化的实体都包括实体集的所有属性以及附加属性</p>
+<p>一个实体集可以根据多个可区分的特征进行特化，某个特定实体集可能同时属于多个特化集</p>
+<p>在E-R图中，特化用从特化实体指向另一方的空心箭头表示，成为<strong>ISA关系</strong></p>
+<p><strong>重叠特化</strong>(overlapping specialization)：一个实体属于多个特化实体集，分开使用<u>两个箭头</u></p>
+<p><strong>不相交特化</strong>(disjoin specialization)：至多属于一个特化实体集，使用<u>一个箭头</u></p>
+</li>
+<li><p><strong>概化</strong>(generalization)：高层实体集与一个或多个底层实体集间的包含关系</p>
+<p>高层与低层实体集可以分别称作<strong>超类</strong>(superclass)和<strong>子类</strong>(subclass)</p>
+<p>在E-R图中对概化和特化的表示不作区分，区别在于出发点和总体目标</p>
+<p><strong>特化</strong>从单一的实体集出发，通过创建不同的低层实体集，来<u>强调同一实体集中不同实体间的差异性</u></p>
+<p><strong>概化</strong>是在这些实体集的共性的基础上，将它们综合成一个高层实体集，<u>强调相似性</u></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6117.PNG" alt="IMG_6117"></p>
+</li>
+<li><p><strong>属性继承</strong>(attribute inheritance)</p>
+<p>低层实体集继承高层实体集的属性</p>
+<p>低层实体集继承高层实体集所参与的联系集</p>
+</li>
+<li><p><strong>聚集</strong>(agrregation)：是一种抽象，将联系视为高级实体</p>
+<p>例如：我们将联系集 proj_guide(instructor, student, project) 看成一个高级实体集，可以像对任何其他实体集一样来处理，就可以在proj_guide和evaluation之间创建一个二元联系eval_for</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6119.PNG" alt="IMG_6119"></p>
+</li>
+<li><p><strong>概化上的约束</strong></p>
+<p><strong>不相交</strong>(disjoint)：一个实体至多属于一个低层实体集</p>
+<p><strong>重叠</strong>(overlapping)：同一个实体可以同时属于一个概化中的多个低层实体集，比如某些雇员可以参加到多个工作组当中，因此是重叠的</p>
+<p><strong>全部概化</strong>(total generalization)：每个高层实体必须属于一个低层实体集</p>
+<p><strong>部分概化</strong>(partial generalization)：允许一些高层实体不属于任何低层实体集</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6120(20210509-153942).PNG" alt="IMG_6120(20210509-153942)"></p>
+</li>
+<li><p><strong>转化为关系模式</strong></p>
+<p><strong>概化的表示</strong></p>
+<p>为高层实体集创建一个模式，为每个低层实体集创建一个模式</p>
+<p>person( <u>ID</u>, name, street, city )</p>
+<p>employee( <u>ID</u>, salary )</p>
+<p>student( <u>ID</u>, tot_cred )</p>
+<p>如果概化是不相交且完全的，即如果不存在同时属于两个同级的低层实体集的实体，且如果高层实体集的任何实体也都是某个低层实体集的成员，可以不需要为高层实体集创建模式</p>
+<p>employee( <u>ID</u>, name, street, city, salary )</p>
+<p>student( <u>ID</u>, name, street, city, tot_cred )</p>
+<p><strong>聚集的表示</strong></p>
+</li>
+</ol>
+<h1 id="第8章-关系数据库设计"><a href="#第8章-关系数据库设计" class="headerlink" title="第8章 关系数据库设计"></a>第8章 关系数据库设计</h1><h2 id="8-1-为什么要引入范式"><a href="#8-1-为什么要引入范式" class="headerlink" title="8.1 为什么要引入范式"></a>8.1 为什么要引入范式</h2><ol>
+<li><p>数据冗余</p>
+<p>比如姓名重复出现浪费空间</p>
+</li>
+<li><p>更新异常</p>
+<p>更新后造成数据不一致，比如班主任换名字，每个学生对应的每行都得换</p>
+</li>
+<li><p>插入异常</p>
+<p>应该插入的无法被插入</p>
+</li>
+<li><p>删除异常</p>
+<p>不该删除的被删除了</p>
+</li>
+</ol>
+<p>所以我们引入一个规范的方法判断一个关系模式是否应该分解</p>
+<h2 id="8-2-概念"><a href="#8-2-概念" class="headerlink" title="8.2 概念"></a>8.2 概念</h2><h3 id="8-2-1-符号表示法"><a href="#8-2-1-符号表示法" class="headerlink" title="8.2.1 符号表示法"></a>8.2.1 符号表示法</h3><p>用希腊字符 $\alpha$、$\beta$ 等表示属性集，用小写罗马字母后括住大写字母 $r(R)$ 指关系模式</p>
+<p>当属性集是一个超码时用K表示，超码属于特殊的关系模式</p>
+<h3 id="8-2-2-码的概念"><a href="#8-2-2-码的概念" class="headerlink" title="8.2.2 码的概念"></a>8.2.2 码的概念</h3><p><strong>超码</strong> (super key)：能推出所有属性的属性集，唯一能够标识整条元组的属性集。R的子集K是 r(R) 的超码的条件是：在关系 r(R) 的任意合法实例中，对于r的实例中的所有元组对t1和t2总满足，若t1 !&#x3D; t2，则t1[K] !&#x3D; t2[K]</p>
+<p><strong>候选码</strong>：可以推出所有的属性，但是他的任意一个真子集无法退出所有的属性，候选码是最小的超码</p>
+<p><strong>主码</strong>：从候选码中任意挑一个作为主码</p>
+<p><strong>主属性</strong>：包含在任意一个候选码中的属性，如下题的ABCDE</p>
+<p><strong>非主属性</strong>：不包含在任意一个候选码中的属性，如下题的G</p>
+<p><strong>码</strong>：把主码、候选码简称为码</p>
+<p><strong>全码</strong>：如果所有属性都是码，成为全码</p>
+<p><strong>求候选码的步骤</strong>：</p>
+<p>step1：只出现在左边的一定是候选码</p>
+<p>step2：只出现在右边的一定不是候选码</p>
+<p>step3：左右都出现的不一定</p>
+<p>step4：左右都不出现的一定是候选码</p>
+<p>step5：求确定的候选码的闭包（closure，指由他可以推出来的所有属性），如果可以推出全部，那么当前确定的就是候选码。否则就把每个可能的码，放进当前确定的候选码里面进行求闭包</p>
+<p>例题：<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6121.PNG" alt="IMG_6121"></p>
+<p>####8.2.3 函数依赖 (function dependency)</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609212220049.png" alt="image-20210609212220049"></p>
+<ol start="3">
+<li><p><strong>最小函数依赖集</strong>：即F中的每个依赖，都不可以被其他依赖推出</p>
+<p>step1：把右边的元素拆分成单个的</p>
+<p>step2：除去当前元素，求它的闭包，把集合里面所有元素一一排查</p>
+<p>step3：左边最小化（通过遮住元素来看能不能推出其他元素），比如BCD，遮住B看能不能推出B，再遮住C&#x2F;D</p>
+</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6123.PNG" alt="IMG_6123"></p>
+<h2 id="8-3-范式"><a href="#8-3-范式" class="headerlink" title="8.3 范式"></a>8.3 范式</h2><p><strong>1NF</strong>：原子性，不可分割</p>
+<p><strong>2NF</strong>：不存在<u>非主属性</u>对码的<u>部分函数依赖</u> </p>
+<p><strong>3NF</strong>：不存在<u>非主属性</u>对码的<u>传递函数依赖</u>，全码一定是3NF</p>
+<p><strong>BCNF</strong>：<u>主属性和非主属性</u>都不存在对码的<u>部分函数依赖和传递函数依赖</u></p>
+<p><strong>4NF</strong>：关系模式R属于第三范式，且消除了非主属性对候选键以外属性的多值依赖。</p>
+<p>BCNF 消除了所有基于函数依赖能够发现的冗余，具有函数依赖集F的关系模式R属于BCNF的条件是，对F+中所有形如 $\alpha \rightarrow \beta$ 的函数依赖下面至少有一项成立：$\alpha \rightarrow \beta$ 是平凡的函数依赖，或 $\alpha$ 是模式 R 的一个超码 </p>
+<p><strong>范式判断：</strong></p>
+<ol>
+<li><p>求候选键，和主属性&#x2F;非主属性</p>
+</li>
+<li><p>非键属性是否<strong>部分依赖</strong>于候选键</p>
+<p>部份依赖是指如果候选码是AB非键C，如果在F中找到A→C或者B→C，就是部分依赖</p>
+<p>如果是：1NF</p>
+<p>如果否：往下走</p>
+</li>
+<li><p>非键属性是否<strong>传递依赖</strong>于候选键</p>
+<p>如果是：2NF</p>
+<p>如果否：往下走</p>
+</li>
+<li><p>所有依赖项的左边是否全为候选键</p>
+<p>如果是：BCNF</p>
+<p>如果不是：3NF</p>
+</li>
+</ol>
+<h2 id="8-4-函数依赖理论"><a href="#8-4-函数依赖理论" class="headerlink" title="8.4 函数依赖理论"></a>8.4 函数依赖理论</h2><h3 id="8-4-1-函数依赖集的闭包"><a href="#8-4-1-函数依赖集的闭包" class="headerlink" title="8.4.1 函数依赖集的闭包"></a>8.4.1 函数依赖集的闭包</h3><p><strong>逻辑蕴含</strong>(logically imply)：如果函数依赖集 F 能推出函数依赖 f ，则称 f 被 F 逻辑蕴含。</p>
+<p><strong>函数依赖集的闭包</strong>(closure)：令F为一个函数依赖集，F的闭包是被F逻辑蕴含的所有函数依赖的集合，记作F+</p>
+<h3 id="8-4-2-Armstrong公理"><a href="#8-4-2-Armstrong公理" class="headerlink" title="8.4.2 Armstrong公理"></a>8.4.2 Armstrong公理</h3><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609212335949.png" alt="image-20210609212335949"></p>
+<h3 id="8-4-3-属性集的闭包-Attribute-Closure"><a href="#8-4-3-属性集的闭包-Attribute-Closure" class="headerlink" title="8.4.3 属性集的闭包  (Attribute Closure)"></a>8.4.3 属性集的闭包  (Attribute Closure)</h3><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609212352748.png" alt="image-20210609212352748"></p>
+<h3 id="8-4-4-正则覆盖-Cononical-Coverage"><a href="#8-4-4-正则覆盖-Cononical-Coverage" class="headerlink" title="8.4.4 正则覆盖 (Cononical Coverage)"></a>8.4.4 正则覆盖 (Cononical Coverage)</h3><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609212409022.png" alt="image-20210609212409022"></p>
+<h3 id="8-4-5-无损分解-lossless-decompositon"><a href="#8-4-5-无损分解-lossless-decompositon" class="headerlink" title="8.4.5 无损分解(lossless decompositon)"></a>8.4.5 无损分解(lossless decompositon)</h3><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210609212426101.png" alt="image-20210609212426101"></p>
+<p><strong>判断无损分解</strong>：</p>
+<p>当且仅当只被分解为两个关系时：</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6139.PNG" alt="IMG_6139"></p>
+<p>当分解为多个关系时：</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6124.PNG" alt="IMG_6124"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6125.PNG" alt="IMG_6125"></p>
+<p>####8.4.6 保持依赖</p>
+<p>判断是否保持依赖：对于关系模式R(U,F)，设R1(U1, F1), R2(U1,F2), … Rn(Un, Fn)是R的分解，若F的闭包等于$F1\cup F2\cup …\cup Fn$ 的闭包，则称该分解是保持函数依赖</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6126.PNG" alt="IMG_6126"></p>
+<h2 id="8-5-范式分解算法"><a href="#8-5-范式分解算法" class="headerlink" title="8.5 范式分解算法"></a>8.5 范式分解算法</h2><p><strong>模式分解的要求：</strong></p>
+<ol>
+<li>无损连接性：具有无损连接性的分解不一定能够保持函数依赖</li>
+<li>保持函数依赖：保持函数依赖的分解不一定具有无损连接性</li>
+</ol>
+<p><strong>模式分解步骤</strong>：</p>
+<ol>
+<li><p><strong>求候选码</strong></p>
+</li>
+<li><p><strong>求3NF分解</strong></p>
+<ul>
+<li><p>求最小函数依赖集</p>
+</li>
+<li><p>把最小函数依赖集箭头前后的元素写在一起作为一个Ri</p>
+</li>
+</ul>
+</li>
+<li><p><strong>求BCNF分解</strong></p>
+<ul>
+<li><p>INPUT 关系模式R以及函数依赖集F，初始化 P&#x3D;{R}</p>
+</li>
+<li><p>若P中的所有关系模式S都是BCNF，则转步骤（4）</p>
+</li>
+<li><p>若P中有一个模式S不是BCNF，则S中必能找到一个函数依赖X→Y，X不是S的候选码，且Y不属于X（根据BCNF的定义）</p>
+</li>
+<li><p>设S1 &#x3D; XY，S2 &#x3D; S-Y，分解后的{S1, S2}代替S，转步骤（2）</p>
+</li>
+<li><p>END</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6133.PNG" alt="IMG_6133"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6132.PNG" alt="IMG_6132"></p>
+<h1 id="第十章-存储和文件结构"><a href="#第十章-存储和文件结构" class="headerlink" title="第十章 存储和文件结构"></a>第十章 存储和文件结构</h1><h2 id="10-1存储设备基础"><a href="#10-1存储设备基础" class="headerlink" title="10.1存储设备基础"></a>10.1存储设备基础</h2><p>（属性、排序、效率、在整个体系架构里的位置）</p>
+<p>高速缓冲存储器&gt;主存储器&gt;快闪存储器&gt;磁盘&gt;光盘&gt;磁带</p>
+<h2 id="10-2-磁盘部分的概念"><a href="#10-2-磁盘部分的概念" class="headerlink" title="10.2 磁盘部分的概念"></a>10.2 磁盘部分的概念</h2><p>（11章12章会涉及）</p>
+<p>扇区section 磁道track 读写头 read-write head </p>
+<p>磁盘臂 disk arm 柱面 cylinder</p>
+<p>扇区是从磁盘读出和写入信息的最小单位</p>
+<p>RAID：独立磁盘冗余阵列</p>
+<p>作用：通过冗余提高可靠性（奇偶校验），通过并行提高性能</p>
+<p>磁盘性能的度量：访问时间，寻道时间，平均寻道时间，数据传输率，平均故障时间</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626144000227.png" alt="image-20210626144000227" style="zoom: 67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626144034358.png" alt="image-20210626144034358" style="zoom: 67%;" />
+
+<h2 id="10-5-文件组织"><a href="#10-5-文件组织" class="headerlink" title="10.5 文件组织"></a>10.5 文件组织</h2><p>定长记录：</p>
+<p>变长记录：分槽的页结构</p>
+<h2 id="10-6-文件中记录的组织"><a href="#10-6-文件中记录的组织" class="headerlink" title="10.6 文件中记录的组织"></a>10.6 文件中记录的组织</h2><p>堆文件组织 顺序文件组织 散列文件组织</p>
+<h1 id="第十一章-索引与散列"><a href="#第十一章-索引与散列" class="headerlink" title="第十一章 索引与散列"></a>第十一章 索引与散列</h1><h2 id="11-1-基本概念"><a href="#11-1-基本概念" class="headerlink" title="11.1 基本概念"></a>11.1 基本概念</h2><p>顺序索引</p>
+<p>散列索引</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626145041944.png" alt="image-20210626145041944"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626145059102.png" alt="image-20210626145059102"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626145132100.png" alt="image-20210626145132100"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626145303445.png" alt="image-20210626145303445"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626150131687.png" alt="image-20210626150131687"></p>
+<h2 id="star-11-2-顺序索引"><a href="#star-11-2-顺序索引" class="headerlink" title=":star:11.2 顺序索引"></a>:star:11.2 顺序索引</h2><ul>
+<li><p>主索引和辅助索引 primary index&#x2F;secondary index</p>
+<p>又叫聚集索引和非聚集索引 clustering index&#x2F;nonclusering  index</p>
+<p>包含记录的文件按照某个搜索码指定的顺序排序，该搜索码对应的索引成为聚集索引</p>
+<p>搜索码指定的顺序与文件中记录的物理顺序不同的索引成为非聚集索引</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626160452042.png" alt="image-20210626160452042"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626161818964.png" alt="image-20210626161818964"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626162236820.png" alt="image-20210626162236820"></p>
+</li>
+<li><p>稠密索引和稀疏索引 dense index&#x2F;sparse index</p>
+<p>稠密索引：文件中每个搜索码值都有一个索引项</p>
+<p>稀疏索引：只为搜索码的某些值建立索引项，只有索引是聚集索引（当关系按照搜索码排列顺序存储时）才能使用稀疏索引</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626155857159.png" alt="image-20210626155857159"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210626160036400.png" alt="image-20210626160036400"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626160135095.png" alt="image-20210626160135095"></p>
+</li>
+</ul>
+<p>11.3也是重点 b+树 基本组成 结构 在查询里面的作用 怎么插入删除节点 （考察重点）::star:</p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626163331250.png" alt="image-20210626163331250"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626163551482.png" alt="image-20210626163551482"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626163753283.png" alt="image-20210626163753283"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626164013790.png" alt="image-20210626164013790"></p>
+<p>插入节点</p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626165031084.png" alt="image-20210626165031084"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626170858237.png" alt="image-20210626170858237"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210626171034133.png" alt="image-20210626171034133"></p>
+<p>11.4 不过多考察</p>
+<p>hash部分跳过</p>
+<h1 id="第12章-查询处理"><a href="#第12章-查询处理" class="headerlink" title="第12章 查询处理"></a>第12章 查询处理</h1><p>首先了解基本概念 为什么要做查询处理 实际上是对应怎么去磁盘取数据</p>
+<h2 id="12-1-概述"><a href="#12-1-概述" class="headerlink" title="12.1 概述"></a>12.1 概述</h2><p>代价取决于两个因素：执行的算法、数据库目录中的统计信息估计成本</p>
+<h2 id="12-2-查询代价-Query-Cost"><a href="#12-2-查询代价-Query-Cost" class="headerlink" title="12.2 查询代价 Query Cost"></a>12.2 查询代价 Query Cost</h2><p>查询处理的代价包括：磁盘存取，执行一个查询所需要的CPU时间，在并行&#x2F;分布式数据库系统中的通信代价</p>
+<p>用传送磁盘块数以及搜索磁盘次数来度量查询计划的代价：</p>
+<p>假设瓷盘子系统传输一个块的数据平均消耗t_T秒，磁盘平均访问时间（磁盘搜索时间+旋转延迟）为t_S秒，则一次传输b个块，以及执行S次磁盘搜索的操作将消耗（b<em>t_T+S</em>t_S）秒。<br>其中t_T和t_S必须针对所使用的磁盘系统来计算</p>
+<p>通果把读磁盘块和写磁盘块区分开，可以进一步细化磁盘存取代价的估算。</p>
+<p>本书给出的代价没有包括将操作最终写回磁盘的代价，当需要时需要单独考虑。</p>
+<ul>
+<li><p>本书所考虑的算法代价依赖于主存中缓冲区的大小</p>
+</li>
+<li><p>最好的情形是所有的数据都可以读入到缓冲区中，不必再访问磁盘</p>
+</li>
+<li><p>最坏的情形是假定缓冲区只能容纳数目不多的块——大约每隔关系一块</p>
+</li>
+<li><p>在代价估算时，通常假定最坏的情形</p>
+</li>
+</ul>
+<h2 id="12-3-选择运算"><a href="#12-3-选择运算" class="headerlink" title="12.3 选择运算"></a>12.3 选择运算</h2><p> 表格有点问题： a3 a5要加一个传输 寻道时间</p>
+<p>在b+树去做index，查到叶子节点，就是树的高度</p>
+<p>后面算法的比较不过多涉及</p>
+<p>复合查询有一些概念就好</p>
+<h2 id="12-4排序"><a href="#12-4排序" class="headerlink" title="12.4排序"></a>12.4排序</h2><p>外部归并排序 有个概念就好</p>
+<h2 id="12-5-join"><a href="#12-5-join" class="headerlink" title="12.5 join"></a>12.5 join</h2><p>是重点 主要考察的是前几种</p>
+<h1 id="第13章-查询优化"><a href="#第13章-查询优化" class="headerlink" title="第13章 查询优化"></a>第13章 查询优化</h1><p>主要考察前面几节</p>
+<h2 id="13-1-概述"><a href="#13-1-概述" class="headerlink" title="13.1 概述"></a>13.1 概述</h2><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210627022738813.png" alt="image-20210627022738813"></p>
+<h2 id="13-2-关系表达式的转换"><a href="#13-2-关系表达式的转换" class="headerlink" title="13.2 关系表达式的转换"></a>13.2 关系表达式的转换</h2><p>等价转换的规则</p>
+<p>13.3 根据统计信息做估计 （不特别明确的考察但是大家要有概念）</p>
+<p>有时候带有比较大的误差 不明确考察但是要有概念</p>
+<p>后面跳过</p>
+<h1 id="第14章-事务-transaction"><a href="#第14章-事务-transaction" class="headerlink" title="第14章 事务 transaction"></a>第14章 事务 transaction</h1><h2 id="14-1-概念"><a href="#14-1-概念" class="headerlink" title="14.1 概念"></a>14.1 概念</h2><p>构成单一逻辑工作单元的操作集合称作事务</p>
+<p>事务是访问并可能更新各种数据项的一个执行单元</p>
+<p>事务调度 schedule：一组事务的基本步（读写、锁解锁）的一种执行顺序称为对这组事务的一个调度</p>
+<p>ACID property：</p>
+<p>原子性 atomicity</p>
+<p>隔离性 isolation</p>
+<p>持久性 durability</p>
+<p>一致性 consistency</p>
+<h2 id="14-4-生命周期"><a href="#14-4-生命周期" class="headerlink" title="14.4 生命周期"></a>14.4 生命周期</h2><p>活动的 active：初始状态</p>
+<p>部分提交的 partially committed：最后一条语句执行后</p>
+<p>失败的 failed：发现正常的执行不能继续后</p>
+<p>中止的 aborted：事务回滚并且数据库已恢复到事务开始执行前的状态后</p>
+<p>提交的 committed：成功完成后</p>
+<h2 id="14-6-可串化"><a href="#14-6-可串化" class="headerlink" title="14.6 可串化"></a>14.6 可串化</h2><p>冲突可串化 conflict serializability</p>
+<p>当i，j是<strong>不同事务在相同的数据项上</strong>的操作，并且其中至少有一个是write指令，则IJ是冲突的</p>
+<p><strong>冲突等价</strong> conflict equivalent：如果调度S可以经过一系列非冲突指令交换转换成S‘，我们称S与S’是冲突等价的</p>
+<p><strong>冲突可串行化</strong> conflict serializability：如果调度S与一个串行调度冲突等价，则称调度S是冲突可串行化的</p>
+<p>满足冲突可串行性，一定满足可串行性，反之不然</p>
+<p><strong>优先图</strong> precedence graph （前驱图）</p>
+<p>每个事务是一个节点，每个有冲突的操作是一条边，如果没有环就是冲突可串行化的</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210627164445818.png" alt="image-20210627164445818"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210627165738126.png" alt="image-20210627165738126"></p>
+<p>14.7以后都是概念为后面做准备</p>
+<p>14.8 不考察14.9 14.10也</p>
+<h1 id="第15章-并发控制"><a href="#第15章-并发控制" class="headerlink" title="第15章 并发控制"></a>第15章 并发控制</h1><h2 id="15-1-加锁协议"><a href="#15-1-加锁协议" class="headerlink" title="15.1 加锁协议"></a>15.1 加锁协议</h2><p>共享的shared S</p>
+<p>排他的 exclusive X</p>
+<p>可以让多个事务读取一个数据项但是限制同时只能有一个事务进行写操作</p>
+<p>相容函数 compatibility function </p>
+<p>封锁协议 locking protocol：规定事务何时对数据项们进行加锁、解锁，限制了可能的调度数目</p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627190307282.png" alt="image-20210627190307282"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627190556072.png" alt="image-20210627190556072"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627190834667.png" alt="image-20210627190834667"></p>
+<p><strong>两阶段封锁协议 two-phase locking protocol</strong></p>
+<p>要求每个事务分成两个阶段提出加锁和解锁的申请</p>
+<p>1.增长阶段 growing phase 事务可以获得锁，不能释放锁</p>
+<p>2.缩减阶段 shrinking pahse 事务可以释放锁，不能获得新锁</p>
+<p>保证了冲突可串行化</p>
+<p>严格两阶段封锁协议：所有排他锁必须在事务提交后方可释放</p>
+<p>强两阶段封锁协议：要求事务提交之前不得释放任何锁</p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627191058994.png" alt="image-20210627191058994"></p>
+<h2 id="15-2-死锁处理"><a href="#15-2-死锁处理" class="headerlink" title="15.2 死锁处理"></a>15.2 死锁处理</h2><p>1.通过对加锁请求进行排序或要求同时获得所有的锁来保证不会发生循环等待</p>
+<p>2.每当等待有可能导致死锁，进行事务回滚而不是等待加锁</p>
+<h2 id="15-3-多粒度"><a href="#15-3-多粒度" class="headerlink" title="15.3 多粒度"></a>15.3 多粒度</h2><p>怎么在并发调度里面加锁</p>
+<p>死锁的概念</p>
+<p>两个阶段的加锁协议（必考）</p>
+<p>锁的实现看一看就好</p>
+<p>graphbase协议不考了</p>
+<p>死锁处理知道概念就好</p>
+<p>等待图</p>
+<h2 id="15-4-时间戳"><a href="#15-4-时间戳" class="headerlink" title="15.4 时间戳"></a>15.4 时间戳</h2><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627210643847.png" alt="image-20210627210643847"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627210801356.png" alt="image-20210627210801356"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627210940003.png" alt="image-20210627210940003"></p>
+<h1 id="第16章-恢复系统"><a href="#第16章-恢复系统" class="headerlink" title="第16章 恢复系统"></a>第16章 恢复系统</h1><h2 id="16-1-概念"><a href="#16-1-概念" class="headerlink" title="16.1 概念"></a>16.1 概念</h2><p>恢复算法是出现故障时确保数据库一致性、事务原子性和持久性的技术</p>
+<p>故障分类</p>
+<p>transaction failure，system crash，disk failure</p>
+<p>存储器</p>
+<p>volatile storage</p>
+<p>nonvolatile storage</p>
+<p>stable storage</p>
+<h2 id="16-3-恢复与原子性"><a href="#16-3-恢复与原子性" class="headerlink" title="16.3 恢复与原子性"></a>16.3 恢复与原子性</h2><p>使用数据库的两种方法</p>
+<p>deferred database modification 延迟的数据库修改</p>
+<p>immediate database modification 立即的数据库修改</p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627223108583.png" alt="image-20210627223108583"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627223222533.png" alt="image-20210627223222533"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627223456516.png" alt="image-20210627223456516"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627223957791.png" alt="image-20210627223957791"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627224028465.png" alt="image-20210627224028465"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627224101587.png" alt="image-20210627224101587"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627224243696.png" alt="image-20210627224243696"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627224255110.png" alt="image-20210627224255110"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627224450181.png" alt="image-20210627224450181"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627224616684.png" alt="image-20210627224616684"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627224721396.png" alt="image-20210627224721396"></p>
+<p>undo&#x2F;redo</p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627225343899.png" alt="image-20210627225343899"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627225431853.png" alt="image-20210627225431853"></p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20210627225442475.png" alt="image-20210627225442475"></p>
+<p>16.4 肯定要重点考察</p>
+<p>16.5 之后涉及到buffer情况 修正 了解就行 不做重点考察的内容</p>
+<p>这一章比较简单</p>
+</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/zcy530">Github</a></li><li><a href="mailto:zhangcaiyii@163.com">Mail</a></li><li><a href="/13896796126">Wechat</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Course-Note/">Course Note</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programing-Language/">Programing Language</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/">web development</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functional-Programing/" rel="tag">Functional Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOAD/" rel="tag">OOAD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Parallel-Programing/" rel="tag">Parallel Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software-Testing/" rel="tag">Software Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button" href="/2021/08/09/JavaScript-Basic/">JavaScript Basic</a><a class="next-button" href="/2021/07/20/Java-Advanced/">Java Advanced</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>

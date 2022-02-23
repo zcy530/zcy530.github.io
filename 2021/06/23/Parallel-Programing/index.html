@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><meta name="description" content="Hello World [ Nicole Zhang ] "><meta name="theme-color" content="#9dab86"><title>Hello World [ Nicole Zhang ] </title><style>@font-face {
+<!DOCTYPE html><html lang="zn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><meta name="description" content="Parallel Programing 并行程序设计 [ Nicole Zhang ] "><meta name="theme-color" content="#9dab86"><title>Parallel Programing 并行程序设计 [ Nicole Zhang ] </title><style>@font-face {
   font-family: 'Abril Fatface';
   font-style: normal;
   font-weight: 400;
@@ -28,17 +28,198 @@ gtag('config', 'xx-xxxxxxx-xx');</script><link rel="stylesheet" href="/css/tocbo
     orderedList: false,
     collapseDepth: 2,
   });
-})</script><link rel="preload" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"><meta name="generator" content="Hexo 6.0.0"></head><body><div class="mask-border"></div><div class="head"><div class="head__inner"><h1><a href="/">Nicole Zhang</a></h1><p>East China Normal University  |  Software Engineering  |  Bachelor 2023</p></div></div><div class="paper-container"><div class="main"><div class="location-bar"><div class="line-1"><div class="horizontal-line" style="height: 3px"></div></div><div class="line-2"><div class="horizontal-line" style="height: 1px"></div></div><p class="text">Hello World</p><div class="switch-button"><input class="container_toggle" type="checkbox" id="switch" name="mode"><label for="switch">Toggle</label></div><div class="line-3"><div class="horizontal-line" style="height: 1px"></div></div></div><div class="main__2-col"><article class="post-view__article"><div class="article__infomation"><div class="posts-item"><h2 class="posts-item__title"><a href="">Hello World</a></h2><span class="post__date">2022-02-22</span></div></div><div class="article__content"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+})</script><link rel="preload" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"><meta name="generator" content="Hexo 6.0.0"></head><body><div class="mask-border"></div><div class="head"><div class="head__inner"><h1><a href="/">Nicole Zhang</a></h1><p>East China Normal University  |  Software Engineering  |  Bachelor 2023</p></div></div><div class="paper-container"><div class="main"><div class="location-bar"><div class="line-1"><div class="horizontal-line" style="height: 3px"></div></div><div class="line-2"><div class="horizontal-line" style="height: 1px"></div></div><p class="text">Parallel Programing 并行程序设计</p><div class="switch-button"><input class="container_toggle" type="checkbox" id="switch" name="mode"><label for="switch">Toggle</label></div><div class="line-3"><div class="horizontal-line" style="height: 1px"></div></div></div><div class="main__2-col"><article class="post-view__article"><div class="article__infomation"><div class="posts-item"><h2 class="posts-item__title"><a href="">Parallel Programing 并行程序设计</a></h2><span class="post__date">2021-06-23</span><a href="/tags/Parallel-Programing/"><span class="post__tags">#Parallel Programing</span></a></div></div><div class="article__content"><h2 id="Parallel-Programing"><a href="#Parallel-Programing" class="headerlink" title="Parallel Programing"></a>Parallel Programing</h2><p>caiyi 2021&#x2F;6&#x2F;17</p>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h4 id="1-为什么要构建并行系统"><a href="#1-为什么要构建并行系统" class="headerlink" title="1.为什么要构建并行系统?"></a>1.为什么要构建并行系统?</h4><p>电路晶体管密度过大会使处理器能耗增加，散热的问题使通过继续增快集成电路密度提高处理器性能不再现实，因此集成电路商决定构建多核处理器。</p>
+<h4 id="2-为什么要编写并行程序？"><a href="#2-为什么要编写并行程序？" class="headerlink" title="2.为什么要编写并行程序？"></a>2.为什么要编写并行程序？</h4><p>之前的串行程序适合之前的传统处理器，为了充分发掘多核处理器的性能，必须对常见串行结构进行并行化以提高性能。</p>
+<h4 id="3-如何编写并行程序？"><a href="#3-如何编写并行程序？" class="headerlink" title="3.如何编写并行程序？"></a>3.如何编写并行程序？</h4><p>基本思想是把任务分配给各个核，主要有两种方法：任务并行和数据并行。</p>
+<p><strong>任务并行</strong>指的是把各个的任务分配给不同的核</p>
+<p><strong>数据并行</strong>指的是将待处理的数据分配给各个核进行处理。</p>
+<p>任务并行很可能每个核执行的任务不一样，数据并行分配给每个核的往往是相同的任务。</p>
+<p>在并行计算中，需要注意协调过程，包括通信、负载平衡、同步</p>
+<p><strong>通信</strong>：在不同核把计算结果发送给其他核<br><strong>负载平衡</strong>：每个核的计算的工作量应该大致相等<br><strong>同步</strong>：同步每个核的运算时间</p>
+<p>例子1：求累加的n项和<br>假设把数据分为n组分别累加，有一个接收数据累加和的变量x。正常情况下需要等变量的初始化在往其传数据。<br>如果变量还没初始化但其他的部分和已经送我来，会导致数据丢失等等。（没有同步的情况）<br>解决方案：写一个函数给他们一个同步函数（提出要求），让其他的核等，等x初始化后，在传数据（同步）</p>
+<h4 id="4-怎么做？"><a href="#4-怎么做？" class="headerlink" title="4.怎么做？"></a>4.怎么做？</h4><p>利用消息传递接口（MPI）、POSIX线程和OpenMP来编写基本的并行程序</p>
+<p>MPI和Pthread是C语言的扩展库，可以在C程序中使用扩展的类型定义、函数、宏，而OpenMP包含了一个扩展库以及对C编译器的部分修改</p>
+<p><strong>共享内存系统</strong>：各个核能够共享访问计算机的内存，可以通过检测和更新共享内存中的数据来协调各个核</p>
+<p><strong>分布式内存系统</strong>：每个核拥有自己的私有内存，核之间的通信是显式的必须使用类似在网络中发消息的机制</p>
+<p>Pthreads和OpenMP是共享内存系统，MPI是分布式内存系统</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6751.PNG" alt="IMG_6751"></p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618181843501.png" alt="image-20210618181843501" style="zoom:67%;" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618182150166.png" alt="image-20210618182150166" style="zoom:67%;" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618182349637.png" alt="image-20210618182349637" style="zoom:67%;" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<h4 id="5-并发、并行、分布式"><a href="#5-并发、并行、分布式" class="headerlink" title="5. 并发、并行、分布式"></a>5. 并发、并行、分布式</h4><p>并发（concurrent）：一个程序的多个任务在同一时间段内可以同时执行</p>
+<p>并行（parallel）：一个程序通过多个任务协同工作去解决一个问题</p>
+<p>分布式（distributed）：一个程序需要与其他程序协作解决一个问题</p>
+<p>并行程序和分布式程序都是并发的</p>
+<h4 id="6-为什么实现并行程序很难"><a href="#6-为什么实现并行程序很难" class="headerlink" title="6. 为什么实现并行程序很难"></a>6. 为什么实现并行程序很难</h4><ul>
+<li>Amdahl’s Law 必须并行化大部分计算</li>
+<li>数据局部性</li>
+<li>通讯与同步</li>
+<li>负载不平衡</li>
+</ul>
+<h2 id="第二章-并行硬件和并行软件"><a href="#第二章-并行硬件和并行软件" class="headerlink" title="第二章 并行硬件和并行软件"></a>第二章 并行硬件和并行软件</h2><h3 id="1-冯诺依曼结构"><a href="#1-冯诺依曼结构" class="headerlink" title="1.冯诺依曼结构"></a>1.冯诺依曼结构</h3><p>经典的冯诺依曼结构包括主存、中央处理单元（CPU）以及主存之间的互连结构（总线）</p>
+<p>CPU分为控制单元和算术逻辑单元ALU</p>
+<p>主存和CPU之间的分离叫做<strong>冯诺依曼瓶颈</strong>，互连结构限制了指令和数据访问的速率</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6752.PNG" alt="IMG_6752"></p>
+<h3 id="2-改进冯诺依曼结构"><a href="#2-改进冯诺依曼结构" class="headerlink" title="2.改进冯诺依曼结构"></a>2.改进冯诺依曼结构</h3><ul>
+<li><h4 id="缓存-CACHE："><a href="#缓存-CACHE：" class="headerlink" title="缓存 CACHE："></a><strong>缓存 CACHE：</strong></h4><p>解决冯诺依曼瓶颈所使用的最广泛的方法之一</p>
+<p>缓存使一次访问能够传输更多的数据和指令，并且将部分代码和数据存在靠近CPU的特殊存储器里</p>
+<p>高速缓存器的访问时间比其他存储区域访问时间更短</p>
+<p><strong>局部性</strong>：程序倾向于使用最近访问过的（时间局部性）和物理上接近存放的数据和指令（空间局部性）</p>
+<p><strong>高速缓存块&#x2F;缓存行</strong>：运用局部性原理，系统使用更宽的互联结构来访问数据和指令，一次内存访问能存取一整块的代码和数据，这些块称为高速缓存块。</p>
+<p><strong>缓存分层</strong>：第一层最小但最快，高层更大但相对更慢</p>
+<p><strong>命中&#x2F;缺失</strong>：当向cache查询信息时，如果cache中有信息，则称为命中，如果信息不存在成为缺失</p>
+<p>读数据：如果发生cache缺失，处理器会阻塞直到高速缓存块从主存传送到cache中</p>
+<p>写数据：更新数据后，cache中的值与主存中的值不一致，有两种方法解决：写直达和写回</p>
+<p>​               <u>写直达</u>：当CPU向cache写数据时，高速缓存会立即写入内存</p>
+<p>​               <u>写回</u>：数据在缓存中被标记为脏数据，并在被新的缓存行替换时写回内存，回写缓冲区提高性能</p>
+<p><strong>高速缓存行应该存储在什么位置？</strong></p>
+<p>主存地址与Cache地址之间的转换是与主存块与Cache块之间的映射关系紧密联系</p>
+<p><strong>全相联</strong>：每个高速缓存行能够放置在cache中的任意位置，主存中任何一块都可以映射到Cache中的任何一块</p>
+<p>优点：命中率较高，Cache的存储空间利用率高<br>缺点：线路复杂，成本高，速度低</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618154143233.png" alt="image-20210618154143233" style="zoom:67%;" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/zcy530">Github</a></li><li><a href="mailto:zhangcaiyii@163.com">Mail</a></li><li><a href="/13896796126">Wechat</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Course-Note/">Course Note</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programing-Language/">Programing Language</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/">web development</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functional-Programing/" rel="tag">Functional Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOAD/" rel="tag">OOAD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Parallel-Programing/" rel="tag">Parallel Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software-Testing/" rel="tag">Software Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button">没有更多</a><a class="next-button" href="/2022/02/18/Functional-Programing/">Functional Programing 函数式语言程序设计</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>
+<p><strong>直接映射</strong>：每个高速缓存行在cache中有唯一的位置，主存中的一个块只能映射到Cache的某一特定块中去，例如，主存的第0块、第16块、…、第2032块，只能映射到Cache的第0块；而主存的第1块、第17块、…、第2033块，只能映射到Cache的第1块</p>
+<p>优点：硬件简单，容易实现<br>缺点：命中率低， Cache的存储空间利用率低</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618154119197.png" alt="image-20210618154119197" style="zoom: 67%;" />
+
+<p><strong>n路组相联</strong>：每个高速缓存行可以放置到cache中n个不同区域位置中的一个，是直接映射和全相联映射的折中方案，主存和Cache都分组，主存中一个组内的块数与Cache中的分组数相同，组间采用直接映射，组内采用全相联映射</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618154701903.png" alt="image-20210618154701903"></p>
+<p><strong>替换策略：</strong></p>
+<p>直接映射：别无选择<br>设置关联：首选无效条目<br>LRU：选择最长时间未使用的<br>随机的</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618171140530.png" alt="image-20210618171140530" style="zoom: 67%;" />
+
+
+</li>
+<li><h4 id="虚拟存储器："><a href="#虚拟存储器：" class="headerlink" title="虚拟存储器："></a>虚拟存储器：</h4><p>如果所有的指令和数据可能在主存中放不下，利用<strong>虚拟内存</strong>使主存作为辅存的缓存，将当前程序所需要的部分存放到主存，将暂时用不到的部分存储在辅存的块中，称为<strong>交换空间</strong>，通常成为<strong>页</strong></p>
+<p>使用<strong>页表</strong>来将虚拟地址转为物理地址，但这样使访问内存的次数增加，所以使用虚拟地址来计算出物理地址，而不用访存。页表的缺点是会使访问主存区域时间加倍，为了解决页表对性能的负担，处理器使用<strong>TLB（转译后备缓冲区）</strong>减少对主存的访问。</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6753(20210618-171800).PNG" alt="IMG_6753(20210618-171800)"></p>
+<p>TLB在快速存储介质中缓存了一些页表的条目，大部分存储器所访问页的物理地址已经存储在TLB中了，对主存中页表的访问可以大大减少</p>
+<p><strong>TLB命中&#x2F;缺失：</strong>当查询的地址和虚拟页号在TLB中，成为命中</p>
+<p><strong>页面失效</strong>：想要访问的页不在内存中，即页表没有合法的物理地址，只存储在磁盘上</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/07163541_gEDQ.png" alt="architecture" style="zoom:50%;" />
+</li>
+<li><h4 id="指令级并行"><a href="#指令级并行" class="headerlink" title="指令级并行"></a>指令级并行</h4><p><strong>指令级并行ILP</strong>：通过让多个处理器部件或者功能单元同时执行指令来提高处理器性能，主要有两种方式：流水线和多发射。<br><strong>流水线</strong>：将功能分成多个单独的硬件或者单元，并把他们按顺序串接来提高性能</p>
+<p><strong>多发射</strong>：通过复制功能单元来同时执行程序中的不同指令</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6754.PNG" alt="IMG_6754" style="zoom:67%;" />
+
+<p>指令级并行通常很难利用，因为程序中还有很多部分有依赖关系</p>
+<p>线程级并行TLP、硬件多线程、同步多线程都能提高并行性。</p>
+</li>
+</ul>
+<h3 id="3-并行硬件"><a href="#3-并行硬件" class="headerlink" title="3. 并行硬件"></a>3. 并行硬件</h3><p>能够通过修改源代码而开发并行性或者必须修改源代码来开发并行性，叫并行硬件。</p>
+<ul>
+<li><h4 id="SIMD系统"><a href="#SIMD系统" class="headerlink" title="SIMD系统"></a>SIMD系统</h4><p>Fylnn分类法对计算机体系进行分类，根据同时能管理的指令流数目和数据流数目来对系统分类</p>
+<p><strong>单指令单数据流（SISD）</strong>：一次执行一条指令，一次存取一个数据项，冯诺依曼体系</p>
+<p><strong>单指令多数据流（SIMD）</strong>：并行系统，他通过对多个数据执行单一指令从而实现在多个数据流上的操作。可以看做是一个处理单元有一个控制单元和多个ALU。</p>
+</li>
+<li><h4 id="MIMD系统"><a href="#MIMD系统" class="headerlink" title="MIMD系统"></a>MIMD系统</h4><p><strong>多指令多数据流（MIMD）</strong>：支持同时多个指令流在多个数据流上操作，可以看做一组完全独立的处理单元且每个处理单元都有一个控制单元和一个ALU</p>
+<p><strong>共享内存是隐式通信，分布式内存是显式通信</strong></p>
+<p>分布内存系统：每个处理器有自己私有的内存空间，处理器-内存通过互联网络通信</p>
+<p>共享内存系统：一组自治的处理器通过互联网络，与内存系统相互连接， 每个处理器能够访问内存区域</p>
+<p>​        一致内存访问UMA：每个核访问内存中任意一个区域的时间都相同</p>
+<p>​        非一致内存访问NUMA：访问与核直接链接的那块内存区域更快</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618185104435.png" alt="image-20210618185104435" style="zoom:67%;" />
+
+
+</li>
+<li><h4 id="互联网络"><a href="#互联网络" class="headerlink" title="互联网络"></a>互联网络</h4><p>&#x3D;&#x3D;<strong>共享互连网络：</strong>&#x3D;&#x3D;共享内存系统中，最常用总线和交叉开关矩阵</p>
+<p><strong>总线</strong>由一组并行通信线和控制对总线访问的硬件组成</p>
+<p>优点是成本低和灵活，缺点是设备多的话会经常争夺总线，降低性能。</p>
+<p><strong>交叉开关矩阵</strong>使用交换器来控制设备间数据传递。它允许不同设备间的同时通信，但是开销相比总线更大。</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618201230528.png" alt="image-20210618201230528" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618201714767.png" alt="image-20210618201714767" style="zoom:67%;" />
+
+<p>&#x3D;&#x3D;<strong>分布式内存互联网络</strong>&#x3D;&#x3D;</p>
+<p><strong>直接互连</strong>：每个交换器直接连接到处理器-内存对，并且交换器之间相互连接。</p>
+<p><strong>间接互连</strong>：交换机可能不会直接连接到处理器。间接网络中相对简单的例子：交叉开关网络和omega网络</p>
+<p>通常显示为单向链路和一组处理器，每个处理器都有一个传出和传入链路，以及一个交换网络</p>
+<p>互连的成本可能是机器的很大一部分，由以下因素控制：链接数、开关数量、可用带宽</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6765.PNG" alt="IMG_6765"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6764.PNG" alt="IMG_6764"></p>
+<p><strong>等分宽度</strong>：“同时通信的数量”或“连接性”的度量。它计算网络分为一半一半后两部分间可同时<u>发生的通信数</u></p>
+<p><strong>等分带宽</strong>：网络质量的衡量标准。它不计算加入两半的链路数量，而是对<u>链路的带宽求和</u>。</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6761.PNG" alt="IMG_6761"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/IMG_6762.PNG" alt="IMG_6762"></p>
+<p>在多核系统中，每个核都有自己的存储空间，储存相同变量的副本，当一个处理器修改自己的副本时，应该令其他处理器知道该变量已经更新。</p>
+<p>与内存系统一样，我们也在消息传递中考虑带宽和延迟</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618202735398.png" alt="image-20210618202735398"></p>
+</li>
+<li><h4 id="Cache一致性"><a href="#Cache一致性" class="headerlink" title="Cache一致性"></a>Cache一致性</h4><p>有两种主要方法保证cache一致性：监听Cache一致性协议和基于目录的Cache的一致性协议。前者是利用互连网络对更新行为进行广播，后者是通过使用一个叫目录的结构来标记更新状态。</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618183724738.png" alt="image-20210618183724738" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618183924867.png" alt="image-20210618183924867" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618184045536.png" alt="image-20210618184045536" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210618184335700.png" alt="image-20210618184335700" style="zoom:67%;" /></li>
+</ul>
+<h3 id="4-性能计算"><a href="#4-性能计算" class="headerlink" title="4. 性能计算"></a>4. 性能计算</h3><p><strong>Some definitions:</strong><br>Token : A group of inputs processed to produce a group of outputs<br>Latency : Time for one token to pass from start to end<br>Throughput : The number of tokens that can be produced per unit time</p>
+<h3 id="5-并行算法"><a href="#5-并行算法" class="headerlink" title="5. 并行算法"></a>5. 并行算法</h3><p>竞争：当执行结果取决于两个或多个事件的时间时，存在竞争条件</p>
+<p>数据依赖：对必须保留以保持正确性的一对内存操作的排序</p>
+<p>同步：用于对线程之间的控制进行排序或对并行代码中的数据访问进行排序</p>
+<p>原子性：一组操作是原子的，如果它们同时执行或都不执行。 因此，无法查看部分执行的结果</p>
+<p>互斥：最多有一个线程可以随时执行代码</p>
+<p>互斥锁的方法有<strong>锁争用和粒度差</strong>的缺点</p>
+<p>如何增加并行粒度：每个线程使用它自己的私有变量，并独立于其他内核执行此代码块。</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210619125107851.png" alt="image-20210619125107851" style="zoom:67%;" />
+
+
+
+<p>任务并行性：将解决问题的各种任务划分到内核之间。<br>数据并行：在核心之间划分用于解决问题的数据，每个核心对其数据的一部分执行类似的操作</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210619125317262.png" alt="image-20210619125317262" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210619125332670.png" alt="image-20210619125332670" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210619125622880.png" alt="image-20210619125622880" style="zoom:67%;" />
+
+
+
+<p>总结：如何导出顺序算法的并行版本</p>
+<ol>
+<li>Computation Partitioning  计算分区</li>
+<li>Preserving Dependences using Synchronization 使用同步保留依赖关系</li>
+<li>Reduction Computations减少计算</li>
+<li>Overheads费用</li>
+</ol>
+<p>四个步骤设计一个并行程序：</p>
+<ol>
+<li>将问题的解决方案划分成多个任务</li>
+<li>在任务间识别出需要的通信信道</li>
+<li>将任务聚合成复合任务</li>
+<li>在核上分配复合任务</li>
+</ol>
+<h3 id="6-数据依赖"><a href="#6-数据依赖" class="headerlink" title="6. 数据依赖"></a>6. 数据依赖</h3><p>定义：如果两个内存访问可能引用相同的内存位置并且其中一个引用是写操作，则它们涉及数据依赖</p>
+<p>数据依赖是对必须保留以保持正确性的一对内存操作的排序<br>数据依赖可以在两个不同的程序语句之间，也可以在同一程序语句的两个不同的动态执行之间</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210619130914838.png" alt="image-20210619130914838" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210619131534822.png" alt="image-20210619131534822" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210619131554728.png" alt="image-20210619131554728" style="zoom:67%;" />
+
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210619131822216.png" alt="image-20210619131822216" style="zoom:67%;" />
+
+<h3 id="7-习题解答"><a href="#7-习题解答" class="headerlink" title="7. 习题解答"></a>7. 习题解答</h3><h2 id="第四章-Pthreads"><a href="#第四章-Pthreads" class="headerlink" title="第四章 Pthreads"></a>第四章 Pthreads</h2><h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h3><h4 id="共享内存编程（线程）"><a href="#共享内存编程（线程）" class="headerlink" title="共享内存编程（线程）"></a><strong>共享内存编程</strong>（线程）</h4><p>​        启动单个进程和 fork 线程</p>
+<p>​        线程执行工作</p>
+<p>​        线程通过&#x3D;&#x3D;共享内存&#x3D;&#x3D;进行通信</p>
+<p>​        线程通过同步（也通过共享内存）进行协调</p>
+<h4 id="分布式内存编程（进程）"><a href="#分布式内存编程（进程）" class="headerlink" title="分布式内存编程（进程）"></a><strong>分布式内存编程</strong>（进程）</h4><p>​        在多个系统上启动多个进程</p>
+<p>​        流程执行工作</p>
+<p>​        进程通过&#x3D;&#x3D;消息传递&#x3D;&#x3D;进行通信</p>
+<p>​        进程通过消息传递或同步（生成消息）进行协调</p>
+<h4 id="动态线程"><a href="#动态线程" class="headerlink" title="动态线程"></a>动态线程</h4><p>有一个主线程，并且在任何给定时刻都有一个(可能是空的)工作线程集合。</p>
+<p>主线程通常等待工作请求，当一个新的请求到达时，它会fork一个工作线程，该线程执行请求，当该线程完成工作时，它终止并加入主线程。</p>
+<p>这种范例有效地利用了系统资源，因为线程所需要的资源只在线程实际运行时才会被使用</p>
+<h4 id="静态线程"><a href="#静态线程" class="headerlink" title="静态线程"></a>静态线程</h4><p>在主线程进行任何必要的设置之后会fork出所有的线程，这些线程一直运行直到所有的工作完成。在线程加入主线程后，主线程可能会做一些清理(例如，释放内存)，这样被fork出来的线程也会终止。</p>
+<p>在资源使用方面效率较低，如果一个线程是空闲的，它的资源都不能被释放。</p>
+<p>优点是，它更接近于最广泛使用的分布式内存编程范例</p>
+<h4 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h4><p>如果一个函数或库在被多个同时执行的线程调用时能够“正确”操作，那么它就是线程安全的。</p>
+<p>由于多个线程通过共享内存进行通信和协调，因此线程安全代码会使用适当的同步来修改共享内存的状态。</p>
+<h3 id="2-Pthread"><a href="#2-Pthread" class="headerlink" title="2.Pthread"></a>2.Pthread</h3><p>POSIX: Portable Operating System Interface for UNIX，是UNIX的可移植操作系统接口</p>
+<p>PThreads: POSIX线程接口。系统调用来创建和同步线程</p>
+<p>PThreads支持创建并行性、同步，但不支持显式通信，因为共享内存是隐式的</p>
+</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/zcy530">Github</a></li><li><a href="mailto:zhangcaiyii@163.com">Mail</a></li><li><a href="/13896796126">Wechat</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Course-Note/">Course Note</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programing-Language/">Programing Language</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/">web development</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functional-Programing/" rel="tag">Functional Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOAD/" rel="tag">OOAD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Parallel-Programing/" rel="tag">Parallel Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software-Testing/" rel="tag">Software Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button" href="/2021/07/15/Java-Basic/">Java Basic</a><a class="next-button" href="/2020/08/20/my-new/">Data Structure in C++</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>

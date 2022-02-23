@@ -1,0 +1,703 @@
+<!DOCTYPE html><html lang="zn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><meta name="description" content="JavaScript Basic [ Nicole Zhang ] "><meta name="theme-color" content="#9dab86"><title>JavaScript Basic [ Nicole Zhang ] </title><style>@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(data:font/woff2;base64,d09GMgABAAAAAB6MAA4AAAAAWmgAAB43AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGi4bl2wcfgZgAHwRCAr+OON7C4JaAAE2AiQDhTAEIAWEWgeLXRvXShVsnMqGjcMAxL/ZoigfnMnF/5+TGzIE+xGnVSsoEkTprOLCatNCL3NWSrwGiVOeC1Ma4cRt9lKgeMLz6SDPn09f5BtlurhiH5hIRzKSsRXMg/2K5qMneJOanClsEllsWP7NwOgqOFj6FH46vhRKUfOL5PSG6O7ZpIb/7ghNTtFKFL8f6Oz9HyB2gEJFGABURA7JRcURynBBVVVVEfjaVjZveNrmvyMVlLgDjAIbq0BRoixmAoc9xagA10Z/t/6hiw51a9Sf5Tr9f+7nX9R9G6UXWCTYMCLEPk9sZ7QJDSSDqqja7xmbofKolVLIeIlEfCKG+J+43uQWboIdYg0osAFwdFtjr5hfMLliVkqHntfzZUk/yOLTCchsysWeVcP5D/2eUnVVDAqlatMITV/otwweT6qRETrBhufZe/w9A0KwLhbLhqekMPw/qOf776uRyqkxyGJz6D2a+mJFZw6JbSj+RXvpp4AlwaA2M4Pyk5OLXTPPnBc+LoXWqgUpPkHy2Uo2sV3v1vv2IDOPXThRzoyIaxUsYlKl49qjjaog0/8yPr1qrfWzbPZC8iVCyr2WaMjLNRWUVF59Wf++grX5gndvjZfkM8m+6LsDLPlb69UlrcgmptDFWDK0IcWKXDEUTU9N2VOim4hET3fOx9aKBJfKXmXqsOuRk57yyGuqMIgiisiWHucv13Ec8//t/Ytzh5bQpP7kAhhufJwLHgQLgpCDKChgKK0HmbATBAIM5SoIZvZ9FyiH99ZXAgocwE+TWQ4drK0EZgB2P+BgAB0L6TUE4sy5/eHKI001IWEpCcknkL/8EAvOEiWpVa9Bo6XWmrDZVhAhKgxhq6tpKyAwHKDn6CXnvAXBSRQ2CMVocSzAGrawhyPYcIYr3OEJL/jADwEIQgjCEActdEA5cOEjRIwUEAUqNOgwYFr6wpGF2tCBLhixpHCZUCsM1vNHHwYwgjGMYw2bFNkWwza2o5FLbvbRaeBs5qrfrid2E7jPHlP2FHjOXkIKAgAAAAAAAAAAAAAAAAAAAAAAAEASSSSRRBJJ9GEWAAAAAAD0oQ99hbNRu9RbGFbYANgvfaSdobjhjife8Ynv8Z7pzs6tzE//CmwAx3qR6+JDdIx70gF2Wx0w9aERucpEqSHczG3IYNUYUXV3gqXVnpWl1FukCSlYkSQO1ateJXEiq2WNaWyW8TSOBdxzOqygMQnapuIQicSQyAQIkyrx+JN5fKRs1qbjA0jTqNheYQ0s2j9VJf6zKo8baai3PDlPejAKERVuDwuDBMTBHF0MxQIq06VOEqWxoo54q97O2ndFO6abDMiN2As0/CytLuRihyqSNGLSxvvolu27IZa08Y5qm6hsSOvQjyXdPdfSUrZaZPKC/pWotKq9fNXnHik3bTaRZr2yybCVHBSuBFhkJfgQs3HqEWGFl7uCDOkTWTZlZviMNdg49F5HsjtyAOmiSdKWyOWRv1KzJAxjMxflsmOwxEJ5fHwlhXL+6XfY3HHmVQFHRlmB6hypqpyXZuNJ0McToMTKzZSEpfQ6ZU07zorLXi034lrEzzLq1oy6f72YcG5+o29Zq5Bk78GvLaFKqWZdtuysCCS6Ldc97Sf5Ka7npEoXmibZXtxbBeegNE9/+knYSn52a5cqiSvuK8LsFHMIDmAeF1Ru9GgKFEhUpEiSEgOSDRvV5CvrtZqwgxGEYTU6MKkLgYdhgO3u2NTFQUbgWW8QYxgRc8cTsLCYsVrQnLW87ySxgQWBqXXJ7Ba0YD9qSw4rp2CjclyQxkkes2NgAS1F0oepSBLSRJHKQBBrsskodSHmI4CRGzykLoRWNLpMBlIjBFbJiZjvS5SaCQQsVqyUwxLR64IY5FFjWawcxxIeaUEzcBLg3EDcK5I+VkZJQpooUvJf/HUjaWXRO6NWrlax0datXsRm/R+AATUzA3X4mL4cUIZ2BkCQh10QEDCYPXUUOKutsdY6EJxKVWrVwWQ6Hnigvq4i4G4zSf4Q5P0/LFonuTT2AdDTcboNG9iziQPiSnrnLz/wQOIyG7gHkN9rETCbgAYaNt40CCI4xY/PRDRYhAQkOV0Zyf968WZem3mGsLUT0PKoy8irrIdenHnap5uR4dwfgY7z+eXPyezD3wQZ1xFQ0yjqm/IFyxYgwwEY9x0w+R2Q20COMzXMBBgTGmQki4VtCiH1akB6Zz+bCOqBBYVM1WwwdxwuxmwIRK0ZfaN2SlYrJlSoVBGJilhm3Tut4Th4atM2pp4Y2WD9A9n0DO5D/eATknLhUQsNzkU+UHJ8iPGh1McYaq5RU40ooZxMsoXUZm3VNPTmNTRwQrSlSeuExEqUac12EjvKooiyomD55DKXi8KsimQpt9jiJqEUL8biQTku5OqRlspKt9w0Zcptv7NczErJSpI0JI1YoRo42INZsHAwDn3SmE3pUhOqqC7VXLXU/1XADBnxpJM6BEiVPqrwINUHiV/TTSktWUqZ7HNwRzTdrKdAhXsmIV4wnmzxjEf8PGmrimdtm6ATiF528nTE+S4KIPpmX6Kd8Uyi1vFP3evw7+HeA4tdZoX+mn19hiW9p3oSCOo3r3f7vPsSUKRjAB9vNOSnQxzte2aSIUHnbvc225VjqIxl3+Cl/FGPHXIuO58IsOceVk6H+Cqy6X+1Oc5SY8ceBXL9fOE87z41mBvuLVhOX2v8vqnHmX1PZI4Qq8e8F0L6Bq7yiWkYk4YEBGLlkH+2r/Vtie6NBPL7jgDt6azA1viYmnuBh+yaGH6EPmc8cuDCnJjxp8r1tU0+76DogBhugyS4R8S54b5rC2gjKAxbl5IMwxZcsmiIH9q2ls7n7/B6GuCV15SKh4+kfYS9YFzy38kXZgSFrexdtlhv9KUnTh8j1RNprT5T30XarpY3b/Q2d9K/4j4r3rV6dJ1pFw1iCK2k5VGc7yWLaAUoh0icLnfiC7/llN725gy7eR/wA+OIOzhz+PJn/Yl3PQHCxqxuucQcO9fx4fcozDkLam/Uk5tcMvDgwa53De4/njyUIxODQRcdeeEK4xiD/cK75DjQVFjbK+n1g3/8sf29u+c99XnRQZba9O112h4iQL0QFNefiZcQWtuxnopsRofb7F2S+rY5qABRqgR1qHvcL5EYdmdfASb1v+beYFwKJJAZhtojLMadJkIMIywSgPS2FCPoK+eymsJ4RiWx3d2wRBES6qR7ZCOa3SNpg8JpqfWyIEZYerzc9rZCKs62DXBR20RnTXC/SygrI+baSlfX+j/xs+MpvIom1MTE5tQ2zJXf82ltuxNVMOYBy0aPeUk7ADT+y9sBkf8MA9YvCFqfrxBeuW+MrUUsnNnvQLv/F5Cefmuxck2ct4Ohb1HVyJfkSkVlnaLIqZAobW6ycxK7X5m5ZpCEOQwlwACIfsVCBHCxttL55xCyCqwkW/KfD6qnpoHogGx48JLrO1YzW3vY9593rasIjworDYYJ3nh4rE3F8svVELL3gyCqS5lLMpiCb1mUlkxR19aC7nQOd/WOLxwV9ztXiPfAi1ZTpJO+k78Zvzb7O3zDDa0fAZ0T0WwaavZLkXo2DDmkcv8ANW9YfGhbkjaOyz7LnEaxZLWY4WLbNd85S/NDEDNSJpYWTBkc2mJUUSYfjyjBKmCfKSpmm2wrbOZ23fRmTStxS/xT0VSkxz9Vvxtqo8YsZ8KqbFEsKYecJhdcVf+dbsKRSi1K7nW0gvJIrBzGnMcrpKuBhg0laVxOjvnJXEoESqKavT3mp5sHRcy6Wm7wSPB0k8HkosY9G6y/uEPZUHB7sld1Y49qq0sMt+p3IGxLz6Fdu+y/AThrs5/3bfP73JL5/tluUytkCfgsnl8GoCsb5W2tLV37mfZUF5HuygjiPnFPG0xqMNsHDDf27nVxM93umWt3W9IxI4G2u6Sgx1G4rUNzBr4uxeyOKqu0e+KZ541zc3Ned6FO76TZbW64x2SYnT08dfy0zW5wsRVOWZO05CKRXTxHhWnbU/65EQNAhOZ+3zTuJPc6eBrW9u41sjaRehgs2ZG5njEGtZPh/5yzlmrE5MDJ3Jltlak3BT6SnfOq0tAmkNdjUpNQ9DgOQgGMxCGqSyRwYNEnm565OVlmI6MhVWna2FWZ0d3FSSoxvbb0RshYOgElIesiojQEf816ZjMJUjDe1Df3Byxdf+uzudilmIWPw9JAuVg/ejkGcu9Z45meU7N3jfd67xhus9t7sc3ZT2UayDsvkboY7tRhnidePKY+Q0s6BjOF7KJwSi+6GrqlHFHOhZbJbT6WnNAEivsco8x+aBvTAnQMIyygDGUAsYcqwYP9iaZblrbuVeJqFnGcoqxnH+gDPzp3UL8ZPe8znWOrydYknamVD10sMGwm9150ySCxEYhwLr3euKXNvF2AjclCpdPX3aY1OnLnk1Bbg8PzHK7DjYqi0zmHIpcklqTLzhrKyDoyFlUzcpwNRd3Us6OtR6BUu6NzesgYlLm/d15r4OTsIfX47GKbQAhWg+4JWIuesE3aUTdLXjbbZAx6RtCQDrZHtnGE4zMjdkglOxy7Xoqj3bEj4xiL1uSYZe5kDc2VcbG999tPCZSZFlX7FfiWs3lekXoNQ3sCMu70YKR1zLl0+6uZlvbmBCrxKSgC1mvGdq3ZwNgANpC0xu/W7Rnfw4LmnSZNPXuMe3tn3daR5Znst873Hkf/t9N946u7wjNbllVOBVr8C557h0U5DLEjfIGTZFMvsHXXprbdaUpPKp8JcXDGF/6OtcMl0mZ67OXgoLGW6OoQ1Z7dTt/5ZhGFGTTAuefjllMVovfWNCoSR+iwxi0so76t/VmfsTMtS158K/EdF5Zw9LQAMGhuWPpoqKP6L7MeW4+8QL2w3qUNhqPzEvUip6LAZK/wPYvAOuq+bEdvqW1ufNDXFWi2x+qT9uLCvyZ0KwuH35RFqJgn2m21hoTUcK2PKjdZEZrIeF3HboovyyiXfJ/O4u+PuyIPCCaZvg2TVfknxAYmBPjXAtUlTS5D587altmXmVAxU7GV7XFq8ER2V9eTlYa3LY2tX47eWTdejtQiGubDvGM8+NniC7Fh2ZO5BzN2vnTtBkMOWthoUYW0UGLfXzAjo/+i35CTmRQY5sH4ZYS81iLIWOZ/24Z6u8n60IokGe3YtwXb9VpUuOEokSUHqX+T5ry5L1y/1ZcPP0cj8cEdvCA/+P9pHsiZgjEwNy1Jl6SAV8BeTVOrtEFZQctHp3xhfzgyIzV6wboE4KZgZzisPL4uXgb3w0EnbNlZyXGNslD1SddUBVXt0niayRUl2adk6XZMAU2csESxVFkc97f35xcT1Hjk0HLAd4jwzMK/FkOnllUC1v36vuxRRVFoxZ7HJXPGye+NSuQktqyt946GOS9DXc9nM3+38v4XGBVkBT+1e+GY+Suq+XhkLeL/eU/Khz1+SDSy+EUW/vAqsJeWy/VhDo49n++tKzn+J31ne/ydU/wPpOruYrcffKavzrVbqVpST0o81p4gOCb42qzaKeemwYpPY8sTpX8xneemxpL/Khs8sN47cSD5m6TKjFmY8Ct5yRqkw1EycWBv7omzm6LqHRlr0snE72Gf/OzSHcG1374wltA9928SC3+S3Q8uGT1r518U27aqXzYsO17VVkVdTsLmC1Hk5hPzg9KfganCzbqk0riTdoh0XIqEnju7YS/ZvUA7sC3iD43vsnjrG38JvVSmDFMumAj+0dtOaoVWhnSs5CQWa7Pb2t5d0e3ziILf/xwI//oT8flGvvMVzXX+W4dkABfaqjwlmIcVHkZ9IVXVJXoabY1gF0mB+YGMTTInO6Pg90N8Jp8XCBcqf1wB46SZ+WWYm58Rl+YS6uwvUs5Q+9DpcbdCrSXumYYKKw2D+IMbSzAkWJXhcg6BfFY8sUFn4K2/xdVJ+UBfxZ92rJ7H4mgRz4mli+HGetfCpkk+8YOHO6eNdEhXn93/1ulDWWYeOOF9QcxiszxsqdYcSo9LoOss0PrGBCzOq4xa6504Hrcm82eUT+dKJOPIWXuur1v2llxBe5OA2VJvy+ze03mq0rMKPrjPiE6StGL/NaWj8P+jHL33PHGxsXoMDeXoFdVeGnCEXSF+8Qck3Q7jJB+JCLsaJkDCEcH4e57yqjIC4f/lcy3KYDOZP3pW+UnCk/U7Xwg7mKuIfM5kB6RGMrxhe5g3zasCEQXDRq+OnnpUYatYUMIW/o4JEz+FXl11lf4MDu1k7pxScXs8IVPYyQPWJwMR3jgPeX9YAd0z0hIPxN3sICv6/Jeg4kH3+eEicBxxG1E4p2bjApU+dts3gvvrq2k+zIV5xwRUTVSdj18gnjm0HPN4Rh/zh27R5vvz/BxsV13aiB8Tdi8aYtRdqeMB/icBdz2Puo2iTae1IKsWB7w4OvHhP4EVCG/fipbW1uTsKL7309RVgt0eA3bfsTwrS97GgyK26JgZuZaPKJC+fLJ6pyFVJdEJE0pDUPf3BVFMeTlGAhfKFR3ozSfRXSpq+kC9n+LegZXu9G8Ovv6Rm7a0F7UXZ/9BRtbYhCcie5HInWefzIYhEsR/UmiMylU12GXGRn96k2G/6v9c//KDnWDetAB+9c+r309kw5dhZWP+rhRXOJUjhGMbcO+2AeNkMat0yFWTXxRcxoQX4C7NqxQPvF34R69+rq5DTQtuJZYWrkJ9cS0LFowqxCVfWEojeUeu9XQWFK/T3eTSCK2G0jqzgNsiNiYR4LlR12svb8vWw/NJd47EepQIrpNyJZyUaLcN1/uTLGWnxrjkCcCibdv7tMvrecgqV0sz8K/++sPbElUmJ9D8p2eZ3rrbMd4rXVDIRerHeFHf5WH7WD44c9G7DIcb5V0+PkcQzem9doEi0aYtHSVtpSBS6Laizfc84dhYXb8V6CiNyuFm5otuWJHTejAtiu8FJa7jDzos5PFExUGqOg2LM6QueM6iKXJx2mVzeP8P04mhKBtU+DiCl4a4o05hqujIvUfJ0Wk1Ma1w4ezvkkS/pe5rJw+h+y7JJ0/otpyGL1p0Yk5ADo24fNOdHRx/7AL/LS97gu6+dGAFg+PWlz5OjD945NAWhsul5fkgOjc0UYIoEMm4BPHrLrdNeb0jNUZDwCaRRLFoaMiEq3gpRFKXTMpVpbH8ixnKEHZ4mCLRIVEaEetY3YXmC+5ZFH/U5UP849Zd6t22W9zfgZwUpAqtSAlf4yV3WrhXkdbZVRla62g/QSZM0fy1xcVtMn5OUlCDU3y+e97kXmn58u7K8BEHM8oNivSI7q1dafT9qVq6mfKQrfhJy2fE8pzUoiSNKxEq/ZYGNSHOh0cpr90wsY4udpQXnpEX6qwZp6ukdsNk9vDJ4n2S+luGNKuXRrvdWyFVLLHd249s20nz94j3UtliscWIhrntdWF/yd3FO5maEUuxIp9rQMzfg+qAgAfzjMd993bD3cn+3pEzeogoj05SEzdQ9aMEH6eVFK+U3qOC3OfC7WzOiUDaqbagkt+nhohi4ix/yHZITM7E3xX8jJ/C58jkje9PPd7N7N6C/AuIDoGRzcLcSbSg+JIEGUF4p9srWqxG6voP8BABIjF90I63+IFNrj5dEz+jD/1caMUP+ToQVMbGuPCF/FhrpBPRKvKcUQXsQBhoHZet6DlpAorPx3EbRmWXoC4Sc1dZ+y1DrA5ciUHbHDXNwPwsbZ1KcRKcCUfCEMHY903fFyDXEOnRA2mjF40X0Q8H/BEFouwOrm+lr7afX0C7TJOOL4qPQp7vEPzti/1pYppEGcHun1nyH81363eS5THgnL6y1qEEJr8Aaa8RblrGovBmmPLzWq/u5tH9OIUfHrVU56C2eRTq9Unq0xPkggSJY5mlxdkVyh6dG7X1TEjwwX0zvwoyeS8uw02Bm9RHCw3fzzv/hXuzqLQVLoN5xyLgCNxQxZhREyvV/aRaHoy6IzKw7rCz2RmHrQOcgZAAq1UD6+vilALNq6TUkB/c77G/hlleZ9KNCE6E9WD/Nw276wajltC5ijxnL8Wyt5PzTBXRM0qv4f1EHfViFv5wbGe1thHy3bXbZkD9rR47vbd32njpps0s4aR9e/N0qlSfyFoR7y/q7nlRPLIO8R8YcTobcUVQF/T+eT1T9u67tFnws61ylY38nIyya8vp7aIs+0Wr7ONPymb+jttufpNzacxv6efvvnp7w2mXVLjkWApRUaMqI5qO8qBteaeRjfs+q6i1eMLtwhcMLbaLRW2jR/1lgxqlvDGcLA3wtErpLgvG1fq+ZnvZZOZhLO2rm7t4H9hnYO+2mVWfAStC7pa7Cu3grxDuq8/KtBNv/FQFNCB7n+U3Ld6lbAo6AXxL9zD/A8W2c97B5iNuI0pOVNwJHvKaeDtvwoec/3nei7ajq6EVe1sTfqv9tmWTeL8nvcQoVHlhxFf20jegvE3jbP+89j9TDL2aducRDAY+NvWIX4sH7r4tdiH0YweuMwhDUKCthtIQ/tXgWV5x+D7HSDQsPyYkVKShDxfzgykiTEBZyFAWoLkDPDAQAIhURJBAiHKnBcMSLFgMar+0FIhRoIsVVcx+SRHMovSpX0GCeRSsxep3ZQIpyj21FBPIlQ4Lxk+gKX8DwcLz+kEUvMQSP/2uBpZ5RBD21k+kdYpOcKEGz0foLivkY+As4B6a7hkWobquCD2+uDmjzEHp/MuvXgao1G8Qay5DAK8HgBslg0LrF9S2cz9fJk4kBxgo0oxwq3HNRO4wlUCYwg8Cj7hfofAlHrSlIqPS1UP3RIwy1Zi0VhJQ++sheJeyxIxDxITbcbEbQtVn5D75J17WzzhNs6mO4fmQDdzilVrT4fGwKTKP2bG+K8GtPUMEusX1J0yb7DG5K5DfSsIgIY37Sk5ZAdhWSWa5PWyMCyKP7CEIENKDs6t596jI/wAZ+z/A9+fcabhdzi+/9NbeGTAYBuAZ4Koto88ofVq4Csi46BvXPG9ZCXgL5F8rSo+Rv1ALB6hF+rLLCZwnSDmAU1lwnRSxGDB5KS+gtnCi4wNGHUF4oUSTPIArygWZF5i1Rs58gFQMktWYBsqC5D1ck1yw8keYVdwKAfINwEbPJlHtvxkIhKEgIafLZlNVpPADWoKapX6lgXIyOS01ZiJr2CgcziVE2iq1qVm9GAmS61sdQd74h7jh2pfx11EDt4ekTnAXLFC5C510J9cY2hsO3QMPKrNzjpSu7g1ClyV3SQZM2aH5AvKSaypdiNbWTN1O9+aAkAbiqNMZ1WDc2E7hNUvbaJygHCP4CmmJAgO0sTWURXiCsrt/FJEGDuYqY8KKBwMBBiuEBfXmAKQHAFkeYhvc8hiUOC6PlRKfShyR4RHuXJ7AM2seL4qQnCNTpVqLWiWKFKvH5kmPiy1IgMDJfOAIOaLWsnQBtSoUsOJTq+VoTYcOP/XEar7q9zP70atSgSuYbFIyP44txbW6gTXGmfOxKVWptJJJkKuiQl3WmUSeUVZOGLuuUil/IAIsd7DCAT0vgahnijQop3NW65BFHJxCbux9ZURsmlYkWafEE2PzpJ8AAhW1GzbAl/Qjt161CP4zWUfPjdGl69Xxk2R+lH6q1CriL5GSCgaAlhBkTLy5haR/I8jIKcWIk0JDSyddpgE/6vdNuBAWwh2qUmvyf36AVqdPIzEYMZnpDCaLzeHy+II88hSKxBIpCMGITK5QqtSavLQ6vcGIYjhBUiazxZp5Fm52h9Pl9kCgMDgCiUJjsDg8gUgiU6ip55NlVjQ6wGCyZNXmcHl8gVAklkhloFyhDFRqjTZfOF3G9QajyWyx2uwOZ269efDoyZ2XXO4enl7ePr7+DfK8CkYtFDcdQPZn89+MeBdT1O/2hwKrXHp77FFrKs8O2ONTJN9h5fxSeaCCZrpLAz/Swlp2VM9in13SR8TnDcMQIUCPI5argbFmfDUhGIMsq8Ejr6fWJi5EVE3RFqiHdBk/JS68nhYTlbmK3tOjynVmMP95qw3VvpUYP+EqxOjVBoaZUHWJgllFdXtWSVT3Cpy1ns0pcutC8ddOKFXAb7+ur6E96hV4stFWEn+IF9pcxZfzU+3aAlEk1NcSa/UhUejH+367ZaNYnv6amiTeUcLQStIWhIeQJAypKF2/+DrS8+9b+r84YC1QjYTmWmqtOaQKcws0rrB4vbaZomVftL3zwCbetAtNX0Jfw1D1yzO4hkBoC4PwFgLC1qTBzV416W3aOwJ3tbZWApe7sX3HiM3KAxHboqsFjk/h7nHO13DNXdW3JDX+dYgh+cJmfKKdkKXpH5+Te+m3pXdChEGOvZYmXkh0HZy9deKn7PtuJeuwC8ynEtPecOx0c73CcWprlrk9zYQ2e3xsgX1x7ao=) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(data:font/woff2;base64,d09GMgABAAAAADNUAA4AAAAAftwAADL8AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjQbvCgchGIGYACBTBEICoGiZP1TC4NOAAE2AiQDhxgEIAWEWgeEVRuFabMDMWwcADOsvFsUwcYx8mA8jaJsk2aa/J8S6BAZ9Jp2MO8DkKCcpJ1yqJlTOZxla2ciIFxafq4VtnyvBEWibMmD1f/2okAhKb5lrqCQ8EFQAN3doR2hsU9yf6Jt/ZvZAWaXpZYQEXXBaoyu68bvcdFRX57/fox23n1/TWH6stMRzZJpJNemia3ELhoJERKdEPf3v4C9QSroNnufckKZBsyf4N6Iw/Pb7FmJ/I8YjQiY2Ei1hBKtKFYvrFi72ae9KHVhxuY6b7vKRV8tLmrY/9TgzuHOI51JMjPjQWXimd2XKWx/0P3VLU1VUp9pi5zrt/mpP3SaM29ZkynLQjOWXGQXyIuXK/xIveW30i0nK6/gwiu44IIL/PPv7cnkn2FcJAkMCDIK5RbA/+Uy3T257p6c1mAF5BG7ov+T/8/9PL4UWOoqYZLDPKG1oQCe4S6lAJK/VzVr+c3FSruZDjFUbldyDEXrykVHPIAAwU8QI5ISLUJQdGBUoGRbwQFZ0KdGQ1FOKUl0juFirlJ7fe3yQnVzRVncHNT3y5ReX1BgcsLWB0pwCXbIiO89rcLc0691SN+rQL21TleHHLJCBMRlRkTNDJEZMzNAyLbfm3VGQ3pcLiE+qoTux29955s1smnyNWxK8QZjjHlrhBBCGFHytdeck83VxFO3tBcCSgtpjaQz1wcQAB5sjwgmhRyGHHEEdtQdyF0PYY88hTzzDIYAcDzZ4L16JaB8cdfRBZQIAAiUvs8f1nYBCqDyikZgAAx+VGzsh8obCIDxz/y6vBDIPO+7/XxheN2tx/W2ftfvxaEB6a88XvzcwGwyB5c6RYqN2IoDGSPjjeMYb3o/JWnSKXHEsVqvy9Y6rA3sml7aw9f+DiuJYcaOtJGW6T2Wc57vpRlte4727N6c0+sDTePdkdayGyN+nBr7YAN8FFBOUxOVkizbaLIxEypa9HwP7/OTRxrMVRM1e7PNvXRletBB4S5TH/t7Py+aBpDVoWwkVog/hh1gZmzzAMg9iGKlmIqAoVupjIEJZX4kFDz4UwoSwiBMAmdJknnJkMVHjiL+SpQLU6mxSJ1PniR2T7J+z5YUg42TarKZCs22SYUtdupkt2NqnXZJf1dcM9xd94zywANjPPbEWFgjNk+4c72MSZVYmwJTZeE1gNp3mRkoA5NlVogKqWQ0dWWexwkmBYu4IrRPyej0xioWQE1gsfE69WAB0WF29KGIPwW+PZcHGsEhonMPIUBKdxz1B7OgPqM1K7Cc1sPYfJtkDKvuR6fH5M5ITo52MotlYxMBZHISsooR/U+5yI0W4v09Z5l3TE4WZVfErSuCUAw0gtl6S8tGMdkxM1K6bypSCOyE0krRDeY0w+yIDS0ynKNdmleMZ6xTI/TpQcsSSmpjAGlxN9/scjudUcZnZm0KDGv0Wfo2qycsqMK83WtqRNi4UFEJjKx3iakBFjnDj4rTSWGD9P7/C0YACKo8LQkn4Nr0zer2JNMX1TKrLEbWf2nr0vHlGNbAlkAELAWBiRsPXvxEipckWbYcFRpaaBEPnggacIuQRfQidkGqyCPKiNrQJvQqSbT6ZykptTGepe22gm1gO9gBmsFO0KLoU/QrBhSDiiHFHsVByVmz82aXFI+KZuAUPHfYQfiE14gLbUiZRiAQCIRcwzAzwihHOMoxjg9+dNQQlVVIZN0qXAohmlibhKAW3pNoa/FE7ktRBkov921Q36OR1mv0waADCnPSoj6lnwEGGWLPthkypnEwwSRTzGthzCJLLLPCKifrNXAKnOZMOIvOcyl7mbhj1X0enPajxCmVwKUTUiww5Na7h+OSjh26odzM0wRCjoXmFdJ4FB1cgSRB691gSeFhGamDPmc5775rad4aDt/FH/8AMTfnG0R0P4pDQIaRpyyg+3r8XNrmq3LXRCyZ2xLuoR/duLwmd1mqfIbuGxJuvgq4JkThRdFWsUq8scwmbMiBYit/Om1F73gnglVCKtEiljwihUrpSWWl9tFU2tUh39RIaRGV6rY8HHZZ0kIf/QwwyJD2IOzV7GM/B7IHVcMmI4xyhKMc43gYo8aZYJIp5rMLaJFaYpkVVjn5HWcBgB1Uf/jD1Ro16ay8j2/ZW5wcozYdQhqEEIUkEo2UQJCthYdESqSIkSJHgRKV1DE0aDd0qTrSEyTBVrBN2ws7aGbnttdVe8E+9nPAokpjOY2TCSaZYpoZZpljngUWWWKZFVY5+R2FkSQukIuL69uH3/J1gruWe/ra1zfKt3zH9/y4xnvy9hEQOmQWU+BmIR4ecOT9WXkM2BJiqRGMJVQSUaKWDtLjbcObUiZG66WBTiaTyWRyDu3NaJ+ynwN+MNwghBCaByGEEEIMwzBucpOcg1u6Parv6O723OO+Hqg/fJa+nYem0JmMVo8ZnuRKs1DHKXk6SQciUZLq+BYOcnWPDmLZIAs0PYm4k9+S/ghDYKwZDEY5ong5lkrLC4MBLOBeesvYvd7pKFEzzAijHOGojinHv+vB4877zbyk2+Sek2Jxv8uFb4PZmOCgcmI2+DDoNwZVSpHRWiBTqnXZkzWyxXEcx3Ecx3F82K1pTimnOcNZzusy6xvMTWzcwqXo0OyOnyzCBecksi/R6YoKZvna7MwgPjPcKkAdNNbVr7YXoSEF+rvKfBuRYH/KGmE8AB10eOVm7JL8AVQ20JTEFQGT4HXUSoPVBqBEdqVfOdCQ4yOHfpqn+32gD/oAgMXkOT3ncAS/m4zD4nRPw15lqrY1hTwq9PEbG33NiOrCa4rAAyADPT7GUQAVPeqW1WJBQ+XoJJV6YxgwBgmTgHl7YIBN68ZnaZywqeP/skIJG6cMKEw/FH/ESHKn6X2kVYpaYtUBzzyHwF7VZrgreA/4lFEZURUsMp2AOc9gBUiVUKP6bBPAKV/Jw3YzLpE3f1J5NwMwFXjRQ7cLS1bczOJ0caDkvLWGKJlnmJpKewY52LQCIjXB55wcFPFqiGwPSK61GwHx3ATHUg+mqJGens7Xywck/zpJ20t4T+EYUQGHqXKcVyKbgbI+uTy9M6xdfK4pVmTPZltDBEAdczz5aEZIVsSk9OWbzyICm7EDnvfxd6oNcHciCrBKI6ivbM1hojdthCghc5+tuEmIq3QE+4+omozXxbpMLeCwR4qUEGVLMgMpnyBJmKjYp0Orl8Xolw/ujjs/Mway7FaY9ynvYmLTyrS+kedWa+ZzORlgHzZxjGrhtOsBorAuZHxqTu5Pz8Ci7AtzrELUEMUFBG+1+C2KhiBCq7zJBX9GOJcZdce/Xg9+8UOBAYLdZlHaJzMyGraDND6HxEczYHGriMkRHPO8RtzicScQ6FMsUOGG7DS4sHCudme+k1eC5MZzo2QX6w0cuvL1HHCcA2uVTfkwyYJZ/HPJPdJsrnMwj1cEJcxLiSvxY7pH/qM+H+5GK4rlecewNYuuWF4D9v9BfinvH2/9Op+xWFTJxnJsnhLlF0HVIvmuwVP+jHd8bsNBTvmTwiNmJCEBwJFDVDQYnjxJefMl4y8CJ0ocvQSJTDJkMctRzl2lBgI00liYzjoLZ2cXoZ9+Ig02U5TZFiq0+LcSnVadDp3u9K8eGvT7iM+HQyQe8M7GpaDkxUd35XgfwRgARGQtI0Wts2LNZVmegpKK6gY1zT8JCLR0AMz0DFw4MXJm4sKFmRaAKzfuRBYBACysL/jhs63jkv5eMhDm1pM4lrFMMwAcZf5Avl+gGTMdc8/JIS/TDICZ2FhoWeRuMcxJPnzpyYNXIZDD/Dg3ek5M9BLAwGjjuNpOHWtyZuE20kH3a7praQsAylLa7iGX2QwBDtLsxt/BSVjdpMQZkaubs1hFeFtPjsdR4E44BjQuc9Vaytyc2vsmOUGgDA0Eoxn+2lTGUiJIUDUEUJHPaY4Z14dRk0nlYGH8LjoXAghJc4GTTPcsgI7r74o32sx8UbD5ujIXr2WKIF4uqxAh8GpZvggxoK6OMDq5GSezz0iuGya5f7eTA8QX7ds2B+8X9padILBw20IxQ9MAAblBQaS+z1oNbrmOmLbwzJ6GAqReugiDFyeDBO+H0la+HmLkKvagTBa4Dzu192BBd3EuB+FI5y5Ez1A1O4CrHXnb5MyCpainxkgL7XTd+6TAQIUfLO+ApLqpPCEfkVAmICTmCca1TdVGZVbWgMqvLI0qqsyfKkbCjEacW0jVzCrmSPJUMbQsqaIRN0lSoTWdMR7jUcizKgp5gcvHdbomkgD8KaMBjC2vD/rL5jfAJA0AGHMQn+Pz75+KTxQhhbivJ9b/7wGQfeQhAkwBAOhP9gIQjWNIWMcVyEPsfCr9iQhOf3UoDJVnb47ndu7u6UST6CZaRW8xTswQHeLaY1arYNXX1QEQLSwMlfUvohWNormS2D/lzH8OmzRrD7n/69//f+8e7rBowawpe/XINvvBytfuHwfkoLEImqjQ828M0G+APgDnj0C8CwCTAbxEGN+QZOMZyIlLhAPMQGyqQhaZigFReNUihFXFADRiDYCAhPhQmEhwaqxAoohwkbp7gmD4UttHQs3paPI9ACqhs7pTvWGm4KqsdiIpdVXkEomxgC/U9OrGG5RlzSSEyqRSqiZUbeM4Vq8P4lWEEqqTe0domVAXrUFPlW56SmWEyNxpqFzNCBwnKuWi2dvMu7iqXXQGKnAWgzcXojOqTGa9oCRKGaG+HK+18IJAxQTelXIG6sIFu2pZXq/QmSIM3ZdsFfyJv0ZB/eKN1IOQEPr27pbiJ2dZKRHo5rbyxD2c+rjIqKucZ1mWyLUMkbsTLRPuTtUMu7k4lyZAax2oL0kQ2VbFiXmBRSmOp1RQ6TQGyt5cHN3TE34dq4xsTXBGSvUfE1yEL0fp0qyUpUGUTxQo9dLFVXHctr0L76rRspSNGkqJ8WYRlXm9tauHgXobnHiqym+pIUR1IHoNWZZomWjBmZBAtbdfmCpCZU3ilclb4U6vnQydFX04ANEA5npFn+rh8ZTk7mr9WIJ+6oTJkOHHJE4npQQt+gW6Z1J9W4Ughs+31Rjs0cJeYAzXBCCckWFAmPsERHnegwtWOAa5zfhlKQKfk1tDsEL6jggK2ofOcg/+7f8+JKgv/GCxeTw/P6piYwpFQUG1rDp9EU+uvO7+hnKC6lQLL5hNu2QgpHyPWeMYQgaaIz2uopFn9qYmoAaqWC+1a7O4+fYeN153M3SI8VeTs8I5Bq7NrpmoQSQLGrcAa/80XGsC/82rn+KgcgubtsJ5c5F46eVRIIR6HbJajGGkolfEpjGaIepxiIY82q2ifCxhMVXLIwgICRkZOLs4MiTCqyu43vSY6xS/eX5QDEngPvU+xA/n7RV31VzWyYAb06kqY7mFhRNKITor9TEymuEuhhh5k95rktcfX35P+3bjMDIFJ8ZoFl30POLcj7P5PTkIhZGxQoARRMDuRiOZBgSH+AGtbNk8ep3ALRljxdEOCL+twDDC6tBKEn4yeN2o2Bi/np4md1LilJnxGHb9zq7BWyPvUd1zqcIU4TCRJR/JXjEGZ0InNZFiAk3/2q8vOcXZ/mzV/XarSnICOWZYOMZe8HGCjIZ0TvM5vjJkF2SLr+oUc7kt09AxY6XmRrlvNM/P90dxmJXrhH2TwVmhG5nAe4JsuIvDr38acqi6ID+7imQRIH7JefGz7tU6dRKOwvHhUy+gHtEQ22FwHH1W1GG9WqubXfBQzGDUHBPXbee2RdSaWZjM8VocHHQ2VQMxe8xVNiqupaUFY1iypJqsS0ti1bJ/rOY4DJ2iKOV2M5fclm+qaOJSv/koz42Ru2k82pxeqlDRoaFLH0S1fwLE4MBwSm8yJMOBK3vFVWbQGrewb3ICIYM6mHMfObQLUXlqitcC3M2m4Cf6ccNNDKcDR8zMwbDdZzAa6iESaqCIfqCdMcIscOxfhNVc1mQlBUUsx7m+GMmPGnJF65qheh65FHHkSNpaM7w4D0dNtPMB3PggdfpBov4w7QdP0dRfeFxtekMrdHObllbIlpqasUUAxIxqxMF953w+BTg05ZIGAWuSPcDL4+D6YxN9dgtpLS0tqF7O9OpA3za4YE9tjyPbcfKontFjl1cIkq/qp4T0I2khuqbkveLDaNQ9ve/ozGHtYb0ro/1dTevtzp5RtQ4dRP41Yt4VPi8Eb7QPQWbXKAcZBiGHU20f6cioHQdBwZi3YtoNtZ5VF82PwCmh46bwIrYYDWZ+NdNs4cr2WMaCakr9Azgnl2BNRtMweKH34zXzVaBHyvGTR+hxCjlUwl5XjY5d856qkZy4NAUPx6jLzEerRXeIYXS2hvkoJ2tGHjrrAY/Vh/m1Rp7mPbk2zmSrZojkARxaqQHIAP+iRXToZZC/M36i3HE1w2WapoT07jy2Qu3N47IXujE4dzvWpWBuNMvNMY7DAv61dDHMr0mTF0CMzL2R8oKTTbIB1KoAg3JhiYTb03UMd3FWLvJAxhmctljawTFxGejYjqwjOHwHkRQd2ecjoityfFhuXHYRwGutDXZrOoajtwERfG7DFSCvgU5VbQ4ea73PHxGMS9C6VEQ8vCayapWDs9W4ePO/SCW/ATZoQ44uMSurKdmEjscyLCoPbSSQcTMcgRWmSKxTNKrQcEKeuW/dn43DhFwdqgcg6U3IYSYT6xptL8Lik/F2MDfSUuKjr8qGKdjhnRWyW4cMH516zPvl4BTcvATieYMDdOGurXblg6XJHeUqc8yl+wLycSDZ6eUt7Te3Z9yPYekM5GczNWKj1rTUqqEpFh59mfQOJjDP2F4hK8dxNQnVEH1xk2JohM84wzaY+/ugcbwB1v4AIZephLOy7anLIpRcgUTLmjVGK9ifDKOn8SW+Ci1zmCAPhiVP87eIynvpQ71nuacCPS2F/NJgOVeYbEmGC/aSQX5qoD0LrJMUFd8D/b6ldnbABUVe7u+Nh2yw42xqwQmhotX9LWESZjqcZHOTXE+MLaEL4lzRlQL5T91LUHddv3yQCTDy7MNAIHq//3jD9bwWdsp9IKuhe7isXixkdWIeneV1qxUsRGr5bG867ZArycwvg78ibORCKwJWpxECYEWftIqjQTg2cXAv2+78BmLMHnNZhx3X/eDifKgds3avPSFdKODG+5Piamm7wj+HLiPVXnG/uys2VV82Xw4nIpGRCeE3GchAjZbLOIEz3+Iloz1gkC4M6DjMErkT/EXxZdbJWR1g7eAnO4GkMD/xhSH6kHMKxqghT4REFPaRP3ciGAQY6+OoT+gEshm0Rvfw1vKsqmsN0WVQgEOuyEElatjkA2pIDEsHhNRTk5Wmoxj1ZoKWQ5Zj1TdB4y41mXWiTtaMwum8StbBJ2aCN6f3gHm2XkW5L153E3XhssWjb9ZbhmH6EOq4JOeOsWWVnXw6iTwh/vSyBVQmOsovTtrxeVo+WOjz0vPT/dnMhOnTw0qI4N6C7H3pXFVNrYT56oNMXEzWtmA4/epPr80DEcNh3HSerepFoAB5X+DDNNkdBWtfnQJpVM20w7oLQ6NpgNGgF+Xk4TC45snODx7nK8GmwCScOPhdgTEr8jOsIZ4QZfDvrBGvs8lm3/6qBkmX7BMBlCMeqgGw0RN08vWlkolO5qNdZaTYtNfxwiypYEZeTkBTJQ5zvmD4Fdr0Ec3NlcoYnOE8PRsyJI+h5P3fK+NmWIyox/zRRZiZYmXzIFyvJarsdydunq8VRTbZJNVSAhwynLM2mROiNcDx1NoXaVd0XLqsJU3zRErIUAMJUWq+SIvwcUrg5NJdCKOOVpVwoBEDJc/EBQ2wkE2HPiDbwtTQUUYsAOkCaxa+hvB/TEn/c6dkhHjTKZnJ6CyPVbLpJSxETGYlbP3hQZZfcuHhRuUon3SsDvnTAlMJd6jkgrlJHP2mgNSh3NSXrsUZ5+chRFV/EeAKhwIaUvonDyPnTuEH9swmPjJrJOKEQRc0ro7tHO/nPbdv3y9pj+GdFciPzdvFIj7YvFop55CCJzls8zb6xw/x1CckmoShzL/a0xRUNCVA56Wo6h7TRKFq6oyDvDpOZnsk/RrEoMrA9qoSlMk6hLSqfq6SkhJLAi4Sq4sEvifl5qVrRg4Co/dVZknQeWyUGyikSuc66QWWJkHzYKi3UAjoqs10ZSB2sDY9T18Ttv+liKkor5K628ZeQG3cNwvkBb/02jw+0WAQGZWCp6kMX5wixNQc0gnXNPVMeKx3GghEXdNYzPZ1AwCvKqNCb9Xf32nvvhhqamI8tRnZS/SMYG7DlfcB5u+k6uacoLe9+BC68PQ2iPVugBwLPfrxXVdlOCWxHeMMKC9oIKF15Sw3DkOXMiXB9ugeAPGGCBcXECggRADhOBj8iRmiazBzZ7Ek1eVz8xBLHBHKb7O8HrXXBF9GQKEKxd3JGnCJUVpHiq5h6CYYhh8iaBj0LRy86KE/g+EnYm5H9enRbMRO9b4xpUlFj9ZUVr2AmgTC/yaEphmx31c4eB9yLtyZr6CZGcvWHoBeZOYU40CXFfb+2eaoUd45dI26vmWFB5ZIAugDj4Od7t6lJ98GtMUKq7c5af6skx18lNeUaQ9dcFmkc0CsvFNDM+wIjj7L0bRl4JwlPVujqzeDMmd7BrbKnSoYnCwEJmuEfOpJuvymNDZS6hvCeq19gpEqiPwXWk3MmphdJ+hLrAU/fu9tV+6BCXJrxS+PPV43MOLhebwGkVrp0V3jbKxEtXm6tk12znuzk7HJrbvJKbXB67jHuXH6/pvJ2P+Pp4HZfIYrpPDWBP7mus3e+pKKUbNyR+GZbjqZXqdwYnsz5IEclje3Cu0y6WT7TE1vNsT8IPNSZ41py5OcVd5xH+hX9YrNnqz2vNqgftiK8Z8I5ypwtxLuQ78li/1Oe2wBz+z0xl5T5kG95mCmseZ/53S3ThaWnaCu8eyIxLLqcKNrhJE1ScVtkqb67yIw/yEsNq01ViDR2u8zZHKFCjWkk53ennElS0gvOkSiscqEXzkLzMQy1DRKYJbmIp4J1XFLBscy2cI49U9YeSJCHYhS/FpEV3ynJHWmZf58KUnjdjg9j8jmRvQn0ap0IFmgP3lgoOEPXuff7f8oxxy1pfI411pQ4nfm8YU512TQpACW4TMmV4xNeXL+Hr5nWvbfhnnrg0UQuZ6bO8PW7OKXCK0hjfVdYzsiHz2r8p/zZ4bvcneRI1K0odP136XgC7h8vf7/sO1R4FXYg/u4+7cDbl/CXXoANHvPPEwRPvorP5H9RsUsomeCKFfff9yAzm5YdF75p/ousMmAyhsIUHYDWLQbuJhxeNLj0ETN4cnXHYZMcxlSUxN/hPPxTgXwY+sveW/c5VMJmg6XOsE/+CoWk+E6uBBg1pdrnjdotN77/K2azm5LP3bzF/7es0g71KcVOca8NE3PXBArhR5i8q2geiovEUDwumpt1eOD7CJ1tot5vW1lZnLGnnWt8Ua3REHWE+Vf1Ao/E1KopoYYxgnSchI2SGcbzx7zT0x2DjH5bPNv6DKcfggBe7xf92u2Dj4Bi7MP8eFXN34+AmIS/SUVvBAb5t8nf3fHm2t/cB5quEP45VaC5fkc3L58zBmxuniorjnxNuhUPVE9ZzcHmELRHJSPLA0ExJyfvD+YX6rk4qzlf1Er/U0oZie7ByzEyK9sKPq0f0eTj/WRH1146+zFezr/FIRsOtPuFN1SfBEs2n1ZTSnI2jh6BggvOLJd7P89V1J2XrSVsD7vy+JlDPjDnmFZrOWrd2Sab0vdm6s3WVt8pjmS0Wzq8jo79p1ztyFQlh8oP4FJKgpI3qpzF9S6F9fZ4DA2F5C43l0AhLsuHL83UFglYxHsFS+plb5lxNEQLq0bLMbIi1LKy3NrDlQ2oPErSdnT9IIQrnI0F9hqPhSgY6m6Wit+uGbgpebiec+LZwI7jnWMg1enrwRcubx3owDcL6/uh7GO44BcVqn7qkqljI9VvhzYQfH4GDn+7S1lcGZKaGOIyV8VNUOko+Sf0tnWyBynUr8lB6EkBxOeXJHVM3aU+ODmpJ6xnV8gcs9U/rq6i9jXGlymYrYYZr7+cXb3qcm9jQWNV72EHvxOiY5VW99UbxvwyW3O1EGkZjjG5yyYgRI/uyL9TALvhon/rVf+PR0BC+GMt2lWSwC1FtrWKja0jHqaXzX2l45o9+Bg9gDbQiAjkkIl4jhOHJuPFsR6xnayiWJKDOia3xsq61QckpelfgJZfytPGYIbfdkj8zOZJ88eoFf4ooZSHGw+F8Jy0ovA9cI75fIi8ZoXzBngwHHnzu6bccDlajuPU37QhO+QuAPUmq3dZSE4J1VsCIzDEJmCmwgCEim+G+fOxhk3l7ppUDZfeKGpH1FnX8JdAVuckZThzQ+PZPJPnfoixF1R4VEN6LppN2aHXdRI6AUW2h+N90S4Bzi3BkbhNr7uNkRmZJXRd4fKBsRDALWWAFPir8ZTYTJMHejkCK4KKHDCSF/gvhYFkwZIMGgEM2t8XP/ZnbV1dYp0ekLoL+Ut1Cl8p9cwmlBW+IdkwY2kbfAgy+AZmDZx9udP4mE2TBxlbKFDuUzUWgG66COsJic/ptgVegHhXR+45rBT9w2W/dsaZ5otKxy8a3wU5+3mIOn4WLu2ubpbmlFW7x/1H0XwLkK84hcvFdJmVhyEhg2JdVDeJ9+zZRHbcbtHF3Wzl3ijJ/VHTwPnNdxgr3Z9gyFCFTJo69gIb5HvZVpWu9LCFcZITQiXDAjKmSV/qEwKvTxsdmR6KdPQOGuZwoydxG+T8GDONTdn78+/qyZY73Rqm7tZs3cvIMyMk7Fh/h7fv3DE1hJP5YdxVaLG2kJuzxTp4mJHsKztZvbqwlGetEiUcDFVEOtPjufLfGQcCuDZR0vjSpXkoRCe34sHpYamTWVxG329Rxysr6uJ2oKCem6CSR5d6SfJwWWNznBKmreWkXt8bJ1vK+3eaEK1u7aA+jW7v+DQ7dwMlmOPxrXUVdPjxOLnBG+G7f4CyhpG5qgut+ASG+6BSacbSmvdeso75kkwFWY/BFOLU2+TLWPhXzar/5t/5grBsetKP+oZMhwPU/s+r/48F74Gc1bmDb0Xt1zU/T1PhPmwAJzSwpw+mwM2RfBdmDsddK8sHqVA8Zp/Hfi1AHUbxTnu9ONwCmjf2JGQ63LZhTOQJKHD7VFNGMsgurBc2CBiDY3vxKTs2uhTCDm8BdqQnmBDahK5BnL+GowdkP+UPxQexMb4BxFxwAL2gsobQsLKqPBBKAJHDPLHsIPCJ7+vwduA5NOyabnpVHEUeNv+XdA7+HaZcebojrLrUY5P4c/XPkkmFMsXuhAg96igeuK0qvr71SnykpuxPhirvO8tdGQ2pwYpuhwT3VcrXB8rnZ7yGw5Ps2GkuoCqclhACRcyT4aGst10ZbH136cHaYxrf27Kq86PXddX9Bgi3SBBIOBBWJBpXWx2qKaKL+tBQpqg+NSK+oZf27c0GdJ4BXdlfwZD7IBsl0jwMNeVRx2J+TLUiwPzH41dd+z5AbICbXp9/Z9X9LN4OvTX3SgIdNlt3v7mo8b1j2wfmfBZUdmMisB6CBJmybKZfvlRihDydBJIeOtdwzy0Hdq+WgcVQ6RVCkSx/Ki0b4tGxNF/JW2O0eFgLtiDmE33DeV4ZkqiD5bq0vGDa96svEcj+l153b8XU6SuJxs8tZuTVWRtmDRTwY+ToT509a+WFKeWsD9PQSfMia/wImPsHy6K564jJouikiOJG4Hdm09l/7JJ3L3HwhMgLyiYT/tN7x+poqFCIW+BPAEg3/+y3CKHoYNv8t7fSICCIdIqFfx1p3l0/cRmlZStZyQXxepwf7Wmu/JKzNlQHm/JfQMUUMT6Z9hHEZAfRLpBhd4/e//9yXToMiSoyplUYiFg9ebb1xfXjbHtvvpk9M/9wa0YU7y+l5grdIUC+dJbGnuf0CSaJxYyG1rQO0xNRfldD861SgIOJvF3rT4A0kuaTJQehz5ubDcml94sPeaPP9V1Mn3Tpp93bf6jtqru//+NQhEzV5Q4SuMdGU6frU2v/+fWPvL3lxZboI1r+dG42MN880n4BaL1pcu0cUKtyjcHl3o0ClJAQHc2iGTiOAqhBExea9CvzS6I4tNHMxdSJ95htwK7BUcPrY7PyWN7d+Te5CK/yd5nMsqj4vGob3ocdjtGbykm3vNA3OvhvrhTznVZPZw7lq3VMfat2KB5gNpJJUGkLSfCZ7ZCWxXEUNrNbDMbnlB+VMcGqsf2ib+/ZIjjnv2tmmYV00iKjoCe3yCBG1AoxKyWFEu40E4orPf6xtXrwHQdMoeCDXK9nP+he0j19RZtdFp088R/EsMhIkRLVQlfuBeCMlzlcCLUD8VuWRn+vwElQ8LShQ0LHGg/xGm6OvgzBVJCAmB5XcBA8SWScgkX6oCiT3r6pynEVdw49RpWxUeoA6tOuwYz5d7KNP34dfDlV9DrFSe1SeeZ5Yy4tRTxy0mH3GS2b7GT41ngxk0zKw/2bke1rJHDZAI4nu3rNY/hSxOMluZ6azlF6Od1JoBORetksqgb3S7eA4SNaWagrWkPfg/I4LqkmW0keA+4dN+Iksl0HglcL68zfkI5RW9tbrSUJvAxXvO+7HhYIAsjr7WgvNuDy8F8h/8YnnJ4dd4j643yIMEvOmURKYlRgLkHWrRGy39BVEgxT7Ss15736thiSW1iHyD954fT5xANoUnrmImdgUs2R9cHlKMLltAFbfiJDdurquzcihbR+R94jAjNgAQp81MEoUFgsHdSlNCVH5DdWfJ4vYZLuKT0pFb4mSCBiOQtSL016z3rG4NnRWPTmTGBtazQqliWhUlcklc0KDQ6MQohvxvfp+jWQNOr1fKbUn2AQfBtVZqBhxCrT5R+K850SZNKK4v0IuRHArqkipJYz5BU0kRga3MH1k+3742u9K4R1Sh+clwnnmz03ihCXc7eaK99fdr2bsJvwnku4ZcAP2Jq8EmRlEPit5hkQkXLeLvZFmkaZH0ENk/sP2MRTmSeedYdyRUVb2yUd2fisI2yniwcwIgZhfztggLx49CH/zmAX/3sePDSfOz4FO70vPu60cPex/Y6T4x4Htr777E2tif/gYdY3PiPo0WVPRJvFm0ZEuyXVphxvjQ3zYsFW0VDJGBnXuUMbpHQJO5fblgPOwpKgS/z4VL1w0Y+Oak9CO34ld95nzsxxsettfhybYwOy+lw5/owrDyKAxww4Cfr2ZZmzbB6uvnAli+ChlEjJcC1o80jAVeOgYjC51VI68/NOlaYP5OZc7Qkb2+qXjeUqu1OMQxp1KJjFjpb22xb9CzatgDP9gp5hxSL7m4uds5R64O1PlFBPnCDs15m4dIdthkBNuBNLiYg2av8WP1WaaaEHzI4hRxe9c/FbD54FfbwNO70rYBbs7jZh8m59Vs86t+ChE5NXJlK0shRHQrFViKsZyPVv/0QrizAkUbGUMlBL+N+8ASOCzE9GXh29BdmUstESmEGR9Ou93gb8QJjQqR6zqOxFdlFdeY8pPppno1bKNaB4mIKsI8950GQRINhmHHmxVPHqOs7yoDDO53p/xEIX2ISizRreyg0eL446tlx+/5mk2Sby6PJHeT3hZScwPqcFGgV1CjM4JbuXb8NdXc9gtnLb/4wSqRpnKSiWJ0PL00exvERpCqafVanMsH6l3XEs/Mt74nnchwLDcFshiBie3Q1jFnqdf4QZC7yDfRyfksA9hZuQhuoCxIO8WA0zAc4bxrHh8ngJQjCWOg+YXbKRH5K9oXJpatg+uRsS5V6WDVVrbRhp1Ajpwd+Zq1hmGt7D8C72D4sTJEdd50O2xTCiIWrYHPmZKEwtbbtJ/B4xc4vTFYA/m/5YP6EvqvsV8pnl3LqqaXMFj7vW9edGw/XHmDNEZCFW6aWG560e7ulEEmYi5sFn9fdTwp7z3oR80X1LR3cbu7HD9aBkJucQjyMs11AC8//b8vBI8O+uLimKIzyEWZ/r7UoTpQYmMBIELnDTbCWn4XR8UH1ETSjyNrULL1UFUarQPnM6B+fZ0rgPTCxs8fvLOUKtdI7qq7rvDLPa+oJDjlkNjOdUQfaVOYV/PtYMjatLDjBUpNNYHgtS242/RXHr1OKtlgs3PYdJdqXzn9J1X4SGPho/4pPleyZgfI8pYSCWlqqsHenvqCqrQ8SYYvnlvpxpP6tZmhHUbkbh229NNqxruDvX6i343M49Re+2PG3L4GFeOb22PaRKOzui3f7+3p7q3p6Nv5q8Rp/PqN9fUXzXwBHqF97Clo8eOe4zpNHT48x07yTWrwla9ybj8Vjdncsl/oitv833P/Hbb9JDmPbqtKGv6EYLUxeEK352YX2SJ6aB0VikYI0/1e0hsUDkyWsk0rEfqHj5Zg2A9VMm2ENO1oNf3uLtltwjNq3zsjxI4k9xZgYUQZWwB16XcyN2xaRxDdaQ9KLR4Zad6YnC2OxWM4xbgS7/H8HVhQtzUlvCpPYo3eVtDHX+ajeb1tt7VtNUA8fY2RpcZQgzOvWb9uO4Gbjt4uiX0I84/R8uq50+qfCT0vj3Da6LEBWuxuyUvlpSJk8xn+2xKCSjrfmUrN99Av1k1QxeklmNeXNj8S6HNTV1/FmK/Qozu/aEGXvKGzLBX1xGWR4sZ4fTjEKGiNq6Zgas3mBgfksZvVV/1toJtKf/s4nnEg7cLQhv6EAHDfAL7BSLP7L5gKjppDHlrcAvzHHQmohvyaF2l9gf0akOGPCsTZvafq1dmex6oxNbxgfe1GT7paq8DBmJee4pyjdlMCupB75079NxWqlHdsQxqjVFSei6W5QjyAA1QU9PBJ5J/Zl3J0Ez28ewn8vTZ//LHR+1ae5aYu/pQdP584aCbrwPw4t8BLpPIW9RG6XRsCrIjtwIgluyq3FMZYbwz+IIR7GrJI5Vu5CrsmJRd2FktBvL20r7vlqFPSqxcSfJ9hXNBeFu1Bp9MO4PbMzo5DXvRez1pkafL7WimTKpsHRZdXMlX01AiWD0Sb9BO12jZt+2b7pRQKfxc+/bxnvEmFwXxWFz+F73NG36hMnreVbAUQvp38O8HC7dTfKl0M3BWtAJazzI8wXeJOdcGRZS1IwwuuWV8d17lrN/tZhpNH9RgfiLSmfS8zDs4Dy4uia/UeIPfOIJSuLkhSfRIetitIUsCt1INM+317LAF1cxk2sETDrOYL/tYlzXWpxOGDUrrsH/+0uftzKvQQOtNQ7r9at80x8jtnw9dSL8sXUaXAwpIaN7ySIfXNIV4RNgeSSpJSdh/rsB3mpNFdX1/jUGKhtb1dterGUEtgkvBKV4zP6I6jbaVXvlPzcVRWDfIqMVbnZ0J2s6wdmkQQlAXFDhVdkmVhFenEYIhuBUWKQS5xH4FWYY/rI2/2xt9LWZqZrNRoKbHGelrnLz7k4FlPX2OZsykAkOmb6tHRZIhQ3KHmjNwQUv91Qc0h0IwHyg8JXu1ZZUBSM82rfu2e3OkOQ/rd0OZxuPT8L0nesNULGmVDoxL7Ve14GcAvC0F9v0un/qusJ8VGwV3F5YDeJx1PvLU7KnEBTO4rGYSnd5gj1TRo0Zne35S0OsR6dhy0Lo6veYLGk/1btpvCj5UWGabtld5m7qNfo2st1uupLJZK/kh2sg+pWS6A0SLebWGZo03N5bN2XkjaMs7UGlJzD4YmqUl06VrDbh2VsAs/8RX78wpC2OFGOdLMplhbm53rwfLBtI3l33gvtZ8E35a87JxLdMj/QJSsgn6Y1vedAmT7DuA0sRTUk8/ScSt4DQ8qQK4GZm9QpbImW2qOIrOP+A9Q4gABAbQOQ//8DJTgH8dqsAReJ2Oa4agE8Re8Q7sRJXC+2DzlFgbKFMJOBkkLBOLKaDPQodDLQI9wkYLxjVTzETAAAMABQHwAABgBA3NfNeQOOa+4xW7nVByOmQJH4HtV8va7nlnio9NMquQuNqG9083u88NuSeuw+DKMMoljeJurxyg+TAnQGvxUEkBVEPfYcRjauPG+7PobnsHnGnW5v9BwCgKS935WWpqqEb1TOvAQAp/9W6TLlH94jHYcVACgMhkR4AwD/60D5jFDVHvJzJ8kD6Mqt3wrQe/aK2NJMUCIhqQHcOgpS7Warpo9LnEwDCRHAu6TgUc38WhaCxvcdzUxutYoqvuCRRHBLQ5KYQZ12rPU/v7TknHacRuh8cwTwQTHlJWeIa7usbSfNFPpsLrW+QDVKia54rXeDwtQSMOW+DRX0naP5RW8jVW+qxFnGjvWEZw1PLlmfdaT9o0NOzN8ZhNxWQitXIu9RK2eyUEior4Cjj5gX6FKAqydUnK4LGaUGkIWre9qNeiaCtKLrOqQTOiaAtHvikOLjDsIojD0p9QFXm1lqNEkaI9EBMJfIUg7wUcCh4Fm9GCsZxtYL4F1I0L/HGIhKJic/FZ7m80/fddoeWX3V4iggoY5zqfdsFnSsEFJn+I7TteXyzUtdxFbLhZVaskVK5pBfIGKlg1qlqleCk1knAgIVWRRzMrQ3ovLBMnagGp5YK9TUKs0fWtInWYBGJdihSUBgm7x4ftPeKJc3YTKBEFjhIxfpUPeyUNDBzekS+Ey2gsoOdQIC26AE3DWKnXTowa9TqFxhra+6azPTqD+l65cXi0AQB3v76okKjpkpCWz4dZaTd309EZZW5L1cPA+rD+UkWYazNWyyL7XOT9Z/o/8AulB3jktzdv6BFjRbTaYSgR3lJgUAPk1TbTAfDRYADYB9BjEVmcGU5TbDKCtwP+mTBL3+M1K+NfPvjlJEHZTOrkYvtdprqx0Hka+W/IhsQoUJE0jsPVOhV2itgp3Wame8dsB73DeCOfp+FMSxp2At3aozP1zVQ/tmEpXdveum7kat3CaLXRcmTZHmOveMiqxSteCZOrGKmscOa9WycTUXtRFabrtts1Nb3e5qHtqWPMWtuEkMSdydcarhKoTcVXtBgujKwULbPFJvqywIzBjboUacECG6ajlIews5dBUMkJ/LYHa12gpRLEsBDAAA6raxOaTnbx4GG5J6hdn4twxT1DRvEQZvD6banOa3BbstVh48efHmw5cffwECBQkWIvK/LTbhIkSKEi1GrDjxEiRKkixFqjTpMmTKki1Hrjz5ChQqUqxEqTLlKlSqUq2e+hpoqJHGmmiqmeZhWGKoYfaZ7qXhxhtjnlWWxsBotw0xxWdfjDPDSEfc98l8q33z1XeLrXPKCeu10NJErZzR2kmnXXDWOee90sYVF12yQVsfTXLdVde088Y7o3TQXkedddLFQnb/qVGrq24cuuvhtZ5666WPfvraaZEB+htokLfe2+1GBDbalARuuueWzbbYboejttrmmBHW2O+AvUmRDMb6EEUsHHQoDskRjxRIiVRILev2qn1oaGpomZOB2z/jmn/eUk6tvaZda/5znbhPCguQ7wsEvd1strBI3OYR8ye01+ZO0jbH36oqKm37w90hl2v/wO5o3vIjtpoZx20H) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><script src="https://cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js" defer></script><script src="/js/paper.js" defer></script><script src="https://www.googletagmanager.com/gtag/js?id=xx-xxxxxxx-xx" async></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'xx-xxxxxxx-xx');</script><link rel="stylesheet" href="/css/tocbot.css"><script src="/js/tocbot.js" defer></script><script>window.addEventListener('DOMContentLoaded', () => {
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '.toc__content',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '.article__content',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+    orderedList: false,
+    collapseDepth: 2,
+  });
+})</script><link rel="preload" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"><meta name="generator" content="Hexo 6.0.0"></head><body><div class="mask-border"></div><div class="head"><div class="head__inner"><h1><a href="/">Nicole Zhang</a></h1><p>East China Normal University  |  Software Engineering  |  Bachelor 2023</p></div></div><div class="paper-container"><div class="main"><div class="location-bar"><div class="line-1"><div class="horizontal-line" style="height: 3px"></div></div><div class="line-2"><div class="horizontal-line" style="height: 1px"></div></div><p class="text">JavaScript Basic</p><div class="switch-button"><input class="container_toggle" type="checkbox" id="switch" name="mode"><label for="switch">Toggle</label></div><div class="line-3"><div class="horizontal-line" style="height: 1px"></div></div></div><div class="main__2-col"><article class="post-view__article"><div class="article__infomation"><div class="posts-item"><h2 class="posts-item__title"><a href="">JavaScript Basic</a></h2><span class="post__date">2021-08-09</span><a href="/tags/Javascript/"><span class="post__tags">#Javascript</span></a></div></div><div class="article__content"><h2 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h2><p>caiyi 2021&#x2F;7&#x2F;30</p>
+<h3 id="一、初识JS"><a href="#一、初识JS" class="headerlink" title="一、初识JS"></a>一、初识JS</h3><p><strong>解释型语言和编译型语言：</strong></p>
+<p>程序语言翻译成机器语言，一种是编译，一种是解释</p>
+<p><strong>编译器</strong>在代码执行之前编译，生成中间代码文件</p>
+<p><strong>解释器</strong>是在运行是进行及时解释，并立即执行</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210802170554.png" alt="image-20210731102954630"  />
+
+<p>运行在客户端的脚本语言，不需要编译，运行过程中由js解释器逐行来进行解释并执行</p>
+<p>现在也可以基于node.js技术进行服务器端的编程</p>
+<ul>
+<li><p><strong>作用</strong>：表单动态校验，网页特效，服务端开发，桌面程序，app，物联网，游戏开发</p>
+</li>
+<li><p>浏览器执行JS简介：</p>
+<p>渲染引擎：解析HTML&#x2F;CSS</p>
+<p>JS引擎：读取网页中的JS代码，对其处理后运行，chorme的V8，执行代码时逐行解释每一句源码</p>
+</li>
+<li><p><strong>JS组成</strong>：ECMAScript(语法)，DOM(页面文档对象模型)，BOM(浏览器对象模型)</p>
+<p>ECMAScript</p>
+</li>
+<li><p><strong>三种写法</strong>：</p>
+</li>
+</ul>
+<p>行内样式，可读性差在html中编写JS，不方便阅读</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;点我试试&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;alert(&#x27;hello world&#x27;)&quot;</span>/&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>内嵌式，最常用的</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"> <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;s沙漠&#x27;</span>);</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>外部JS文件，中间不可以写代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&#x27;my.js&#x27;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>注意：JavaScript中都使用单引号</p>
+<ul>
+<li><strong>注释</strong>  &#x2F;&#x2F; (ctrl+&#x2F;)  &#x2F;**&#x2F;  (shift+alt+A)</li>
+<li><strong>输入输出语句</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>归属</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>alert(msg)</td>
+<td>浏览器弹出警示框</td>
+<td>浏览器</td>
+</tr>
+<tr>
+<td>console.log(msg)</td>
+<td>控制台打印输出信息</td>
+<td>浏览器</td>
+</tr>
+<tr>
+<td>prompt(info)</td>
+<td>弹出输入框</td>
+<td>浏览器</td>
+</tr>
+</tbody></table>
+<p><u>注意：prompt取过来的值都是字符型的</u></p>
+<ul>
+<li><p><strong>JS的变量</strong></p>
+<p>变量是在内存中用于存储数据的容器空间</p>
+<p>变量的初始化：1.声明 2. 赋值</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> age;<br><span class="hljs-keyword">var</span> urname = <span class="hljs-title function_">prompt</span>(<span class="hljs-string">&#x27;请输入姓名&#x27;</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(urname);<br><span class="hljs-title function_">alert</span>(urname);<br></code></pre></td></tr></table></figure>
+
+<p>声明变量的特殊情况</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>说明</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>var age;  console.log(age);</td>
+<td>只声明，不赋值</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>console.log(age);</td>
+<td>不声明 不赋值 直接使用</td>
+<td>报错</td>
+</tr>
+<tr>
+<td>age &#x3D; 10;  console.log(age);</td>
+<td>不声明 只赋值（不提倡，会变成全局变量）</td>
+<td>10</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p><strong>变量命名规范：</strong></p>
+<p>由字母&#x2F;数字&#x2F;下划线&#x2F;美元符号组成</p>
+<p>严格区分大小写</p>
+<p>不能以数字开头，符号只能美元符号&#x2F;下划线</p>
+<p>不能是关键字&#x2F;保留字（var for）</p>
+<p>变量名必须见名知意&#x2F;驼峰式命名</p>
+</li>
+</ul>
+<p>案例：交换两个变量的值</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> change1, change2 = <span class="hljs-number">21</span>, change3 = <span class="hljs-number">34</span>;<br>change1 = change2;<br>change2 = change3;<br>change3 = change1;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(change2,change3);<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="二、数据类型"><a href="#二、数据类型" class="headerlink" title="二、数据类型"></a>二、数据类型</h3><p>JavaScript是一种弱类型或者说动态语言，不用提前声明变量类型，在运行过程中自动确定</p>
+<p>js拥有动态类型，变量的数据类型是可以变化的</p>
+<p><strong>获取变量类型</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">10</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-keyword">typeof</span> num); <span class="hljs-comment">//number</span><br><span class="hljs-keyword">var</span> timer = <span class="hljs-literal">null</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-keyword">typeof</span> timer); <span class="hljs-comment">//object</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>简单数据类型</strong>（Number，Boolean，String，Undefined，Null）</p>
+<ul>
+<li><p>number：八进制前加0，十六进制前加0x</p>
+<p>Number.MAX_VALUE</p>
+<p>Number.MIN_VALUE</p>
+<p>Infinity 无穷大</p>
+<p>NaN  isNaN() 判断是非数字</p>
+</li>
+<li><p>String：单引号</p>
+<p>长度计算 str.length()</p>
+<p>两个引号嵌套，外单内双或外双内单</p>
+<p>转义符\n \t \b</p>
+<p>字符串拼接用加号 ‘tianguan’ + ‘cifu’</p>
+<p>字符串 + 其他类型 &#x3D; 字符串</p>
+</li>
+<li><p>Boolean</p>
+<p>true参与加法运算当1，false当0</p>
+<p>true +1 &#x3D; 2</p>
+<p>flase + 1 &#x3D; 1</p>
+</li>
+<li><p>undefined 未定义的数据类型</p>
+<p>一个声明后没有被赋值的变量会有一个默认值undefined</p>
+<p>var variable &#x3D; undefined;</p>
+<p>variable + ‘caiyi’ &#x3D; ‘undefinedcaiyi’</p>
+<p>variable + 1 &#x3D; NaN</p>
+</li>
+<li><p>Null</p>
+<p>var space &#x3D; null;</p>
+<p>space + ‘caiyi’ &#x3D; ‘nullpink’</p>
+<p>space + 1 &#x3D; 1</p>
+</li>
+</ul>
+</li>
+<li><p><strong>复杂数据类型</strong>（object）</p>
+</li>
+</ul>
+<p><strong>数据类型转换：</strong></p>
+<p>转换为字符型</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">1</span>;<br>str = num.<span class="hljs-title function_">toString</span>();<br>str = <span class="hljs-title class_">String</span>(num);<br>str = num + <span class="hljs-string">&#x27;&#x27;</span>; <span class="hljs-comment">//隐式转换</span><br></code></pre></td></tr></table></figure>
+
+<p>转换为整型</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&#x27;530.9&#x27;</span>;<br>num = <span class="hljs-built_in">parseInt</span>(str); <span class="hljs-comment">//530, 只能得到整数，向下取整，不会四舍五入</span><br>num = <span class="hljs-title class_">ParseFloat</span>(str); <span class="hljs-comment">//得到浮点数</span><br>num = <span class="hljs-title class_">Number</span>(str);<br>num = str - <span class="hljs-number">0</span>;<span class="hljs-comment">// 用 - * / 做隐式转换</span><br>num = str * <span class="hljs-number">1</span>;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&#x27;3.94&#x27;</span>)); <span class="hljs-comment">//3</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&#x27;120px&#x27;</span>)); <span class="hljs-comment">//120</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&#x27;rem120px&#x27;</span>)); <span class="hljs-comment">//NaN </span><br></code></pre></td></tr></table></figure>
+
+<p>转化为布尔型</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Boolean</span>(varb);<br><br><span class="hljs-title class_">Boolean</span>(<span class="hljs-string">&#x27;&#x27;</span>);    <span class="hljs-comment">//false</span><br><span class="hljs-title class_">Boolean</span>(<span class="hljs-number">0</span>);     <span class="hljs-comment">//false</span><br><span class="hljs-title class_">Boolean</span>(<span class="hljs-title class_">NaN</span>);   <span class="hljs-comment">//false</span><br><span class="hljs-title class_">Boolean</span>(<span class="hljs-literal">null</span>);  <span class="hljs-comment">//false</span><br><span class="hljs-title class_">Boolean</span>(<span class="hljs-literal">undefined</span>);<span class="hljs-comment">//false</span><br><span class="hljs-comment">//除了以上五种情况其他都是true</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="JS命名规范"><a href="#JS命名规范" class="headerlink" title="JS命名规范"></a>JS命名规范</h5><p>标识符命名规范：变量、函数的命名必须要有意义，变量一般使用名词，函数一般使用动词</p>
+<p>操作符命名规范：一般操作符前后都由空格</p>
+<p>单行注释规范：单行注释前有个空格</p>
+<p>其他规范：括号前后空格，花括号对齐</p>
+<h3 id="三、运算符"><a href="#三、运算符" class="headerlink" title="三、运算符"></a>三、运算符</h3><p>运算符operator也成为操作符</p>
+<h5 id="1-算数运算符-x2F"><a href="#1-算数运算符-x2F" class="headerlink" title="1. 算数运算符 +-*&#x2F;%"></a>1. 算数运算符 +-*&#x2F;%</h5><p>浮点数运算会出现误差，尽量不使用</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0.1</span> + <span class="hljs-number">0.2</span>) <span class="hljs-comment">// 0.30000000000000004</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0.07</span> * <span class="hljs-number">100</span>) <span class="hljs-comment">//7.000000000001</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num == <span class="hljs-number">0.3</span>) <span class="hljs-comment">//false</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="2-递增递运算符"><a href="#2-递增递运算符" class="headerlink" title="2. 递增递运算符"></a>2. 递增递运算符</h5><p>前置递增：先加一，后返回值</p>
+<p>后置递增：先返回原值，后自加</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">10</span>;<br>++num + <span class="hljs-number">10</span> <span class="hljs-comment">//21</span><br>num++ + <span class="hljs-number">10</span> <span class="hljs-comment">//20</span><br><br><span class="hljs-keyword">var</span> e = <span class="hljs-number">10</span>;<br><span class="hljs-keyword">var</span> f = e++ + ++e; <span class="hljs-comment">//22</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="3-比较运算符"><a href="#3-比较运算符" class="headerlink" title="3. 比较运算符"></a>3. 比较运算符</h5><p>&lt; &gt;  &gt;&#x3D; &lt;&#x3D;</p>
+<p>&#x3D; 赋值（把右边的值给左边）</p>
+<p>&#x3D;&#x3D; 默认转换数据类型（把字符串型数据转换为数字型）</p>
+<p>&#x3D;&#x3D;&#x3D;全等（值和数据类型一模一样）</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">18</span> == ‘<span class="hljs-number">18</span>’); <span class="hljs-comment">//true</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">18</span> == ‘<span class="hljs-number">18</span>’); <span class="hljs-comment">//false</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="4-逻辑运算符"><a href="#4-逻辑运算符" class="headerlink" title="4. 逻辑运算符"></a>4. 逻辑运算符</h5><p>与&amp;&amp; 或|| 非!</p>
+<p>逻辑与： 表达式1 &amp;&amp; 表达式2 </p>
+<p>两个都是 true 结果才是 true</p>
+<p>逻辑或：表达式1 || 表达式2</p>
+<p>两个都是 false 结果才是false</p>
+<p><strong>逻辑中断（短路运算）</strong>：</p>
+<p>当多个表达式值可以确定结果时就不再继续运算右边表达式的值</p>
+<p>运算符优先级</p>
+<img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20200314164506416.png" alt="pink-JSP54运算符优先级" style="zoom: 80%;" />
+
+
+
+<h3 id="四、流程控制"><a href="#四、流程控制" class="headerlink" title="四、流程控制"></a>四、流程控制</h3><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210731120750599.png" alt="image-20210731120750599"></p>
+<h4 id="1-顺序结构"><a href="#1-顺序结构" class="headerlink" title="1. 顺序结构"></a>1. 顺序结构</h4><p>按照代码先后顺序，依次执行</p>
+<h4 id="2-分支结构"><a href="#2-分支结构" class="headerlink" title="2. 分支结构"></a>2. 分支结构</h4><p>if\if-else；如果if条件表达式结果为真，则执行大括号的代码</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">if</span> () &#123;&#125;<br><span class="hljs-keyword">if</span> () &#123;<br>    ....<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    ....<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html">//case 1<br><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;if语句案例&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;wangba()&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">		<span class="hljs-keyword">function</span> <span class="hljs-title function_">wangba</span> () &#123;</span><br><span class="language-javascript">			<span class="hljs-keyword">var</span> wbage = <span class="hljs-title function_">prompt</span>(<span class="hljs-string">&#x27;how old r u&#x27;</span>);</span><br><span class="language-javascript">			<span class="hljs-comment">// if((Number(wbage)) &gt;= 18)&#123;</span></span><br><span class="language-javascript">			<span class="hljs-comment">// 	alert(&#x27;come in&#x27;);</span></span><br><span class="language-javascript">			<span class="hljs-comment">// &#125;</span></span><br><span class="language-javascript">			<span class="hljs-keyword">if</span> (wbage &gt;= <span class="hljs-number">18</span>) &#123;</span><br><span class="language-javascript">				<span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;come in&#x27;</span>);</span><br><span class="language-javascript">			&#125;</span><br><span class="language-javascript">		&#125;</span><br><span class="language-javascript">	</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html">//case 2 判断闰年<br><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;判断闰年&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;every4Year()&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">		<span class="hljs-keyword">function</span> <span class="hljs-title function_">every4Year</span> () &#123;</span><br><span class="language-javascript">			<span class="hljs-keyword">var</span> urYear = <span class="hljs-title function_">prompt</span>(<span class="hljs-string">&#x27;年份&#x27;</span>);</span><br><span class="language-javascript">			<span class="hljs-keyword">if</span>(uryear % <span class="hljs-number">4</span> == <span class="hljs-number">0</span> &amp;&amp; uryear % <span class="hljs-number">100</span> != <span class="hljs-number">0</span> || uryear % <span class="hljs-number">400</span> == <span class="hljs-number">0</span>)&#123;</span><br><span class="language-javascript">				<span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;闰年&#x27;</span>);</span><br><span class="language-javascript">			&#125;<span class="hljs-keyword">else</span>&#123;</span><br><span class="language-javascript">				<span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;平年&#x27;</span>);</span><br><span class="language-javascript">			&#125;</span><br><span class="language-javascript">		&#125;</span><br><span class="language-javascript">	</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>三元表达式：</p>
+<p><code>条件表达式 ? 表达式1 : 表达式2 ;</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">10</span>;<br><span class="hljs-keyword">var</span> result = num &gt; <span class="hljs-number">5</span> ? <span class="hljs-string">&#x27;yes&#x27;</span> : <span class="hljs-string">&#x27;no&#x27;</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(result); <span class="hljs-comment">//表达式是由返回值的</span><br></code></pre></td></tr></table></figure>
+
+<p>switch：</p>
+<p>多分支语句 进行匹配 可以多选一</p>
+<p>特定值比较合适，有范围的用 if else更合适</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">switch</span>(表达式)&#123;<br>	<span class="hljs-keyword">case</span> <span class="hljs-attr">value1</span>: 执行语句; <span class="hljs-keyword">break</span>;<br>	<span class="hljs-keyword">case</span> <span class="hljs-attr">value2</span>: 执行语句;<br>	<span class="hljs-attr">default</span>: 执行语句;<span class="hljs-keyword">break</span>；<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> melon = <span class="hljs-title function_">prompt</span>(<span class="hljs-string">&#x27;水果&#x27;</span>);<br><span class="hljs-keyword">switch</span>(melon)&#123;<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;apple&#x27;</span>: <br>			<span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;5.5yuan&#x27;</span>);<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;banana&#x27;</span>:<br>			<span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;bananayuan&#x27;</span>);<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;西瓜&#x27;</span>:<br>			<span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;dont wanna melon&#x27;</span>);<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-attr">default</span>:<br>			<span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;nothing&#x27;</span>);<br>			<span class="hljs-keyword">break</span>;<br>	&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-循环结构"><a href="#3-循环结构" class="headerlink" title="3. 循环结构"></a>3. 循环结构</h4><p>for循环：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> sum = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">for</span>(i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">100</span>;i++)&#123;<br>    sum += i;<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(sum);<br></code></pre></td></tr></table></figure>
+
+<p>双重for循环：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> star = <span class="hljs-string">&#x27;&#x27;</span>;<br><span class="hljs-keyword">for</span>(i=<span class="hljs-number">1</span>; i&lt;=<span class="hljs-number">10</span>; i++)&#123;<br>    <span class="hljs-keyword">for</span>(j=i; j&lt;=<span class="hljs-number">10</span>; j++)&#123;<br>        star += <span class="hljs-string">&#x27;⭐&#x27;</span>;<br>    &#125;<br>    star += <span class="hljs-string">&#x27;\n&#x27;</span>;<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(star);<br></code></pre></td></tr></table></figure>
+
+<p>while循环：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> doage = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">do</span>&#123;				<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(doage);<br>    doage++;<br>&#125;<span class="hljs-keyword">while</span>(doage &lt;= <span class="hljs-number">10</span>);<br></code></pre></td></tr></table></figure>
+
+<p>断点调试：在浏览器中F12进入开发者模式 -&gt; source -&gt; 找到文件 -&gt; 单击行号打点 -&gt; F11 下一步</p>
+<p>continue：跳出本次循环，进入下一次循环</p>
+<p>break：跳出整个循环</p>
+<h3 id="五、数组Array"><a href="#五、数组Array" class="headerlink" title="五、数组Array"></a>五、数组Array</h3><p>在一个JavaScript数组，你可以放任意不同的数据类型</p>
+<h5 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(); <span class="hljs-comment">// 1.利用new创建空数组</span><br><span class="hljs-keyword">var</span> arry = [];  <span class="hljs-comment">// 2.利用数组字面量</span><br><br><span class="hljs-keyword">var</span> arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-number">2</span>); <span class="hljs-comment">// 创建了长度为的为2的空数组</span><br><span class="hljs-keyword">var</span> arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-string">&#x27;caiyi&#x27;</span>, <span class="hljs-number">100</span>); <span class="hljs-comment">// 等价于 [&#x27;caiyi&#x27;, 100] 表示2个数组元素</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arry = [<span class="hljs-string">&#x27;关羽&#x27;</span>,<span class="hljs-string">&#x27;张飞&#x27;</span>,<span class="hljs-string">&#x27;马超&#x27;</span>,<span class="hljs-string">&#x27;赵云&#x27;</span>,<span class="hljs-string">&#x27;黄忠&#x27;</span>,<span class="hljs-string">&#x27;刘备&#x27;</span>,<span class="hljs-string">&#x27;姜维&#x27;</span>];<br><span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>;i &lt;= <span class="hljs-number">6</span>;i++) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arry[i]);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>数组的长度（元素个数）：arr.length;</p>
+<h5 id="新增元素"><a href="#新增元素" class="headerlink" title="新增元素"></a>新增元素</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 1.修改length长度新增数组元素</span><br><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br>arr.<span class="hljs-property">length</span> = <span class="hljs-number">5</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr);    <span class="hljs-comment">//[1,2,3,empty x 2]</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr[<span class="hljs-number">3</span>]); <span class="hljs-comment">//undefined</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr[<span class="hljs-number">4</span>]); <span class="hljs-comment">//undefined</span><br><br><span class="hljs-comment">// 2.修改数组索引新增元素</span><br><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br>arr[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>; <span class="hljs-comment">// replace</span><br>arr[<span class="hljs-number">3</span>] = <span class="hljs-number">4</span>; <span class="hljs-comment">// append</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr);    <span class="hljs-comment">//[0,2,3,4]</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="筛选数组"><a href="#筛选数组" class="headerlink" title="筛选数组"></a>筛选数组</h5><p>可以用 newArr.length 作为插入的下标索引</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">6</span>,<span class="hljs-number">1</span>,<span class="hljs-number">77</span>,<span class="hljs-number">0</span>,<span class="hljs-number">52</span>,<span class="hljs-number">0</span>,<span class="hljs-number">25</span>,<span class="hljs-number">7</span>];<br><span class="hljs-keyword">var</span> newArr = [];<br><span class="hljs-comment">//刚开始 newArry.lengrh 就是0 </span><br><span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span> ;i &lt; arr1.<span class="hljs-property">length</span>; i++) &#123;<br>    <span class="hljs-keyword">if</span> (arr1[i] &gt;= <span class="hljs-number">10</span>) &#123;<br>        newwArr[newArr.<span class="hljs-property">length</span>] = arr1[i];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>];<br><span class="hljs-comment">// 比较四趟</span><br><span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; arr1.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; i++) &#123;<br>    <span class="hljs-comment">//每趟比较次数不同</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; arr1.<span class="hljs-property">length</span> - i - <span class="hljs-number">1</span>; j++) &#123;<br>        <span class="hljs-comment">// 每个数两两比较</span><br>        <span class="hljs-comment">// if 里的 j 写成了 i ，出错 原因咦想通，花费30分钟</span><br>        <span class="hljs-keyword">if</span> (arr1[j] &gt; arr1[j + <span class="hljs-number">1</span>]) &#123;<br>            <span class="hljs-keyword">var</span> temp = arr1[j];<br>            arr1[j] = arr1[j + <span class="hljs-number">1</span>];<br>            arr1[j + <span class="hljs-number">1</span>] = temp;<br>        &#125;<br>    &#125;<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr1);<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="六、函数"><a href="#六、函数" class="headerlink" title="六、函数"></a>六、函数</h3><h5 id="声明和调用函数"><a href="#声明和调用函数" class="headerlink" title="声明和调用函数"></a>声明和调用函数</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 1.利用函数关键字自定义函数（命名函数）</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">fun</span> () &#123;<br>	......;<br>&#125;<br><span class="hljs-comment">// 2.函数表达式（匿名函数）fun是变量名，不是函数名</span><br><span class="hljs-keyword">var</span> fun = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;&#125;;<br><br><span class="hljs-keyword">var</span> fun = <span class="hljs-keyword">function</span> (<span class="hljs-params">aru</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;我是函数表达式&#x27;</span>);<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(aru);<br>&#125;<br><span class="hljs-title function_">fun</span>(<span class="hljs-string">&#x27;pink老师&#x27;</span>);<br></code></pre></td></tr></table></figure>
+
+<h5 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h5><p>形参是接受实参的，类似于一个变量</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">cook</span>(<span class="hljs-params">aru</span>) &#123; <span class="hljs-comment">//形参</span><br>	<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(aru);<br>&#125;<br><span class="hljs-title function_">cook</span>(<span class="hljs-string">&#x27;javascript&#x27;</span>);  <span class="hljs-comment">//实参</span><br></code></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数个数</th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实参等于形参个数</td>
+<td>输出正确结果</td>
+</tr>
+<tr>
+<td>实参多于形参个数</td>
+<td>只取到形参的个数，多余的不要</td>
+</tr>
+<tr>
+<td>实参小于形参个数</td>
+<td>多的形参定义为 undefined ，结果为 NaN</td>
+</tr>
+</tbody></table>
+<h5 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a>函数返回值</h5><p>函数只是实现某种功能，最终的结果需要返回给函数的调用</p>
+<p>只要函数遇到 return 就把后面的结果返回给函数的调用者</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//求任意两数和</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">getSum</span>(<span class="hljs-params">num1, num2</span>) &#123;<br>    <span class="hljs-keyword">return</span> num1 + num2;<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">getSum</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>));<br><br><span class="hljs-comment">//求数组中的最大值</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">maxfun</span>(<span class="hljs-params">arr</span>) &#123; <span class="hljs-comment">//arr接受一个数组		</span><br>    <span class="hljs-keyword">var</span> max = arr[<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>;i &lt; arr.<span class="hljs-property">length</span>;i++) &#123;<br>        <span class="hljs-keyword">if</span> (max &lt; arr[i]) &#123;				<br>            max = arr[i];<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> max;			<br>&#125;<br><span class="hljs-comment">//实参送一个数组过去</span><br><span class="hljs-comment">//用一个变量来接收 函数的返回结果 </span><br><span class="hljs-keyword">var</span> re = <span class="hljs-title function_">maxfun</span>([<span class="hljs-number">5</span>, <span class="hljs-number">22</span>, <span class="hljs-number">99</span>, <span class="hljs-number">101</span>, <span class="hljs-number">67</span>, <span class="hljs-number">77</span>]);<br></code></pre></td></tr></table></figure>
+
+<p>可使用数组返回多个值 return [num1 + num2, num1 - num2] </p>
+<p>函数都有返回值，有 return 则返回对应的值，否则返回 undefined</p>
+<h5 id="argument的使用"><a href="#argument的使用" class="headerlink" title="argument的使用"></a>argument的使用</h5><p>当不确定有多少个参数传递时可以使用 arguments 来获取，它是当前函数的一个<strong>内置对象</strong>。所有函数都内置了一个 arguments 对象，存储了所有实参</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fun</span> () &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">arguments</span>); <span class="hljs-comment">//[1,2,3]</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable language_">arguments</span>.<span class="hljs-property">length</span>; i++)&#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(argument[i]);<br>    &#125;<br>&#125;<br><span class="hljs-title function_">fun</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);<br></code></pre></td></tr></table></figure>
+
+<p>arguments 是一个伪数组：</p>
+<ol>
+<li>具有数组的 length 属性</li>
+<li>按照索引的方式进行存储</li>
+<li>没有真正数组的一些方法 pop()，push() 等</li>
+</ol>
+<p>利用函数求任意个数的最大值：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">getMax</span> () &#123;<br>    <span class="hljs-keyword">var</span> max = <span class="hljs-variable language_">arguments</span>[<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-variable language_">arguments</span>.<span class="hljs-property">length</span>; i++) &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">arguments</span>[i] &gt; max) &#123;<br>            max = <span class="hljs-variable language_">arguments</span>[i];<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> max;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="七、作用域"><a href="#七、作用域" class="headerlink" title="七、作用域"></a>七、作用域</h3><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p>作用域：代码名字（变量）在某个范围内起作用和效果，目的是减少命名冲突</p>
+<h5 id="作用域分类"><a href="#作用域分类" class="headerlink" title="作用域分类"></a>作用域分类</h5><p>es6之前分为两大类：<strong>全局作用域</strong>（整个script 标签或者一个单独的js文件），<strong>局部作用域</strong>（函数的内部）</p>
+<p><strong>全局变量</strong>在全局作用下使用，在局部变量内没有声明的变量也是全局变量</p>
+<p><strong>局部变量</strong>在局部作用下（在函数内部），只能在函数内部使用（函数的形参也是局部变量）</p>
+<p>特殊情况：在函数内部，没有声明直接赋值的变量也属于全局变量</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fun</span> () &#123;<br>    <span class="hljs-keyword">var</span> num1 = <span class="hljs-number">10</span>;<br>    num2 = <span class="hljs-number">20</span>;<br>&#125;<br><span class="hljs-title function_">fun</span>();<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num1);<span class="hljs-comment">//error</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num2);<span class="hljs-comment">//20</span><br></code></pre></td></tr></table></figure>
+
+<p>两个变量的区别：</p>
+<p>全局变量只有在浏览器关闭时才会销毁，比较占内存资源</p>
+<p>局部变量当程序执行完毕就会销毁，节约资源</p>
+<p>扩展： js 在 es6 中新增块级作用域，花括号包裹即为<strong>块级作用域</strong>（{} if{} for{}）</p>
+<h5 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h5><p>内部函数访问外部函数表变量采取链式查找的方式，概括为<strong>就近原则</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">10</span>;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span> () &#123;<br>    <span class="hljs-keyword">var</span> num = <span class="hljs-number">20</span>;<br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">fun</span> () &#123;<br>        <span class="hljs-keyword">var</span> num = <span class="hljs-number">30</span>;<br>    &#125;<br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">funct</span> () &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num); <span class="hljs-comment">//30</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="八、预解析"><a href="#八、预解析" class="headerlink" title="八、预解析"></a>八、预解析</h3><h5 id="案例引入"><a href="#案例引入" class="headerlink" title="案例引入"></a>案例引入</h5><p>引入1</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num); <span class="hljs-comment">//undefined</span><br><span class="hljs-keyword">var</span> num = <span class="hljs-number">10</span>;<br></code></pre></td></tr></table></figure>
+
+<p>引入2</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">fn</span>(); <span class="hljs-comment">//11</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span> () &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">11</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>引入3</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">fun</span>(); <span class="hljs-comment">//error</span><br><span class="hljs-keyword">var</span> fun = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">22</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="预解析的作用"><a href="#预解析的作用" class="headerlink" title="预解析的作用"></a>预解析的作用</h5><p>JS代码是由浏览器中的JS解析器来执行的</p>
+<p>JS 解析器在运行js代码时分为两步： 预解析和代码执行</p>
+<p><strong>预解析</strong>：js 引擎把 js 中所有的 var 和 function 提升到当前作用域的最前面</p>
+<p><strong>代码执行</strong>： 按照代码书写顺序从上往下执行</p>
+<p>① 变量预解析（变量提升）：把所有变量&#x3D;&#x3D;声明&#x3D;&#x3D;提升到当前的作用域最前面，不提升赋值操作</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num); <span class="hljs-comment">//undefined</span><br><span class="hljs-keyword">var</span> num = <span class="hljs-number">10</span>;<br><span class="hljs-comment">//预解析以后相当于执行了以下代码</span><br><span class="hljs-keyword">var</span> num;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num);<br>num = <span class="hljs-number">10</span>;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">fun</span>(); <span class="hljs-comment">// error</span><br><span class="hljs-keyword">var</span> fun = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">22</span>);<br>&#125;<br><span class="hljs-comment">//预解析以后相当于执行了以下代码</span><br><span class="hljs-keyword">var</span> fun;<br><span class="hljs-title function_">fun</span>();<br>fun = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">22</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>② 函数预解析（函数提升）：把所有&#x3D;&#x3D;函数声明&#x3D;&#x3D;提升到当前作用域最前面 不提升函数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">fn</span>(); <span class="hljs-comment">//11</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span> () &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">11</span>);<br>&#125;<br><span class="hljs-comment">//预解析以后相当于执行了以下代码</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span> () &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">11</span>);<br>&#125;<br><span class="hljs-title function_">fn</span>(); <span class="hljs-comment">//11</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="预解析案例"><a href="#预解析案例" class="headerlink" title="预解析案例"></a>预解析案例</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">10</span>;<br><span class="hljs-title function_">fun</span>();<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">fun</span> () &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num); <span class="hljs-comment">//undefined</span><br>    <span class="hljs-keyword">var</span> num = <span class="hljs-number">20</span>;<br>&#125;<br><span class="hljs-comment">//预解析以后相当于执行了以下代码</span><br><span class="hljs-keyword">var</span> num;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">fun</span> () &#123;<br>    <span class="hljs-keyword">var</span> num;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(num); <span class="hljs-comment">//undefined</span><br>    num = <span class="hljs-number">20</span>;<br>&#125;<br>num = <span class="hljs-number">10</span>;<br><span class="hljs-title function_">fun</span>();<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">f1</span>();<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(c);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(b);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a);<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">f1</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">var</span> a = b = c = <span class="hljs-number">9</span>;<br>    <span class="hljs-comment">//相当于 var a = 9; b = 9; c = 9;</span><br>    <span class="hljs-comment">//b 和 c 直接赋值，没有 var声明，作全局变量</span><br>    <span class="hljs-comment">//集体声明应用逗号隔开 var a = 9, b = 9, c = 9;</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a); <span class="hljs-comment">// 9</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(b); <span class="hljs-comment">// 9</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(c);	<span class="hljs-comment">// 9			</span><br>&#125;<br><br><span class="hljs-comment">//预解析以后相当于执行了以下代码</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">f1</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">var</span> a;<br>    a = b = c = <span class="hljs-number">9</span>;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a); <span class="hljs-comment">// 9</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(b); <span class="hljs-comment">// 9</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(c);	<span class="hljs-comment">// 9			</span><br>&#125;<br><span class="hljs-title function_">f1</span>();<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(c); <span class="hljs-comment">//9</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(b); <span class="hljs-comment">//9</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a); <span class="hljs-comment">//报错，因为b、c是全局变量，a是局部变量</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="九、对象"><a href="#九、对象" class="headerlink" title="九、对象"></a>九、对象</h3><h5 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h5><p>对象是一组无序的相关<strong>属性和方法</strong>的集合</p>
+<p>所有事物都是对象，例如字符串、数值、数组、函数等</p>
+<p><strong>属性</strong> ：事物的特征，在对象中用属性来表示（常用名词）</p>
+<p><strong>方法</strong>： 事物的行为，在对象中用方法来表示（常用动词）</p>
+<h5 id="创建对象的三种方式"><a href="#创建对象的三种方式" class="headerlink" title="创建对象的三种方式"></a>创建对象的三种方式</h5><ol>
+<li>利用字面量 {}</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> obj = &#123;&#125;; <span class="hljs-comment">// 创建了一个空的对象</span><br><span class="hljs-keyword">var</span> obj = &#123;<br>    <span class="hljs-attr">uname</span>: <span class="hljs-string">&#x27;zhangcaiyi&#x27;</span>,<br>    <span class="hljs-attr">age</span>: <span class="hljs-number">18</span>,<br>    <span class="hljs-attr">sex</span>: <span class="hljs-string">&#x27;女&#x27;</span>,<br>    <span class="hljs-attr">sayHi</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Hi!&#x27;</span>);<br>    &#125;<br>&#125;<br><span class="hljs-comment">// 属性或方法采用键值对的形式 属性名: 值 </span><br><span class="hljs-comment">// 多个属性间用&#x27;,&#x27;隔开</span><br><span class="hljs-comment">// 方法&#x27;:&#x27;后面跟的是一个匿名函数</span><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>利用 new Object</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>(); <span class="hljs-comment">// 创建了一个空对象</span><br>obj.<span class="hljs-property">uname</span> = <span class="hljs-string">&#x27;zhangcaiyi&#x27;</span>;<br>obj.<span class="hljs-property">age</span> = <span class="hljs-number">18</span>;<br>obj.<span class="hljs-property">sex</span> = <span class="hljs-string">&#x27;女&#x27;</span>;<br>obj.<span class="hljs-property">sayHi</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Hi&#x27;</span>);<br>&#125;<br><span class="hljs-comment">// 利用等号 = 赋值的方法添加对象的属性和方法</span><br><span class="hljs-comment">// 每个属性和方法之间用&#x27;;&#x27;结束</span><br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>利用构造函数</li>
+</ol>
+<p>利用函数的方法，重复相同的代码，把对象中的<strong>相同属性和方法</strong>抽离出来封装</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">SuperStar</span> (uname, age, sex) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = uname;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">age</span> = age;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">sex</span> = sex;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">sing</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">song</span>) &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(song);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">var</span> gd = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SuperStar</span>(<span class="hljs-string">&#x27;GD&#x27;</span>, <span class="hljs-number">30</span>, <span class="hljs-string">&#x27;man&#x27;</span>); <span class="hljs-comment">// 调用构造函数 返回的是一个对象</span><br><span class="hljs-keyword">var</span> jay = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SuperStar</span>(<span class="hljs-string">&#x27;Jay&#x27;</span>,<span class="hljs-number">40</span>,<span class="hljs-string">&#x27;man&#x27;</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-keyword">typeof</span> gd); <span class="hljs-comment">//object</span><br>jay.<span class="hljs-title function_">sing</span>(<span class="hljs-string">&#x27;稻香&#x27;</span>);<br><br><span class="hljs-comment">// 构造函数名首字母要大写</span><br><span class="hljs-comment">// 构造函数不需要 return 就可以返回结果</span><br><span class="hljs-comment">// 调用构造函数必须使用 new</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="使用对象"><a href="#使用对象" class="headerlink" title="使用对象"></a>使用对象</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(obj.<span class="hljs-property">uname</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(obj[<span class="hljs-string">&#x27;uname&#x27;</span>]);<br>obj.<span class="hljs-title function_">sayHi</span>();<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="概念辨析"><a href="#概念辨析" class="headerlink" title="概念辨析"></a>概念辨析</h5><ol>
+<li><p>变量&#x2F;属性&#x2F;方法&#x2F;函数辨析：</p>
+<p>变量：单独声明并赋值，使用时直接写变量名</p>
+<p>属性：在对象里不需要声明 使用时必须是 &#x3D;&#x3D;对象.属性&#x3D;&#x3D;</p>
+<p>函数：单独声明并且调用 &#x3D;&#x3D;函数名()&#x3D;&#x3D; 单独存在</p>
+<p>方法：在对象里调用时 &#x3D;&#x3D;对象.方法&#x3D;&#x3D;</p>
+</li>
+<li><p>构造函数和对象辨析：</p>
+<p>构造函数：如Star()，抽象了对象的公共部分封装，封装到函数里面，泛指一大类（class）</p>
+<p>对象：如new Star()，特指一个具体的事物，利用构造函数创建对象的过程也称为<strong>对象的实例化</strong></p>
+</li>
+</ol>
+<h5 id="new关键字"><a href="#new关键字" class="headerlink" title="new关键字"></a>new关键字</h5><p>new 在执行函数时会做四件事</p>
+<ul>
+<li>在内存中创建一个新的空对象</li>
+<li>让 this 指向这个对象</li>
+<li>执行构造函数内的代码，给新对象添加属性和方法</li>
+<li>返回这个新对象（所以构造函数里不需要 return）</li>
+</ul>
+<h5 id="遍历对象-for-in"><a href="#遍历对象-for-in" class="headerlink" title="遍历对象 for in"></a>遍历对象 for in</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> obj = &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;dora&#x27;</span>,<br>    <span class="hljs-attr">age</span>: <span class="hljs-number">18</span>,<br>    <span class="hljs-attr">sex</span>: <span class="hljs-string">&#x27;woman&#x27;</span>,<br>    <span class="hljs-attr">fn</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)&#123;&#125;<br>&#125;<br><span class="hljs-comment">// for (变量 in 对象)</span><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k <span class="hljs-keyword">in</span> obj) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(k);      <span class="hljs-comment">// 输出得到属性名name, age, sex</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(obj[k]); <span class="hljs-comment">// obj[k] 得到属性值，k不加引号噢</span><br>    <span class="hljs-comment">//按顺序依次输出：属性名和属性值</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="十、内置对象"><a href="#十、内置对象" class="headerlink" title="十、内置对象"></a>十、内置对象</h3><p>js 中对象分为： 自定义对象、内置对象、浏览器对象</p>
+<p>学会使用MDN查询文档：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">https://developer.mozilla.org/zh-CN/</a></p>
+<h5 id="MATH"><a href="#MATH" class="headerlink" title="MATH"></a>MATH</h5><p>不是一个构造函数，所以不需要 new 来调用，而是直接使用里面的方法和属性</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Math</span>.<span class="hljs-property">PI</span> 				<span class="hljs-comment">// 圆周率</span><br><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>()		    <span class="hljs-comment">// 向下取整</span><br><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">ceil</span>()				<span class="hljs-comment">// 向上取整</span><br><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>()			<span class="hljs-comment">// 四舍五入版 就近取整  -3.5 结果为 -3</span><br><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">abs</span>()				<span class="hljs-comment">// 绝对值</span><br><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>()	            <span class="hljs-comment">// 最大值</span><br><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>()	            <span class="hljs-comment">// 最小值</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//max方法说明</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-property">PI</span>);           <span class="hljs-comment">//一个属性 圆周率</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(<span class="hljs-number">1</span>, <span class="hljs-number">99</span>,<span class="hljs-number">3</span>)); <span class="hljs-comment">// 99</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(-<span class="hljs-number">1</span>, -<span class="hljs-number">10</span>)); <span class="hljs-comment">// -1</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(<span class="hljs-number">1</span>, <span class="hljs-number">99</span>, <span class="hljs-string">&#x27;pink&#x27;</span>)); <span class="hljs-comment">// NaN 有字符串或其他类型数据</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>());              <span class="hljs-comment">// -Infinity 空值返回负无穷</span><br></code></pre></td></tr></table></figure>
+
+<p>随机数方法random()</p>
+<p> Math.random() 返回一个 [0,1) 随机的小数</p>
+<p>Math.getRandomInt() 返回一个 [min, max) 的随机整数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">getRandomInt</span> (min, max) &#123;<br>    min = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">ceil</span>(min);<br>    max = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(max);<br>    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>( <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * (max - min) ) + min;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>Math.getRandomIntInclusive() 返回一个 [min, max] 的随机整数，包含 min 和 max</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">getRandomIntInclusive</span> (min, max) &#123;<br>    min = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">ceil</span>(min);<br>    max = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(max);<br>    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>( <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * (max - min + <span class="hljs-number">1</span>) ) + min;<br>&#125;<br><span class="hljs-comment">// 随机点名</span><br><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-string">&#x27;张三丰&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-string">&#x27;李思思&#x27;</span>];<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr[<span class="hljs-title function_">getRandomIntInclusive</span>(<span class="hljs-number">0</span>,<span class="hljs-number">3</span>)]);<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="DATE"><a href="#DATE" class="headerlink" title="DATE"></a>DATE</h5><p>跟math不一样的是，date是一个<strong>构造函数</strong>，必须用new来调用创建日期对象</p>
+<ol>
+<li>使用 Date 如果<strong>没有参数</strong>，则返回当前系统的当前时间</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> date = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(date); <br><span class="hljs-comment">//Sun Aug 01 2021 17:10:18 GMT+0800 (中国标准时间)</span><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>参数的常用写法：</p>
+<p>数字型 2020, 04, 05  数字用逗号隔开</p>
+<p>字符串型 ‘2020-04-05 16:34:59’ 日期用横线隔开，时间用冒号隔开</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> date1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-number">2020</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(date1); <br><span class="hljs-comment">// Fri May 05 2020 00:00:00 GMT+0800 (中国标准时间)</span><br><span class="hljs-comment">// 注意：返回的是5月，而不是4月</span><br><br><span class="hljs-keyword">var</span> date2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&#x27;2020-04-05 16:34&#x27;</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(date2);<br><span class="hljs-comment">// Sun Apr 05 2020 16:34:00 GMT+0800 (中国标准时间)</span><br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>格式化日期：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>日期格式化常用方法</th>
+<th>含义</th>
+<th>代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getFullYear()</td>
+<td>获取当年</td>
+<td>obj.getFullYear()</td>
+</tr>
+<tr>
+<td>getMonth()</td>
+<td>获取当月  0-11</td>
+<td>obj.getMonth()</td>
+</tr>
+<tr>
+<td>getDate()</td>
+<td>获取当天日期</td>
+<td>obj.getDate()</td>
+</tr>
+<tr>
+<td>getDay()</td>
+<td>获取星期几 （0-6）周日为0</td>
+<td>obj.getDay()</td>
+</tr>
+<tr>
+<td>getHours()</td>
+<td>获取当前小时</td>
+<td>obj.getHours()</td>
+</tr>
+<tr>
+<td>getMinutes()</td>
+<td>获取当前分钟</td>
+<td>obj.getMinutes()</td>
+</tr>
+<tr>
+<td>getSeconds()</td>
+<td>获取当前秒钟</td>
+<td>obj.getSeconds()</td>
+</tr>
+</tbody></table>
+<p>函数使用的举例：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> date3 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(date3.<span class="hljs-title function_">getFullYear</span>()); <span class="hljs-comment">// 返回当前日期的年 </span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(date3.<span class="hljs-title function_">getMonth</span>() + <span class="hljs-number">1</span>); <span class="hljs-comment">// 月份 0-11</span><br></code></pre></td></tr></table></figure>
+
+<p>格式化时分秒的例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">getTime</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">var</span> time = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br>    <span class="hljs-keyword">var</span> h = time.<span class="hljs-title function_">getHours</span>();<br>    h = h &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;0&#x27;</span> + h : h;<br>    <span class="hljs-keyword">var</span> m = time.<span class="hljs-title function_">getMinutes</span>();<br>    m = m &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;0&#x27;</span> + m : m;<br>    <span class="hljs-keyword">var</span> s = time.<span class="hljs-title function_">getSeconds</span>();<br>    s = s &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;0&#x27;</span> + s : s;<br>    <span class="hljs-keyword">return</span> h + <span class="hljs-string">&#x27;:&#x27;</span> + m + <span class="hljs-string">&#x27;:&#x27;</span> + s ;<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">getTime</span>());<br></code></pre></td></tr></table></figure>
+
+<p>获取日期的总的毫秒数（时间戳）：</p>
+<p>从1970年1月1日开始起到现在的毫秒数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 1. 通过 valueOf() getTime()</span><br><span class="hljs-keyword">var</span> date = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(date.<span class="hljs-title function_">valueOf</span>());<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(date.<span class="hljs-title function_">getTime</span>());<br><br><span class="hljs-comment">// 2. 简单的写法 （最常用）</span><br><span class="hljs-keyword">var</span> date1 = +<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(); <span class="hljs-comment">// +new Date() 返回的就是总毫秒数</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(date1);<br><br><span class="hljs-comment">// 3. h5 新增的 获得总的毫秒数</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Date</span>.<span class="hljs-title function_">now</span>());<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>倒计时：</li>
+</ol>
+<p>核心算法：输入时间减去现在的时间即倒计时，但不能拿时分秒相减，用时间戳来完成</p>
+<p>把剩余时间转换为天，时，分，秒</p>
+<p>公式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">d = <span class="hljs-built_in">parseInt</span>(总秒数/<span class="hljs-number">60</span>/<span class="hljs-number">60</span>/<span class="hljs-number">24</span>);	<span class="hljs-comment">// 计算天数</span><br>h = <span class="hljs-built_in">parseInt</span>(总秒数/<span class="hljs-number">60</span>/<span class="hljs-number">60</span>%<span class="hljs-number">24</span>); 	<span class="hljs-comment">// 计算小时</span><br>m = <span class="hljs-built_in">parseInt</span>(总秒数/<span class="hljs-number">60</span>%<span class="hljs-number">60</span>);        <span class="hljs-comment">// 计算分数</span><br>s = <span class="hljs-built_in">parseInt</span>(总秒数%<span class="hljs-number">60</span>); 		   <span class="hljs-comment">// 计算当前秒数</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 下面转换时间</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">countDown</span> (time) &#123;<br>    <span class="hljs-keyword">var</span> nowTime = +<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();       <span class="hljs-comment">// 获取当前时间</span><br>    <span class="hljs-keyword">var</span> inputTime = +<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(time); <span class="hljs-comment">// 获取输入的时间</span><br>    <span class="hljs-keyword">var</span> times = (inputTime - nowTime) / <span class="hljs-number">1000</span>; <span class="hljs-comment">// 剩余时间 秒数</span><br>    <br>    <span class="hljs-keyword">var</span> d = <span class="hljs-built_in">parseInt</span>(times/<span class="hljs-number">60</span>/<span class="hljs-number">60</span>/<span class="hljs-number">24</span>);<br>    d = d &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;0&#x27;</span> + d : d;<br>    <span class="hljs-keyword">var</span> h = <span class="hljs-built_in">parseInt</span>(times/<span class="hljs-number">60</span>/<span class="hljs-number">60</span>%<span class="hljs-number">24</span>);<br>    h = h &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;0&#x27;</span> + h : h;<br>    <span class="hljs-keyword">var</span> m = <span class="hljs-built_in">parseInt</span>(times/<span class="hljs-number">60</span>%<span class="hljs-number">60</span>);<br>    m = m &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;0&#x27;</span> + m : m;<br>    <span class="hljs-keyword">var</span> s = <span class="hljs-built_in">parseInt</span>(times%<span class="hljs-number">60</span>);<br>    s = s &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;0&#x27;</span> + s : s;<br>    <br>    <span class="hljs-keyword">return</span> d + <span class="hljs-string">&#x27;天&#x27;</span> + h + <span class="hljs-string">&#x27;小时&#x27;</span> + m + <span class="hljs-string">&#x27;分钟&#x27;</span> + s + <span class="hljs-string">&#x27;秒&#x27;</span> ;<br><br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">countDown</span>(<span class="hljs-string">&#x27;2020-4-7 16:00:00&#x27;</span>));<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="ARRAY"><a href="#ARRAY" class="headerlink" title="ARRAY"></a>ARRAY</h5><p>检测是否为数组的两种方式：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 1.instanceof</span><br><span class="hljs-keyword">var</span> arr = [];<br>consolo.<span class="hljs-title function_">log</span>(arr <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Array</span>); <span class="hljs-comment">//true</span><br><span class="hljs-keyword">var</span> obj = &#123;&#125;;<br>consolo.<span class="hljs-title function_">log</span>(obj <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Array</span>); <span class="hljs-comment">//false</span><br><br><span class="hljs-comment">// 2.Array.isArray()</span><br>consolo.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Array</span>.<span class="hljs-title function_">isArray</span>(arr));  <span class="hljs-comment">//true</span><br>consolo.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Array</span>.<span class="hljs-title function_">isArray</span>(obj));  <span class="hljs-comment">//false</span><br></code></pre></td></tr></table></figure>
+
+<p>添加删除数组元素：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>push(x)</td>
+<td>在数组末尾添加元素，修改i原数组</td>
+<td>数组长度</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>删除数组最后一个元素，把数组长度-1</td>
+<td>删除的元素</td>
+</tr>
+<tr>
+<td>unshift(x)</td>
+<td>在数组开头添加元素，修改i原数组</td>
+<td>数组长度</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td>删除数组的第一个元素</td>
+<td>第一个元素的值</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br>arr.<span class="hljs-title function_">push</span>(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>); <span class="hljs-comment">//[1,2,3,4,5]</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr.<span class="hljs-title function_">push</span>(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>)); <span class="hljs-comment">//5</span><br>arr.<span class="hljs-title function_">unshift</span>(<span class="hljs-number">0</span>) <span class="hljs-comment">//[0,1,2,3,4,5]</span><br></code></pre></td></tr></table></figure>
+
+<p>数组排序：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">arr.<span class="hljs-title function_">reverse</span>();  <span class="hljs-comment">//翻转数组</span><br>arr.<span class="hljs-title function_">sort</span>();     <span class="hljs-comment">//冒泡排序，把数字当成字符串排序，结果[1,13,4,7,77]</span><br>arr.<span class="hljs-title function_">sort</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>) &#123;<br>    <span class="hljs-keyword">return</span> a-b; <span class="hljs-comment">//升序排列 [1,4,7,13,77]</span><br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<p>返回数组索引号：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>arr.indexOf( ’blue‘ )</td>
+<td>从前面开始查找到的第一个元素</td>
+<td>不存在则返回 -1</td>
+</tr>
+<tr>
+<td>arr.lastIndexOf( ’blue‘ )</td>
+<td>从后面开始查找</td>
+<td>不存在则返回 -1</td>
+</tr>
+</tbody></table>
+<p>数组去重：</p>
+<p>核心算法： 遍历旧数组，拿着旧数组去查询新数组，该元素没出现过则添加，否则不添加</p>
+<p>利用 新数组.indexOf(数组元素) 返回 -1，则表示不重复</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">unique</span>(<span class="hljs-params">arr</span>) &#123;<br>    <span class="hljs-keyword">var</span> newArr = [];<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) &#123;<br>        <span class="hljs-keyword">if</span> (newArr.<span class="hljs-title function_">indexOf</span>(arr[i]) === -<span class="hljs-number">1</span>) &#123;<br>            newArr.<span class="hljs-title function_">push</span>(arr[i]);<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> newArr; <span class="hljs-comment">// 遍历完毕后返回</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>数组转换为字符串：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">arr.<span class="hljs-title function_">toString</span>();<br>arr.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;分割符&#x27;</span>);<br><br><span class="hljs-comment">//example</span><br><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>];<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr.<span class="hljs-title function_">toString</span>()); <span class="hljs-comment">//1,2,3</span><br><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&#x27;green&#x27;</span>,<span class="hljs-string">&#x27;pink&#x27;</span>,<span class="hljs-string">&#x27;blue&#x27;</span>];<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;-&#x27;</span>)); <span class="hljs-comment">//green-pink-blue</span><br></code></pre></td></tr></table></figure>
+
+<p>其他常用函数：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>作用</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>concat()</td>
+<td>连接两个或多个数组 不影响原数组</td>
+<td>返回新数组</td>
+</tr>
+<tr>
+<td>slice()</td>
+<td>数组截取slice(begin, end)</td>
+<td>返回被截取项目的新数组</td>
+</tr>
+<tr>
+<td>splice()</td>
+<td>数组删除splice(第几个开始，要删除的个数)</td>
+<td>返回被删除项目的新数组，会影响原数组</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> uniq1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];<br><span class="hljs-keyword">var</span> uniq2 = [<span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>];<br><span class="hljs-keyword">var</span> uniq3 = [];<br><span class="hljs-keyword">var</span> uniq4 = [<span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>];<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(uniq3.<span class="hljs-title function_">concat</span>(uniq1, uniq2)); <span class="hljs-comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(uniq1.<span class="hljs-title function_">slice</span>(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>)); <span class="hljs-comment">// [2,3] 默认不包括结束位置的元素</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(uniq1); <span class="hljs-comment">// 不变 [1, 2, 3, 4, 5]</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;uniq4+&#x27;</span> + uniq4); <span class="hljs-comment">// uniq4+6,7,8,9,0</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(uniq4.<span class="hljs-title function_">splice</span>(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>)); <span class="hljs-comment">//[8, 9]</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;splice后的&#x27;</span> + uniq4); <span class="hljs-comment">// splice后的6,7,0</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="STRING"><a href="#STRING" class="headerlink" title="STRING"></a>STRING</h5><p><strong>基本包装类型</strong>：把简单数据类型包装成为复杂数据类型，这样基本数据类型就有了属性和方法</p>
+<p>js 提供了三种基本包装类型：String，Number，Boolean</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> str = ‘uniq’;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(str.<span class="hljs-property">length</span>); <span class="hljs-comment">// 基本数据类型本无属性和方法</span><br><span class="hljs-comment">//但以上代码可执行是因为 JS 会把基本数据类型包装为复杂数据类型 执行过程如下：</span><br><br><span class="hljs-comment">// 1. 生成临时变量，把简单数据类型包装为复杂数据类型</span><br><span class="hljs-keyword">var</span> temp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(‘uniq’);<br><span class="hljs-comment">// 2. 赋值给我们声明的字符变量</span><br>str = temp;<br><span class="hljs-comment">// 3.销毁临时变量</span><br>temp = <span class="hljs-literal">null</span>;<br></code></pre></td></tr></table></figure>
+
+<p><strong>字符串的不可变性</strong>：</p>
+<p>指的是里面的值不变，实质改变的是地址 在内存中开辟了新的存储空间（指针改变了）</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210802170748.png" alt="image-20210802134137579"></p>
+<ul>
+<li>当重新给 str 赋值时， 常量 ‘andy’ 不会被修改，但依然在内存中</li>
+<li>重新给字符串赋值，会重新在内存中开辟空间 ‘red’ ，这就是字符串的不可变</li>
+<li>由于字符串的不可变，在大量拼接字符串时就会产生效率问题</li>
+</ul>
+<p><strong>返回字符的位置：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">str.<span class="hljs-title function_">indexOf</span>(x,a,b); <span class="hljs-comment">//从a的索引号开始查找x，到b（不包括）</span><br>str.<span class="hljs-title function_">lastIndexOf</span>(x);<br></code></pre></td></tr></table></figure>
+
+<p>例子：查找 ’abcosidfnoiojisoo’ 中所有o出现的位置以及次数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> str = ’abcosidfnoiojisoo<span class="hljs-string">&#x27;,</span><br><span class="hljs-string">var index = str.indexOf(&#x27;</span>o<span class="hljs-string">&#x27;);</span><br><span class="hljs-string">var num = 0;</span><br><span class="hljs-string">while(index !== -1) &#123;</span><br><span class="hljs-string">    console.log(index);</span><br><span class="hljs-string">    num++;</span><br><span class="hljs-string">    index = str.indexOf(&#x27;</span>red<span class="hljs-string">&#x27;, index + 1);</span><br><span class="hljs-string">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>根据索引号返回字符</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>str.charAt(index)</td>
+<td>返回指定位置的字符（index字符串的索引号）</td>
+</tr>
+<tr>
+<td>str.charCodeAt(index)</td>
+<td>获取指定位置处字符的ASCII码，判断用户按了哪个键</td>
+</tr>
+<tr>
+<td>str[index]</td>
+<td>获取指定位置处字符，h5, IE8+支持</td>
+</tr>
+</tbody></table>
+<p>例子：统计出现最多的字符和次数</p>
+<p>核心算法：利用 charAt() 遍历这个字符串</p>
+<p>把每个字符都存储给对象，若没有该属性就为 1，若存在了就 +1</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&#x27;abcoefoxyozz&#x27;</span>;<br><span class="hljs-keyword">var</span> obj = &#123;&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; str.<span class="hljs-property">length</span>; i++) &#123;<br>    <span class="hljs-keyword">var</span> chars = str.<span class="hljs-title function_">charAt</span>(i); <span class="hljs-comment">//chars 是字符串的每一个字符</span><br>    <span class="hljs-keyword">if</span> (obj[chars]) &#123;<br>        obj[chars]++;  <span class="hljs-comment">// 属性存在则加一</span><br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        obj[chars] = <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">var</span> max = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">var</span> ch = <span class="hljs-string">&#x27;&#x27;</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k <span class="hljs-keyword">in</span> obj) &#123;<br>    <span class="hljs-keyword">if</span> (obj[k] &gt; max) &#123; <span class="hljs-comment">// k是属性名</span><br>        max = obj[k]; <span class="hljs-comment">// obj[k] 是属性值</span><br>        ch = k;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>字符串操作方法</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>str.concat(str1,str2,str3…)</td>
+<td>连接两个字符串，等效于 +</td>
+</tr>
+<tr>
+<td>str.substr(start,length)</td>
+<td>(start索引号, length取的个数)</td>
+</tr>
+<tr>
+<td>str.replace(x, y)</td>
+<td>(‘被替换的字符’, ‘替换为的字符’)  只会替换第一个</td>
+</tr>
+<tr>
+<td>str.slice(start,end)</td>
+<td>删除子字符串，(开始位置, 结束位置) end取不到</td>
+</tr>
+<tr>
+<td>str.substring(start, end)</td>
+<td>基本与 slice 相同，但不取负值</td>
+</tr>
+<tr>
+<td>str.split(‘分隔符’)</td>
+<td>join 把数组转换为字符串，split把字符串转化为数组</td>
+</tr>
+<tr>
+<td>str.toUpperCase()</td>
+<td>全部转换大写</td>
+</tr>
+<tr>
+<td>str.toLowerCase()</td>
+<td>全部转换小写</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//把所有o都替换为i</span><br><span class="hljs-keyword">var</span> str = <span class="hljs-string">&#x27;ooooooooo&#x27;</span>;<br><span class="hljs-keyword">while</span> (str.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&#x27;o&#x27;</span>) != -<span class="hljs-number">1</span>) &#123;<br>    str.<span class="hljs-title function_">replace</span>(<span class="hljs-string">&#x27;o&#x27;</span>,<span class="hljs-string">&#x27;i&#x27;</span>);<br>&#125;<br><span class="hljs-comment">//分隔符举例</span><br><span class="hljs-keyword">var</span> str = <span class="hljs-string">&#x27;green-red-pink-blue&#x27;</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(str.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;-&#x27;</span>)); <span class="hljs-comment">//[green,red,pink,blue]</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="简单数据类型和赋值数据类型"><a href="#简单数据类型和赋值数据类型" class="headerlink" title="简单数据类型和赋值数据类型"></a>简单数据类型和赋值数据类型</h5><p>简单类型又叫做基本数据类型或者 <strong>值类型</strong>：在存储中就是值的本身</p>
+<p>string, number, boolean, undefined, null</p>
+<p>复杂类型又叫做 <strong>引用类型</strong>：在存储时变量中存储的仅仅是地址（引用）</p>
+<p>通过 new 关键字创建的对象（系统对象、自定义对象），如 Object、Array、Date等</p>
+<p>栈（操作系统）：由操作系统自动分配释放存放函数得参数值、局部变量得值等，<strong>简单数据类型存放到栈里面</strong></p>
+<p>堆（操作系统）：存储复杂类型（对象），一般由程序员分配释放，若程序员不释放，由垃圾回收机制回收，<strong>复杂数据类型存放到堆里面</strong></p>
+<p>简单数据类型传参：函数的形参可以看作一个变量，当我们把一个值类型作为参数传给函数得形参时，其实是把变量在栈空间里得值<strong>复制了一份给形参</strong>，在方法内部对形参做任何修改都不会影响到外部变量</p>
+<p>复杂数据类型传参：函数得形参也可以看作是一个变量，当我们把引用类型变量传给形参时，其实是把变量在栈空间里保存得地址复制给了形参，<strong>实参和形参保留得是同一个堆地址</strong>，所以操作的是同一个对象</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Person</span>(<span class="hljs-params">name</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;<br>&#125;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">f1</span>(<span class="hljs-params">x</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x.<span class="hljs-property">name</span>); <span class="hljs-comment">// 2. 刘德华</span><br>    x.<span class="hljs-property">name</span> = <span class="hljs-string">&#x27;张学友&#x27;</span>;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x.<span class="hljs-property">name</span>); <span class="hljs-comment">// 3. 张学友</span><br>&#125;<br><span class="hljs-keyword">var</span> p = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(<span class="hljs-string">&#x27;刘德华&#x27;</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p.<span class="hljs-property">name</span>); <span class="hljs-comment">// 1. 刘德华</span><br><span class="hljs-title function_">f1</span>(p);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p.<span class="hljs-property">name</span>); <span class="hljs-comment">// 4.张学友</span><br></code></pre></td></tr></table></figure>
+
+</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/zcy530">Github</a></li><li><a href="mailto:zhangcaiyii@163.com">Mail</a></li><li><a href="/13896796126">Wechat</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Course-Note/">Course Note</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programing-Language/">Programing Language</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/">web development</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functional-Programing/" rel="tag">Functional Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOAD/" rel="tag">OOAD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Parallel-Programing/" rel="tag">Parallel Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software-Testing/" rel="tag">Software Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button" href="/2021/08/09/JavaScript-Bom-Dom/">JavaScript Advanced Bom&amp;Dom</a><a class="next-button" href="/2021/07/21/Database-chpt2/">Database System Principles</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>

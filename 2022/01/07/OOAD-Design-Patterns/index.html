@@ -1,0 +1,577 @@
+<!DOCTYPE html><html lang="zn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><meta name="description" content="OOAD Design Patterns Review 面向对象设计与分析 [ Nicole Zhang ] "><meta name="theme-color" content="#9dab86"><title>OOAD Design Patterns Review 面向对象设计与分析 [ Nicole Zhang ] </title><style>@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(data:font/woff2;base64,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) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(data:font/woff2;base64,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BL3+M1K+NfPvjlJEHZTOrkYvtdprqx0Hka+W/IhsQoUJE0jsPVOhV2itgp3Wame8dsB73DeCOfp+FMSxp2At3aozP1zVQ/tmEpXdveum7kat3CaLXRcmTZHmOveMiqxSteCZOrGKmscOa9WycTUXtRFabrtts1Nb3e5qHtqWPMWtuEkMSdydcarhKoTcVXtBgujKwULbPFJvqywIzBjboUacECG6ajlIews5dBUMkJ/LYHa12gpRLEsBDAAA6raxOaTnbx4GG5J6hdn4twxT1DRvEQZvD6banOa3BbstVh48efHmw5cffwECBQkWIvK/LTbhIkSKEi1GrDjxEiRKkixFqjTpMmTKki1Hrjz5ChQqUqxEqTLlKlSqUq2e+hpoqJHGmmiqmeZhWGKoYfaZ7qXhxhtjnlWWxsBotw0xxWdfjDPDSEfc98l8q33z1XeLrXPKCeu10NJErZzR2kmnXXDWOee90sYVF12yQVsfTXLdVde088Y7o3TQXkedddLFQnb/qVGrq24cuuvhtZ5666WPfvraaZEB+htokLfe2+1GBDbalARuuueWzbbYboejttrmmBHW2O+AvUmRDMb6EEUsHHQoDskRjxRIiVRILev2qn1oaGpomZOB2z/jmn/eUk6tvaZda/5znbhPCguQ7wsEvd1strBI3OYR8ye01+ZO0jbH36oqKm37w90hl2v/wO5o3vIjtpoZx20H) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><script src="https://cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js" defer></script><script src="/js/paper.js" defer></script><script src="https://www.googletagmanager.com/gtag/js?id=xx-xxxxxxx-xx" async></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'xx-xxxxxxx-xx');</script><link rel="stylesheet" href="/css/tocbot.css"><script src="/js/tocbot.js" defer></script><script>window.addEventListener('DOMContentLoaded', () => {
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '.toc__content',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '.article__content',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+    orderedList: false,
+    collapseDepth: 2,
+  });
+})</script><link rel="preload" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"><meta name="generator" content="Hexo 6.0.0"></head><body><div class="mask-border"></div><div class="head"><div class="head__inner"><h1><a href="/">Nicole Zhang</a></h1><p>East China Normal University  |  Software Engineering  |  Bachelor 2023</p></div></div><div class="paper-container"><div class="main"><div class="location-bar"><div class="line-1"><div class="horizontal-line" style="height: 3px"></div></div><div class="line-2"><div class="horizontal-line" style="height: 1px"></div></div><p class="text">OOAD Design Patterns Review 面向对象设计与分析</p><div class="switch-button"><input class="container_toggle" type="checkbox" id="switch" name="mode"><label for="switch">Toggle</label></div><div class="line-3"><div class="horizontal-line" style="height: 1px"></div></div></div><div class="main__2-col"><article class="post-view__article"><div class="article__infomation"><div class="posts-item"><h2 class="posts-item__title"><a href="">OOAD Design Patterns Review 面向对象设计与分析</a></h2><span class="post__date">2022-01-07</span><a href="/tags/OOAD/"><span class="post__tags">#OOAD</span></a></div></div><div class="article__content"><h1 id="OOAD"><a href="#OOAD" class="headerlink" title="OOAD"></a>OOAD</h1><p>zcy 2021&#x2F;9&#x2F;25</p>
+<h1 id="第三章-面向对象分析"><a href="#第三章-面向对象分析" class="headerlink" title="第三章 面向对象分析"></a>第三章 面向对象分析</h1><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><p>面向对象开发需要掌握的极为重要的能力：为软件对象分配职责</p>
+<p>方法：职责驱动的设计，遵循GRASP原则</p>
+<p>面向对象分析OOA：发现并描述问题领域里的对象或者概念（概念类）</p>
+<p>面向对象设计OOD：定义软件对象、以及它们之间如何协作完成功能的（设计类）</p>
+<p>基本过程：定义用例-&gt;定义领域模型-&gt;定义交互图-&gt;定义设计类图</p>
+<p>领域模型（概念模型、领域对象模型、分析对象模型）：问题领域的概念类以及真实对象的可视化表示</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925144946.png" alt="image-20210925144943488"></p>
+<p>低表示差异（LRG）：概念类可以作为软件类，区别是概念类没有操作，软件类有操作。就是说领域模型里面很多的概念类在我们设计的时候可以直接拿来用</p>
+<h2 id="2-面向对象分析方法"><a href="#2-面向对象分析方法" class="headerlink" title="2. 面向对象分析方法"></a>2. 面向对象分析方法</h2><p>系统开发有两种主要的分析方法：面向功能的分析（抽象层面）、面向对象的分析（模块层面）</p>
+<p>面向对象分析与结构化分析方法之间的最大差异是：前者根据对象划分系统，而后者根据功能 </p>
+<p>面向对象分析主要步骤：识别对象 → 组织对象 → 定义对象之间的关系 → 定义对象的操作（在设计阶段完成）→ 定义对象内部细节</p>
+<p><strong>面向对象分析的三种方法：名词法（Conceptual model）、分析模型（Analysis model with stereotypes）、CRC cards</strong></p>
+<h3 id="2-1-名词法案例："><a href="#2-1-名词法案例：" class="headerlink" title="2.1 名词法案例："></a>2.1 名词法案例：</h3><p>一般user ➡️ user pannel</p>
+<p>可能的抉择：一个名词，是作为概念类合适，还是作为某个类的属性更合适？</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925160408.png" alt="image-20210925160406820"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925160435.png" alt="image-20210925160420792"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925160719.png" alt="image-20210925160717565"></p>
+<h3 id="2-2-分析模型法案例："><a href="#2-2-分析模型法案例：" class="headerlink" title="2.2 分析模型法案例："></a>2.2 分析模型法案例：</h3><p>一个健壮、稳定的模型，必须与实现环境无关，实现环境的任何变化，不会影响到系统的逻辑结构</p>
+<p>分析模型能够关注到系统的<strong>信息、行为、展示（输入&#x2F;输出）三个维度</strong>的特性</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925161243.png" alt="image-20210925161241213"></p>
+<p>分析模型用到三种符号：实体（自身的功能运算存储等）、边界（跟用户打交道输入输出）、控制类（资源调度）</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925161330.png" alt="image-20210925161328397"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925161426.png" alt="image-20210925161425419"></p>
+<p>上面废品回收机的例子：</p>
+<ul>
+<li>接口对象</li>
+</ul>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925161855.png" alt="image-20210925161852695"></p>
+<ul>
+<li>实体对象</li>
+</ul>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925161915.png" alt="image-20210925161913503"></p>
+<ul>
+<li>控制对象</li>
+</ul>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925161934.png" alt="image-20210925161932710"></p>
+<h3 id="2-3-CRC方法标识概念类"><a href="#2-3-CRC方法标识概念类" class="headerlink" title="2.3 CRC方法标识概念类"></a>2.3 CRC方法标识概念类</h3><p>CRC stands for：class 类、responsibilities 职责、collaborations协作</p>
+<p>CRC索引卡片格式：左边是类和职责，右边是协作类以及父类子类</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211012090225.png" alt="image-20211012090222858"></p>
+<p>CRC特点：非正式的，不是很细节的，需要进一步精化</p>
+<p>一个简单的例子：分析绘图工具软件</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211012091330.png" alt="image-20211012091313718"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211012093113.png" alt="image-20211012093110566"></p>
+<p>为了寻找crc我们引入了两个技术：头脑风暴，角色扮演</p>
+<p>CRC案例</p>
+<p>1.需求描述</p>
+<p>2.列出概念类</p>
+<p>3.标识核心概念类：关键的，无关的，待定的</p>
+<p>4.明确系统范围</p>
+<p>5.去掉不必要的核心类，辨析一个概念是属性还是类（它不做具体的事情，它不能改变状态）</p>
+<p>6.为核心类分配职责</p>
+<h2 id="3-面向对象设计"><a href="#3-面向对象设计" class="headerlink" title="3. 面向对象设计"></a>3. 面向对象设计</h2><p>在概念模型的基础上进行设计</p>
+<p><strong>低表示差异</strong>（Low Representation Gap）：概念模型里面的<u>概念类</u>和设计模型里面的<u>设计类</u>，之间相似度很高差异很小</p>
+<p>面向对象分析的主要核心思想：<strong>职责驱动</strong></p>
+<ul>
+<li>设计时考虑对象做什么、<u>或者知道什么</u></li>
+<li>一个对象对其他对象承担的义务或者合约</li>
+<li>职责是一个对象的行为，而其他的对象依赖这种行为</li>
+</ul>
+<p><strong>职责定义为两类</strong>：</p>
+<ul>
+<li><u>认知职责</u>：知道自己封装的私有数据、知道你和别人相关的数据、知道哪些是可以推导出来的数据</li>
+<li><u>行为职责</u>：自己可以做什么、启动其他对象做事情、控制和协调其他对象的行为</li>
+</ul>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925162902.png" alt="image-20210925162900793"></p>
+<p>废品回收机：</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20210925214230.png" alt="image-20210925214228762"></p>
+<h2 id="4-标识概念类和对象"><a href="#4-标识概念类和对象" class="headerlink" title="4. 标识概念类和对象"></a>4. 标识概念类和对象</h2><p>面向对象分析的核心目的：发现对象、定义对象之间的关系</p>
+<p>为了标识领域模型里的概念，我们有三种方法：名词法、分析模型法、crc</p>
+<h1 id="第五章-领域模型"><a href="#第五章-领域模型" class="headerlink" title="第五章 领域模型"></a>第五章 领域模型</h1><h2 id="1-领域模型图"><a href="#1-领域模型图" class="headerlink" title="1.领域模型图"></a>1.领域模型图</h2><p>没有定义操作的类图</p>
+<p>包括：概念类、概念类关系、属性</p>
+<p>理解概念类的三个层面：符号、内涵、外延</p>
+<p>可以把描述性性质的概念单独作为概念类的情况：</p>
+<ol>
+<li><p>在数量很大的情况，不浪费存储空间</p>
+</li>
+<li><p>如果删除对象的同时删除了描述，而该描述还需要继续维护</p>
+</li>
+</ol>
+<p>构建领域模型案例：</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019001731.png" alt="image-20211019001722749"></p>
+<p>案例二大富翁游戏：</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019002021.png" alt="image-20211019002020703"></p>
+<h2 id="2-系统顺序图ssd"><a href="#2-系统顺序图ssd" class="headerlink" title="2.系统顺序图ssd"></a>2.系统顺序图ssd</h2><p>把待建系统看成黑盒子，研究参与者与系统边界的交互</p>
+<p>SSD：System Sequence Diagram</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019003529.png" alt="image-20211019003528882"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019002900.png" alt="image-20211019002859485"></p>
+<p>系统顺序图与用例区别：</p>
+<p>在一定程度上，系统顺序图与用例描述是对应的，只是系统顺序图更精炼，用例更详细，二者互为补充</p>
+<p>系统顺序图和顺序图的区别：</p>
+<p>顺序图强调的是系统内部，对象与对象之间如何分工协作</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019003615.png" alt="image-20211019003614114"></p>
+<p>顺序图与代码</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019003735.png" alt="image-20211019003733868"></p>
+<h2 id="3-除了用例以外的需求信息"><a href="#3-除了用例以外的需求信息" class="headerlink" title="3.除了用例以外的需求信息"></a>3.除了用例以外的需求信息</h2><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019004341.png" alt="image-20211019004340458"></p>
+<p>分类方法一：功能性需求和非功能性需求</p>
+<p>分类方法二：FURPS+</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019004523.png" alt="image-20211019004522393"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019004657.png" alt="image-20211019004656560"></p>
+<h1 id="第六章-从分析到设计"><a href="#第六章-从分析到设计" class="headerlink" title="第六章 从分析到设计"></a>第六章 从分析到设计</h1><p>复习用例模型</p>
+<p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20211019005305395.png" alt="image-20211019005305395"></p>
+<ol>
+<li>参与者</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019005622.png" alt="image-20211019005621278"></p>
+<ol start="2">
+<li>用例</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019005745.png" alt="image-20211019005743063"></p>
+<h2 id="6-3-契约式设计-DBC"><a href="#6-3-契约式设计-DBC" class="headerlink" title="6.3 契约式设计 DBC"></a>6.3 契约式设计 DBC</h2><p>软件的正确性可靠性</p>
+<p>design by contract </p>
+<p>specification 规格说明</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019011610.png" alt="image-20211019011609368"></p>
+<p>断言</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019011722.png" alt="image-20211019011720678"></p>
+<p>定义一个前置和后置</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019011814.png" alt="image-20211019011812920"></p>
+<p>形式化规格说明specification</p>
+<p>{P}A{Q}</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019012206.png" alt="image-20211019012205449"></p>
+<p>类不变量 class invariant</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019012525.png" alt="image-20211019012524182"></p>
+<p><strong>操作契约</strong></p>
+<p>是对用例描述的补充，强调重要的动作，其开始和结束需要一些约束</p>
+<p>后置条件：1.new对象2.与另一个对象建立联系</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019012926.png" alt="image-20211019012925151"></p>
+<p>格式</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211019013034.png" alt="image-20211019013033472"></p>
+<h2 id="6-4-开始进入设计"><a href="#6-4-开始进入设计" class="headerlink" title="6.4 开始进入设计"></a>6.4 开始进入设计</h2><p><strong>1.什么是架构</strong> architecture</p>
+<p>架构是关于如何组织软件系统的一系列重大决策</p>
+<ul>
+<li>如何选择组成系统的结构元素及接口</li>
+<li>这些结构元素相互协作时的行为规范</li>
+<li>这些结构元素如何组成逐渐变大的子系统</li>
+<li>可以参考的架构风格</li>
+</ul>
+<p>架构也称：逻辑架构&#x2F;软件架构</p>
+<p>不同于部署架构（deployment architecture）：定义这些结构元素分布在不同的物理设备上</p>
+<p><strong>2.逻辑架构的设计方法</strong></p>
+<p>分层法，  标识一定规模的结构元素 system partitioning</p>
+<p>分层架构的优点：</p>
+<ul>
+<li>各层都容易被替换</li>
+<li>较低层次包含更多的操作细节，容易成为可重用构件</li>
+<li>每层都容易分布部署与连接</li>
+</ul>
+<p>*下层不要调用上层的功能！</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129203518.png" alt="image-20211129203510214"></p>
+<p>分层时要考虑的问题：</p>
+<ol>
+<li>服务放在高还是低层</li>
+<li>服务时作为应用专门的，还是通用的</li>
+</ol>
+<h2 id="6-5-面向对象设计"><a href="#6-5-面向对象设计" class="headerlink" title="6.5 面向对象设计"></a>6.5 面向对象设计</h2><p><strong>面向对象设计</strong>主要是在领域层（domin）的每个模块（module）里面，模块与模块之间，模块与层之间的关系，不属于面向对象分析和设计的范畴 </p>
+<p>面向对象设计：领域层与ui层&#x2F;数据层通过特定的接口进行通信</p>
+<p><strong>model-view模式：</strong></p>
+<p>model是领域层里面做的事情，计算数据存储等</p>
+<p>view是界面，用户数据怎么传进来，怎么显示给用户看</p>
+<p><strong>领域对象与设计对象的一致性</strong></p>
+<p>领域模型中的payment是一个概念，在设计模型中是一个软件类，他们不是同一件事情，但前者启发了后者的定义，降低了表示差异</p>
+<p><strong>从ssd（系统顺序图）到设计</strong></p>
+<p><strong>职责驱动的设计（rdd）</strong></p>
+<p>设计的总体思路就是职责驱动，标识职责，并把他们分配给不同的类 </p>
+<p>职责分为行为职责doing和认知职责knowing </p>
+<p>软件对象只有方法，不能说职责</p>
+<p><strong>GRASP原则</strong></p>
+<p>面向对象设计的基本原则 grasp原则 </p>
+<p>通用的职责分配软件原则 general responsibility assignment software principles</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129211338.png" alt="image-20211129211335840"></p>
+<h1 id="第七章-面向对象设计GRASP原则"><a href="#第七章-面向对象设计GRASP原则" class="headerlink" title="第七章 面向对象设计GRASP原则"></a>第七章 面向对象设计GRASP原则</h1><h2 id="7-1-创建者-creator"><a href="#7-1-创建者-creator" class="headerlink" title="7.1 创建者 creator"></a>7.1 创建者 creator</h2><p>由谁来负责创建这个类的新实例</p>
+<p>每项模式的格式：name、problem、solution</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129213757.png" alt="image-20211129213754853"></p>
+<p>A和B都是软件对象，不是领域对象</p>
+<p>创建模式有什么好处：对方的东西是可见的，高内聚，低耦合（我们两个一起做事情时不用跟别人创建联系）</p>
+<h2 id="7-2-信息专家-information-expert"><a href="#7-2-信息专家-information-expert" class="headerlink" title="7.2 信息专家 information expert"></a>7.2 信息专家 information expert</h2><p>为一个对象分配职责的一般原则，这个对象拥有完成这个职责所必须的信息</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129214705.png" alt="image-20211129214702342"></p>
+<p>information其实就是认知职责</p>
+<p>信息专家的好处：封装性encapsulation，对象充分利用自身的信息，支持低耦合和高内聚，系统行为分不到不同的类</p>
+<p>举例：</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129215325.png" alt="image-20211129215322553"></p>
+<h2 id="7-3-低耦合-low-coupling"><a href="#7-3-低耦合-low-coupling" class="headerlink" title="7.3 低耦合 low coupling"></a>7.3 低耦合 low coupling</h2><p>如何保证设计方案的依赖性、低的变化影响度、增加可重用性</p>
+<p><strong>例子一 pos机计算总金额</strong></p>
+<p>第一种解决方案，register创建了一个对象p，然后把这个对象的参数传给sale让他去用，相当于你朋友让你装修房子，你帮他喊了个装修队，把装修队的电话发给你朋友，但是你真的有必要知道这个p的信息吗，这就增加了系统的耦合关系</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129215908.png" alt="image-20211129215904381"></p>
+<p>第二种解决方案</p>
+<p>委托 delegate</p>
+<p>register把任务委托给sale，sale去创建实例，减少了系统的耦合度</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129220149.png" alt="image-20211129220147622"></p>
+<p><strong>耦合</strong>：一个元素与其他元素的连接感知以及依赖程度的度量</p>
+<p><strong>内聚和耦合的区别</strong>：耦合（coupling）是模块与模块之间联系的强度，内聚（cohesion）是讲在模块内的操作之间的联系紧密的程度</p>
+<p>根据信息专家得出来的方案支持低耦合的，它自己这一个类就已经具备了必要的数据和信息，所以它在做的时候就不需要去委托别人，自己就可以完成了，这样它跟外界的交流和依赖就变少了</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129221739.png" alt="image-20211129221738004"></p>
+<p>低耦合支持类的相对独立，减少了变化带来的影响</p>
+<p>与其他原则原则放在一起考虑，不要单独考虑低耦合，类与类之间没有耦合也不好</p>
+<p>在继承关系中，子类和父类的耦合关系非常紧密。能用组合的地方不要用继承</p>
+<p>可以耦合一些稳定的框架，比如java的包和库</p>
+<h2 id="7-4-控制器-Controller"><a href="#7-4-控制器-Controller" class="headerlink" title="7.4 控制器 Controller"></a>7.4 控制器 Controller</h2><p>在领域层，由谁负责首先接受并协调来自ui层的系统操作？因为ui层不应该包含任何逻辑，在ui上的系统操作必须传给领域层，由领域层来处理</p>
+<p>领域层里面有一些类应该可以代表整个系统、子系统、或者这个设备</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129222621.png" alt="image-20211129222619872"></p>
+<p>控制器有两类，一个是外观控制器，一个是会话session控制器</p>
+<p>下图第一个是外观控制器，第二个是会话控制器</p>
+<p><strong>外观控制器：</strong>为子系统的一组接口提供一个一致的界面，当系统事件不是太多的时候，用一个外观控制器就可以了</p>
+<p><strong>会话控制器：</strong>是虚构出来的，领域模型没有这个概念。当我这个系统事件有很多是跟用例相关的，有好几组，建议每个组定义一个handler，哪个处理销售，哪个处理退货</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129222854.png" alt="image-20211129222852538"></p>
+<p><strong>委托模式 delegation pattern</strong></p>
+<p>外部输入事件可以来自参与者或者其他系统</p>
+<p>facede相当于领域层对外部世界的脸</p>
+<p>handler处理系统某个明确的功能集合，比如相关的一组系统事件</p>
+<p><strong>控制器的优点</strong></p>
+<p>容易适应ui的变化、领域层代码易于重用，有助于保证应用所需要的操作顺序</p>
+<p>臃肿的控制器：bloated controller</p>
+<h2 id="7-5-高内聚-high-cohesion"><a href="#7-5-高内聚-high-cohesion" class="headerlink" title="7.5 高内聚 high cohesion"></a>7.5 高内聚 high cohesion</h2><p>如何使对象功能专注、可理解、可管理、同时又支持低耦合？</p>
+<p>方法：分配职责时保证高内聚</p>
+<p>这也是一种理念，不具备可操作性，用作评价工具</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129224016.png" alt="image-20211129224015092"></p>
+<p><strong>内聚的最佳实践：</strong></p>
+<ol>
+<li><p>一个对象完成的功能不要太多： 谁能保证任务重的对象在完成功能时不会引用到类外部的资源呢？（增加了耦合度）</p>
+</li>
+<li><p>这些功能都是同一类别的</p>
+</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211129224534.png" alt="image-20211129224533133"></p>
+<p><strong>类低内聚的症状：</strong></p>
+<ol>
+<li>做了许多相互无关的工作</li>
+<li>做了太多的工作</li>
+</ol>
+<p><strong>类低内聚的原因：</strong></p>
+<ol>
+<li>太粒度的抽象</li>
+<li>做了太多本应该委托去其他类做的工作</li>
+</ol>
+<h2 id="7-6-多态-polymorphism"><a href="#7-6-多态-polymorphism" class="headerlink" title="7.6 多态 polymorphism"></a>7.6 多态 polymorphism</h2><p>如何处理依据类型不同而有不同行为的一类需求，多态原则解决的问题是在职责分配时如何避免依据类型变化而进行不同的处理</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130020311.png" alt="image-20211130020308943"></p>
+<p>多态案例</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130020633.png" alt="image-20211130020628623"></p>
+<h2 id="7-7-纯虚构-pure-fabrication"><a href="#7-7-纯虚构-pure-fabrication" class="headerlink" title="7.7 纯虚构 pure  fabrication"></a>7.7 纯虚构 pure  fabrication</h2><p><strong>problem：</strong>如果依据信息专家原则获得的解决方案不合适，既不想违反低耦合、高内聚，也不想违反其他的原则，该如何把职责分配给对象（左右为难）</p>
+<p><strong>solution：</strong>把高度内聚的职责分配给人为虚构出来的一个类，这个类在领域模型里没有对应的概念。    </p>
+<p>这种方式在有的场合能起到支持低耦合高内聚、<strong>重用</strong>的效果</p>
+<p>案例</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130022331.png" alt="image-20211130022329551"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130022320.png" alt="image-20211130022318405"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106122530.png" alt="image-20220106122528675"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106122556.png" alt="image-20220106122555441"></p>
+<p>纯虚构原则讨论</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130022427.png" alt="image-20211130022425700"></p>
+<h2 id="7-8-间接-indirection"><a href="#7-8-间接-indirection" class="headerlink" title="7.8 间接 indirection"></a>7.8 间接 indirection</h2><p>若两个对象直接连接，导致耦合太近，如何解决？</p>
+<p>problem：把职责分配到哪里可以避免两个或多个对象之间的直接耦合，如何解耦对象以保持较高的可重用性？</p>
+<p>solution：把职责分配给一个中介对象，隔离对象与其他构建或者服务，使他们不产生直接耦合。因为中介对象使一种特殊的作用，一般对象与中间对象之间的直接耦合，相对比较简单</p>
+<p>和纯虚构的区别：出发点不一样，间接是为了避免直接耦合，纯虚构是在低耦合高内聚都不能满足的时候要分配一个类出来，纯虚构这个类承担的职责是相对集中的，而中介相对来说要简单一点</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130062826.png" alt="image-20211130062823035"></p>
+<h2 id="7-9-隔离变化-protected-variations"><a href="#7-9-隔离变化-protected-variations" class="headerlink" title="7.9 隔离变化 protected variations"></a>7.9 隔离变化 protected variations</h2><p>problem：需求一定会变化的，如何做到以系统的局部变化为代价就可以应对这一点。如何设计对象、系统和子系统，使得这些成分里面的变化因素、不稳定因素不会对系统的其余部分造成意想不到的影响</p>
+<p>solution：标识出能够预计的变化或者不稳定点，职责分配的时候创建一个稳定的接口能把他们与系统的其余部分隔离开来</p>
+<p>需要注意的两种可能的变化点：</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130063902.png" alt="image-20211130063859861"></p>
+<p><strong>PV是最基本的原理</strong></p>
+<h1 id="第八章-其他原则"><a href="#第八章-其他原则" class="headerlink" title="第八章 其他原则"></a>第八章 其他原则</h1><p>僵硬易碎固定粘滞性</p>
+<h2 id="8-1-开闭原则ocp"><a href="#8-1-开闭原则ocp" class="headerlink" title="8.1 开闭原则ocp"></a>8.1 开闭原则ocp</h2><p>软件系统应当允许功能扩展（开放性）</p>
+<p>但是不允许修改原有的代码（即关闭性）</p>
+<p>  <img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130064901.png" alt="image-20211130064858352"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130064838.png" alt="image-20211130064834751"></p>
+<p>close不是绝对的，是战略性的，用到了隔离变化的思想</p>
+<p>ocp的启发：</p>
+<ol>
+<li><p>定义所有的对象、数据为私有的</p>
+<p>涟漪效应 ripping effect</p>
+</li>
+<li><p>不要使用全局变量</p>
+</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211214081702.png" alt="image-20211214081700691"></p>
+<p>一个小例子：</p>
+<p>下面程序不符合开闭原则</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106140011.png" alt="image-20220106140009617"></p>
+<p>改变</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106140812.png" alt="image-20220106140810649"></p>
+<p>更好的方法</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106140827.png" alt="image-20220106140826613"></p>
+<h2 id="8-2-组合"><a href="#8-2-组合" class="headerlink" title="8.2 组合"></a>8.2 组合</h2><p>能用组合的地方，不要用继承</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130065625.png" alt="image-20211130065622893"></p>
+<p><strong>继承：</strong>子类获得父系的全部功能，稍微调整一下，比如覆盖实现几个方法</p>
+<p>继承的副作用：</p>
+<ol>
+<li>打破了封装性，父类和子类之间高度耦合</li>
+<li>继承的代码时静态&#x2F;编译时绑定的</li>
+<li>客户需要购买整个软件包，花钱占内存</li>
+<li>父类定义了许多硬性规定，难以有个性化的东西</li>
+</ol>
+<p><strong>组合：</strong>没有打破封装性</p>
+<ol>
+<li><p>对象组合是一种动态&#x2F;运行时绑定</p>
+</li>
+<li><p>整体与部分之间只有接口边界关联，耦合较低</p>
+</li>
+<li><p>各部分职责明确</p>
+<p>每个对象清晰的集中在少量的任务上，容易独立测试</p>
+</li>
+</ol>
+<h2 id="8-3-依赖倒置原则-dip"><a href="#8-3-依赖倒置原则-dip" class="headerlink" title="8.3 依赖倒置原则 dip"></a>8.3 依赖倒置原则 dip</h2><p>dependency inversion principle</p>
+<p>依赖太重就是耦合太近</p>
+<p>:star:高层模块不应当依赖低层模块，两者都应该依赖抽象</p>
+<p>高层依赖抽象层，底层也依赖抽象层</p>
+<p>:star:抽象不能依赖细节，细节应当依赖抽象</p>
+<p> ocp宣扬了目标，dip宣扬了一种机制 </p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130071031.png" alt="image-20211130071028489"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106135746.png" alt="image-20220106135744915"></p>
+<p>在需求发生变化时是相对稳定的</p>
+<p>启发：</p>
+<ol>
+<li><p>面向接口设计，而不是面向实现设计</p>
+<p>因为抽象类和接口修改的概率低，抽象概念容纳范围广，易于扩展&#x2F;修改</p>
+</li>
+<li><p>例外情况，类非常成熟稳定，再插入抽象层好处已经不多了，例如string class，这里就可以直接用具体类，不需要考虑依赖倒置</p>
+</li>
+<li><p>避免依赖传递性</p>
+</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211130072137.png" alt="image-20211130072134536"></p>
+<p>为什么面向接口设计</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106124433.png" alt="image-20220106124431588"></p>
+<p>避免依赖传递性：中间加入抽象层</p>
+<h2 id="8-4-可见性"><a href="#8-4-可见性" class="headerlink" title="8.4 可见性"></a>8.4 可见性</h2><p>对象之间的可见性<br>对于发送者对象向接收者对象发送消息，发送者必须对接收者可见<br>为了让对象 A 向对象 B 发送消息，B 必须对 A 可见。<br>发送者必须有某种指向接收者对象的引用或指针</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104001135.png" alt="image-20220104001133697"></p>
+<p>可见性是一个对象“看到”或引用另一个对象的能力<br>四种常见方式<br>属性可见性<br>  B 是 A 的一个属性。<br>参数可见性<br>B 是 A 的方法的参数。<br>本地可见性<br>  B 是 A 的方法中的（非参数）本地对象。<br>全球知名度<br>  B 在某种程度上是全局可见的</p>
+<p>实现局部可见性的两种常用方法<br>创建一个新的本地实例并将其分配给一个本地变量。<br>将方法调用的返回对象分配给局部变量</p>
+<h2 id="8-5-CQS原则"><a href="#8-5-CQS原则" class="headerlink" title="8.5 CQS原则"></a>8.5 CQS原则</h2><p>The Command-Query Separation  命令查询分离</p>
+<h1 id="第九章-设计模式"><a href="#第九章-设计模式" class="headerlink" title="第九章 设计模式"></a>第九章 设计模式</h1><h2 id="9-0-重构-refactor"><a href="#9-0-重构-refactor" class="headerlink" title="9.0 重构 refactor"></a>9.0 重构 refactor</h2><p>Structured method to rewrite code maintaining external behavior while applying small internal changes (transformations)<br>Continuously tested with unit tests and regression tests<br>Mostly for beautification</p>
+<p>在应用小的内部更改（转换）的同时重写保持外部行为的代码的结构化方法，通过单元测试和回归测试进行持续测试，主要是为了美化</p>
+<p>在保证程序语义的同时，增强结构性和可读性</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106125523.png" alt="image-20220106125522246"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106125610.png"></p>
+<h2 id="9-1-单实例"><a href="#9-1-单实例" class="headerlink" title="9.1 单实例"></a>9.1 单实例</h2><p>关于设计模式</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106125626.png" alt="image-20220104000918036"></p>
+<p>目的：只希望有一个对象，系统所有地方都可以用到这个对象，又不使用全局变量，也不需要传递对象的引用</p>
+<p>使用全局变量的缺点是：使用之前要测试是否已经实例化，这段代码出现了多次</p>
+<p>单实例模式：</p>
+<ol>
+<li>定义 private static 成员变量</li>
+<li>定义 public static 的 getter 函数，用户只能通过getter获取实例</li>
+<li>privat 构造函数</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">USTax</span> &#123;<br>   <span class="hljs-keyword">public</span>:<br>   	 <span class="hljs-function"><span class="hljs-type">static</span> USTAX* <span class="hljs-title">getInstance</span><span class="hljs-params">()</span></span>; <span class="hljs-comment">// public getter</span><br>   <span class="hljs-keyword">private</span>:<br>   	<span class="hljs-built_in">USTax</span>();        <br>   	<span class="hljs-type">static</span> USTax* instance;<br> &#125;<br> <br> USTax* USTax::instance = <span class="hljs-number">0</span>;<br> <span class="hljs-function">USTax* <span class="hljs-title">USTax::getInstance</span><span class="hljs-params">()</span></span>&#123;<br> 	<span class="hljs-keyword">if</span> (instance == <span class="hljs-number">0</span>) &#123;<br> 		instance = <span class="hljs-keyword">new</span> USTax;<br> 	&#125;<br> 	<span class="hljs-keyword">return</span> instance;<br> &#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">GlobalClass</span> &#123;<br>   <span class="hljs-type">int</span> m_value;<br>    <span class="hljs-keyword">private</span>: <br>       <span class="hljs-type">static</span> GlobalClass* s_instance;<br>       <span class="hljs-built_in">GlobalClass</span>( <span class="hljs-type">int</span> v=<span class="hljs-number">3</span> ) &#123; m_value = v; &#125;<br>    <br>    <span class="hljs-keyword">public</span>:<br>       <span class="hljs-function"><span class="hljs-type">int</span>  <span class="hljs-title">get_value</span><span class="hljs-params">()</span>        </span>&#123; <span class="hljs-keyword">return</span> m_value; &#125;<br>       <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">set_value</span><span class="hljs-params">( <span class="hljs-type">int</span> v )</span> </span>&#123; m_value = v; &#125;<br>       <span class="hljs-function"><span class="hljs-type">static</span> GlobalClass* <span class="hljs-title">instance</span><span class="hljs-params">()</span> </span>&#123;<br>          <span class="hljs-keyword">if</span> ( ! s_instance )<br>          s_instance = <span class="hljs-keyword">new</span> GlobalClass;<br>          <span class="hljs-keyword">return</span> s_instance;<br>       &#125;<br>&#125;;<br><br>GlobalClass* GlobalClass::s_instance = <span class="hljs-number">0</span>;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">foo</span><span class="hljs-params">( <span class="hljs-type">void</span> )</span> </span>&#123;<br>   GlobalClass::<span class="hljs-built_in">instance</span>()-&gt;<span class="hljs-built_in">set_value</span>( <span class="hljs-number">1</span> );<br>   cout &lt;&lt; <span class="hljs-string">&quot;foo: global_ptr is &quot;</span>&lt;&lt; GlobalClass::<span class="hljs-built_in">instance</span>()-&gt;<span class="hljs-built_in">get_value</span>() &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p>单实例模式的类图</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104002435.png" alt="image-20220104002433632"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104002452.png" alt="image-20220104002450902"></p>
+<h2 id="9-2-配适器"><a href="#9-2-配适器" class="headerlink" title="9.2 配适器"></a>9.2 配适器</h2><p>问题：当内部系统与外部第三方模块的接口不一致</p>
+<p>解决：将一个类的接口转换成客户希望的另外一个接口。Adapter模式使原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Duck</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">quack</span> <span class="hljs-params">()</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">fly</span> <span class="hljs-params">()</span>;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Turkey</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">gobble</span> <span class="hljs-params">()</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">fly</span> <span class="hljs-params">( )</span>;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TurkeyAdapter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Duck</span> &#123; <br>    Turkey turkey;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">TurkeyAdapter</span> <span class="hljs-params">(Turkey turkey)</span> &#123;<br>        <span class="hljs-built_in">this</span>.turkey = turkey;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">quack</span> <span class="hljs-params">( )</span> &#123;<br>        turkey.gobble ( );<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">fly</span> <span class="hljs-params">( )</span>&#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; j&lt;<span class="hljs-number">5</span>; j++)<br>            turkey.fly ( );<br>    &#125;<br>&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>类图</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104003947.png" alt="image-20220104003946058"></p>
+<ol>
+<li><p>面向抽象，不是面向实现</p>
+</li>
+<li><p>能用组合的地方不要用继承</p>
+</li>
+</ol>
+<h2 id="9-3-外观模式"><a href="#9-3-外观模式" class="headerlink" title="9.3 外观模式"></a>9.3 外观模式</h2><p>目的：现有系统接口比较复杂，希望利用原有的功能重新定义新的接口。简单来说就是用新的接口实现老的功能</p>
+<p>问题：如果只希望使用现有系统的部分功能，或者以一种特殊方式与现有系统交互</p>
+<p>最小化通信， 最小化依赖</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104005323.png" alt="image-20220104005321596"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104005427.png" alt="image-20220104005426367"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104005511.png" alt="image-20220104005509857"></p>
+<p>适用性</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104005611.png" alt="image-20220104005610600"></p>
+<h2 id="9-4-观察者模式"><a href="#9-4-观察者模式" class="headerlink" title="9.4 观察者模式"></a>9.4 观察者模式</h2><p>定义对象之间的一对多依赖关系，当一个对象改变状态时，所有依赖于它的对象都会自动获得通知</p>
+<p>观察者模式：又称publish&#x2F;subscrib模式、model&#x2F;view模式、source&#x2F;listener模式</p>
+<p>类图</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104011019.png" alt="image-20220104011017833"></p>
+<p>案例：气象站</p>
+<p>publisher：主题对象</p>
+<p>subscriber：观察者</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220104011056.png" alt="image-20220104011054985"></p>
+<p>定义接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Subject</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">registerObserver</span> <span class="hljs-params">(Observer o)</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">removeObserver</span> <span class="hljs-params">(Observer o)</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">notifyObservers</span> <span class="hljs-params">( )</span>;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Observer</span> &#123; <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span> <span class="hljs-params">(<span class="hljs-type">float</span> temp, <span class="hljs-type">float</span> humidity, <span class="hljs-type">float</span> pressure)</span>;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">DisplayElement</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">display</span> <span class="hljs-params">( )</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>实现subject，在实现观察者模式的时候，观察者首先需要知道一个具体的主题对象，然后才能进行后续的动作</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">WeatherData</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Subject</span> &#123;<br>    <span class="hljs-keyword">private</span> ArrayList observers; <span class="hljs-comment">//保存订阅者的列表</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> temperature;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> humidity;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> pressure;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">WeatherData</span> <span class="hljs-params">( )</span>&#123;<br>        observers = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span> ( );<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">registerObserver</span> <span class="hljs-params">(Observer o)</span> &#123;<br>        observers.add(o);<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">removeObserver</span> <span class="hljs-params">(Observer o)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> observer.indexOf(o);<br>        <span class="hljs-keyword">if</span> (j &gt;= <span class="hljs-number">0</span>) &#123;<br>            observers.remove(j);<br>        &#125; <br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">notifyObservers</span> <span class="hljs-params">( )</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; j &lt; observers.size(); j++) &#123;<br>            <span class="hljs-type">Observer</span> <span class="hljs-variable">observer</span> <span class="hljs-operator">=</span> (Observer)observers.get(j);<br>            observer.update(temperature, humidity, pressure);<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">measurementsChanged</span> <span class="hljs-params">( )</span> &#123;<br>        notifyObservers ( ); <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>实现订阅者</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CurrentConditionsDisplay</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Observer</span>, DisplayElement &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> temperatue;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> humidity;<br>    <span class="hljs-keyword">private</span> Subject weatherData;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">CurrentConditionsDisplay</span> <span class="hljs-params">(Subject weatherDataS)</span> &#123;<br>        <span class="hljs-built_in">this</span>.weatherData = weatherDataS;<br>        weatherData.registerObserver (<span class="hljs-built_in">this</span>);<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span> <span class="hljs-params">(<span class="hljs-type">float</span> temperature, <span class="hljs-type">float</span> humidity, <span class="hljs-type">float</span> pressure)</span> &#123;<br>        <span class="hljs-built_in">this</span>.temperature = temperature;<br>        <span class="hljs-built_in">this</span>.humidity = humidity;<br>        display ( );<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">display</span> <span class="hljs-params">( )</span>&#123;<br>        System.out.println(“ Current conditions : “ + temperature + “ F degrees  and “ + humidity + “ % humidity” );<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>什么时候用观察者模式</p>
+<ol>
+<li>某一个对象的状态发生变化的时候，某些其它的对象需做出相应的改变 。</li>
+<li>观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象</li>
+</ol>
+<p>观察者模式的两种形式</p>
+<ol>
+<li>推模式：能把股票价格传过来的股票机</li>
+<li>拉模式：只是起通知作用的股票机</li>
+</ol>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105002458.png" alt="image-20220105002456534"></p>
+<h2 id="9-5-策略模式"><a href="#9-5-策略模式" class="headerlink" title="9.5 策略模式"></a>9.5 策略模式</h2><p>一个系统有许多许多类，而区分它们的只是他们直接的行为。</p>
+<p>一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式，定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。</p>
+<p>下面是一个例子：</p>
+<p>duck自己不再fly和quack了，增加两个行为对象</p>
+<p>当需要fly的时候，委托给flyBehavior对象去处理</p>
+<p>当需要quack的时候，委托给quackBehavior对象去处理</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105011456.png" alt="image-20220105011455038"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105012109.png" alt="image-20220105012107211"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105012052.png" alt="image-20220105012051028"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105012544.png" alt="image-20220105012543250"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105012916.png" alt="image-20220105012915310"></p>
+<p><strong>鸭子游戏总结</strong></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105012314.png" alt="image-20220105012312319"></p>
+<p><strong>策略模式</strong></p>
+<p>定义了算法族，分别封装起来，让它们之间可以互相替换，此模式让算 法的变化独立于使用算法的客户、</p>
+<p>这里图画错了！！不是实线，实线是继承，这里每个strategy应该是“实现关系”（虚线）</p>
+<p>组合关系是黑色的菱形</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105012831.png" alt="image-20220105012830453"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105012847.png" alt="image-20220105012846283"></p>
+<h2 id="9-6-工厂模式"><a href="#9-6-工厂模式" class="headerlink" title="9.6 工厂模式"></a>9.6 工厂模式</h2><p>面向抽象编程，不要面向具体实践</p>
+<p>如果是面向接口的编程，我们可以隔离一些可能使得系统崩溃的变化。当代码需要使用很多具体的类时，增加新的具体类的时候，我们不得不修改代码。所以，我们的代码并不是“拒绝修改”的。如果要扩展新的具体类时，我们不得不重新打开代码进行修改</p>
+<p><strong>问题</strong>：又想new一个对象，又不知道对象在哪里，这个对象还没产生</p>
+<p><strong>工厂模式的定义</strong>：定义一个用于创建对象的接口，让子类决定实例化哪个子类。该模式把实例化延迟到其子类</p>
+<p><strong>GOF 定义</strong>: <u>工厂方法定义了一个创建产品对象的工厂接口，将实际创建工作推迟到子类中</u></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211214084517.png" alt="image-20211214084515504"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211221081849.png" alt="image-20211221081847954"></p>
+<p><strong>核心思想</strong>：把变化集中起来</p>
+<p><strong>例子</strong>：披萨店生产不同的披萨</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PizzaStore</span> &#123;<br><br>    <span class="hljs-keyword">public</span> Pizza <span class="hljs-title function_">orderPizza</span> <span class="hljs-params">( )</span> &#123;<br>        <span class="hljs-type">Pizza</span>   <span class="hljs-variable">pizza</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Pizza</span> ( );<br><br>        pizza.prepare () ;<br>        pizza.bake ();<br>        pizza.cut ();<br>        pizza.box ();<br>        <span class="hljs-keyword">return</span> pizza;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>通过参数传递type，每一个Pizza的子类型都均已实现了prepare()，bake()，cut()，box() 方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">But you need more than one type of pizza:<br><span class="hljs-keyword">public</span> Pizza <span class="hljs-title function_">orderPizza</span> <span class="hljs-params">( String type)</span> &#123;<br>    Pizza pizza;<br><br>    <span class="hljs-keyword">if</span> (type.equals (“cheese”)) &#123;<br>        pizza = <span class="hljs-keyword">new</span> <span class="hljs-title class_">CheesePizza</span> ();<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (type.equals(“greek”)) &#123;<br>        pizza = <span class="hljs-keyword">new</span> <span class="hljs-title class_">GreekPizza</span> ( );<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (type.equals(“pepperoni”)) &#123;<br>        pizza = <span class="hljs-keyword">new</span> <span class="hljs-title class_">PepperoniPizza</span> ( );<br>    &#125;<br><br>    pizza.prepare () ;<br>    pizza.bake ();<br>    pizza.cut ();<br>    pizza.box ();<br>    <span class="hljs-keyword">return</span> pizza;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>把上述代码改为工厂模式</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211214082749.png" alt="image-20211214082748120"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SimplePizzaFactory</span> &#123;<br>    <span class="hljs-keyword">public</span> Pizza <span class="hljs-title function_">createPizza</span> <span class="hljs-params">(String type )</span> &#123;<br>        <span class="hljs-type">Pizza</span> <span class="hljs-variable">pizza</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-keyword">if</span> (type.equals (“cheese”) ) &#123;<br>            pizza = <span class="hljs-keyword">new</span> <span class="hljs-title class_">CheesePizza</span> ();<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (type.equals(“greek”)) &#123;<br>            pizza = <span class="hljs-keyword">new</span> <span class="hljs-title class_">GreekPizza</span> ( );<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (type.equals(“veggie”)) &#123;<br>            pizza = <span class="hljs-keyword">new</span> <span class="hljs-title class_">VeggiePizza</span> ( );<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (type.equals(“pepperoni”) &#123;<br>            pizza = <span class="hljs-keyword">new</span> <span class="hljs-title class_">PepperoniPizza</span> ( );<br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> pizza;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里orderPizza不会再自己去new了，都交给factory去做</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PizzaStore</span> &#123;<br>    SimplePizzaFactory factory;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">PizzaStore</span><span class="hljs-params">(SimplePizzaFactory factory)</span> &#123;<br>        <span class="hljs-built_in">this</span>.factory = factory;<br>    &#125;<br>    <br>    <span class="hljs-keyword">public</span> Pizza <span class="hljs-title function_">orderPizza</span> <span class="hljs-params">(String type)</span>&#123;<br>        Pizza pizza;<br>        pizza = factory.createPizza (type); <span class="hljs-comment">//important</span><br>        pizza.prepare () ;<br>        pizza.bake ();<br>        pizza.cut  ();<br>        pizza.box ( );<br>        <span class="hljs-keyword">return</span> pizza;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>总结一下上面这道题的意思</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211214083104.png" alt="image-20211214083103031"></p>
+<p>现在要在各个地方开分店，每个店的披萨保留老祖宗留下的操作，但允许一定的地方特色</p>
+<p>需要一种机制将所有比萨制作活动“本地化”到 PizzaStore 类，同时让 Branchs 自由地拥有自己的区域风格</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211214083750.png" alt="image-20211214083749342"></p>
+<p>工厂模式的核心就是工厂函数，createPizza()就是工厂函数</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211214083809.png" alt="image-20211214083808027"></p>
+<p>子类该如何确定呢？</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211214084145.png" alt="image-20211214084143537"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220105020200.png" alt="image-20220105020159044"></p>
+<p><strong>抽象工厂模式：</strong>工厂模式生产一样产品，抽象工厂模式生产一系列产品，一辆汽车所需要的多种产品，前门后门</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211214085129.png" alt="image-20211214085128284"></p>
+<h2 id="9-8-命令模式"><a href="#9-8-命令模式" class="headerlink" title="9.8 命令模式"></a>9.8 命令模式</h2><p>编程可用于控制房屋内设备的遥控器</p>
+<p><strong>命令模式：</strong>将一个请求封装成一个对象，从而能以不同的请求来参数化客户对象、把所有请求存入队列或者写入日志，并且支持撤销操作</p>
+<p>各个供应商提供的on off 都有统一的接口</p>
+<p><strong>实现方法：</strong></p>
+<ol>
+<li>命令对象中有一个通用的方法: execute()</li>
+<li>命令对象（系统中有多个）的所有客户（remote）把每个命令对象看作是一个blackbox。当客户需要请求对象的服务时，只要简单地调用对象的虚拟execute() 方法</li>
+</ol>
+<p><strong>关键代码：</strong>定义三个角色：1、received 真正的命令执行对象 2、Command 3、invoker 使用命令对象的入口</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211221090648.jpeg" alt="img"></p>
+<p>1.创建一个命令接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Command</span>  &#123;<br>      <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">execute</span> <span class="hljs-params">( )</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>2.创建一个请求类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//由供应商提供的灯类，具有开灯及关灯两种方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Light</span> &#123;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">on</span> <span class="hljs-params">()</span> &#123;<br>    System.out.println (<span class="hljs-string">&quot;Light is on &quot;</span>);<br>  &#125;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">off</span> <span class="hljs-params">()</span> &#123;<br>    System.out.println (<span class="hljs-string">&quot;Light is off&quot;</span>);<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>3.创建实现了 <em>command</em> 接口的实体类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LightOnCommand</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Command</span> &#123;<br>      Light light;<br>      <span class="hljs-keyword">public</span> <span class="hljs-title function_">LightOnCommand</span> <span class="hljs-params">(Light light)</span> &#123;<br>           <span class="hljs-built_in">this</span>.light = light;<br>       &#125;<br>       <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">execute</span> <span class="hljs-params">( )</span> &#123;<br>            light.on ( );<br>       &#125;<br> &#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LightOffCommand</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Command</span> &#123;<br>        Light light;<br>        <span class="hljs-keyword">public</span> <span class="hljs-title function_">LightOffCommand</span><span class="hljs-params">(Light light)</span> &#123;<br>                <span class="hljs-built_in">this</span>.light = light;<br>        &#125;<br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">execute</span><span class="hljs-params">()</span> &#123;<br>                light.off();<br>        &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StereoOnWithCDCommand</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Command</span> &#123;<br>        Stereo stereo;<br>         <span class="hljs-keyword">public</span> <span class="hljs-title function_">StereoOnWithCDCommand</span><span class="hljs-params">(Stereo stereo)</span> &#123;<br>                <span class="hljs-built_in">this</span>.stereo = stereo;<br>        &#125;<br>         <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">execute</span><span class="hljs-params">()</span> &#123;<br>                stereo.on();<br>                stereo.setCD();<br>                stereo.setVolume(<span class="hljs-number">11</span>);<br>        &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>4.创建命令调用类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//SimpleRemoteControl 是 invoker</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SimpleRemoteControl</span> &#123;<br>       Command slot;<br>        <span class="hljs-keyword">public</span> <span class="hljs-title function_">SimpleRemoteControl</span> <span class="hljs-params">( )</span> &#123; &#125;<br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setCommand</span> <span class="hljs-params">(Command command)</span> &#123;<br>               slot = command;<br>        &#125;<br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">buttonWasPressed</span> <span class="hljs-params">( )</span> &#123;<br>                slot.execute  ( );<br>        &#125;<br> &#125; <br></code></pre></td></tr></table></figure>
+
+<p>使用 SimpleRemoteControl 类来接受并执行命令</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"> <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RemoteControlTest</span> &#123;<br>      <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span> <span class="hljs-params">(String [] args)</span> &#123;<br>          <span class="hljs-type">SimpleRemoteControl</span> <span class="hljs-variable">remote</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleRemoteControl</span> ( );<br>           <span class="hljs-type">Light</span> <span class="hljs-variable">light</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Light</span> ( );<br>           <span class="hljs-type">LightOnCommand</span> <span class="hljs-variable">lightOn</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">LightOnCommand</span>  (light);<br>	   <br>	       remote.setCommand (lightOn);<br>           remote.buttonWasPressed ( );<br>      &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>多个按钮升级版 </p>
+<p>这次遥控器将处理七个开和关命令，我们将保存在相应的数组中</p>
+<p>setCommand() 方法将一个插槽位置和一个 On 和 Off 命令存储在该插槽种，它将这些命令放在 On 和 Off 数组中供以后使用</p>
+<p>当按下 On 或 Off 按钮时，硬件负责调用相应的方法 OnButtonWasPushed ( ) 或 OffButtonWasPushed ( )</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RemoteControl</span> &#123;<br>        Command[] onCommands;<br>        Command[] offCommands;<br>    <br>        <span class="hljs-comment">//在构造函数中，我们需要做的就是实例化 on 和 off 数组</span><br>        <span class="hljs-keyword">public</span> <span class="hljs-title function_">RemoteControl</span><span class="hljs-params">()</span> &#123;<br>                onCommands = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Command</span>[<span class="hljs-number">7</span>];<br>                offCommands = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Command</span>[<span class="hljs-number">7</span>];<br>                 <span class="hljs-type">Command</span> <span class="hljs-variable">noCommand</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">NoCommand</span>(); <span class="hljs-comment">//特殊的空命令。这是一种编程技巧，“哨兵”</span><br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">7</span>; i++) &#123;<br>                        onCommands[i] = noCommand;<br>                        offCommands[i] = noCommand;<br>                &#125;<br>        &#125;<br>    <br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setCommand</span><span class="hljs-params">(<span class="hljs-type">int</span> slot, Command onCommand, Command offCommand)</span> &#123;<br>                onCommands[slot] = onCommand;<br>                offCommands[slot] = offCommand;<br>        &#125;<br>         <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onButtonWasPushed</span><span class="hljs-params">(<span class="hljs-type">int</span> slot)</span> &#123;<br>                onCommands[slot].execute();<br>        &#125;<br>         <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">offButtonWasPushed</span><span class="hljs-params">(<span class="hljs-type">int</span> slot)</span> &#123;<br>                offCommands[slot].execute();<br>        &#125;<br>          <span class="hljs-keyword">public</span> String <span class="hljs-title function_">toString</span><span class="hljs-params">()</span> &#123;<br>              <span class="hljs-comment">// code here  </span><br>        &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>5.用户client</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RemoteLoader</span> &#123;<br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>                <span class="hljs-type">RemoteControl</span> <span class="hljs-variable">remoteControl</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RemoteControl</span>();<br> <br>                <span class="hljs-type">Light</span> <span class="hljs-variable">livingRoomLight</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Light</span>(<span class="hljs-string">&quot;Living Room&quot;</span>);<br>                  <br>                <span class="hljs-type">LightOnCommand</span> <span class="hljs-variable">livingRoomLightOn</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">LightOnCommand</span>(livingRoomLight);<br>                <span class="hljs-type">LightOffCommand</span> <span class="hljs-variable">livingRoomLightOff</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">LightOffCommand</span>(livingRoomLight);<br>                <br>                remoteControl.setCommand(<span class="hljs-number">0</span>, livingRoomLightOn, livingRoomLightOff);<br>                remoteControl.onButtonWasPushed(<span class="hljs-number">0</span>);<br>                remoteControl.offButtonWasPushed(<span class="hljs-number">0</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>其他功能：</p>
+<p>命令可以通过实现一个撤消方法来支持撤消，该方法将对象恢复到最后一次调用 execute() 方法之前的先前状态</p>
+<p>宏命令是 Command 的简单扩展，它允许调用多个命令</p>
+<h2 id="9-9-组合模式"><a href="#9-9-组合模式" class="headerlink" title="9.9 组合模式"></a>9.9 组合模式</h2><p>组合节点 &#x3D; 叶子节点 + 组合节点</p>
+<p>用一个接口处理两种不同类型的节点</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211221082412.png" alt="image-20211221082410770"></p>
+<p>组合模式提供了一个结构来保存单个对象和组合</p>
+<p>允许客户端统一处理复合和单个对象</p>
+<p>组件是复合结构中的任何对象，组件可以是其他组合或叶节点</p>
+<p>图示：</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211221082934.png" alt="image-20211221082933200"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20211221083101.png" alt="image-20211221083059439"></p>
+<h2 id="9-6-applying"><a href="#9-6-applying" class="headerlink" title="9.6 applying"></a>9.6 applying</h2><p><strong>GRASP和GoF的关系</strong></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106131553.png" alt="image-20220106131551982"></p>
+<p>非常重要的概念模型！</p>
+<p>注意，PV是最基本的原理</p>
+<p>具体的GOF模式是GRASP的具体应用</p>
+<p><strong>敏捷开发</strong></p>
+<figure class="highlight ada"><table><tr><td class="code"><pre><code class="hljs ada">敏捷原则-<span class="hljs-number">12</span>条<br><span class="hljs-number">1</span> 我们最优先要做的是，通过尽早、持续交付有价值的软件来使客户满意<br><span class="hljs-number">2</span> 即使在开发的后期，也欢迎需求变更。敏捷过程利用变更为客户创造竞争优势<br><span class="hljs-number">3</span> 经常交付可运行软件，交付的间隔可以从几个星期到几个月，交付的时间间隔越短越好<br><span class="hljs-number">4</span> 在整个项目开发期间，业务人员和开发人员必须天天都在一起工作<br><span class="hljs-number">5</span> 围绕有积极性的个人构建项目，给他们提供所需要的环境和支持，并且信任他们能够完成工作<br><span class="hljs-number">6</span> 在团队内部，最富有效果和效率的信息传递方式是面对面交流<br><span class="hljs-number">7</span> 可运行软件是进度的首要度量标准<br><span class="hljs-number">8</span> 敏捷过程提倡可持续的开发速度。责任人(sponsor)、开发者和用户应该能够长期保持稳定的开发速度<br><span class="hljs-number">9</span> 不断地关注优秀的技能和好的设计,会增强敏捷能力<br><span class="hljs-number">10</span> 简单: 使不必做的工作最大化的艺术<span class="hljs-comment">--- 是必要的</span><br><span class="hljs-number">11</span> 最好的架构、需求和设计出自于 自组织团队<br><span class="hljs-number">12</span> 每隔一定时间，团队会反省如何才能更有效地工作,并相应调整自己的行为。<br></code></pre></td></tr></table></figure>
+
+<p><strong>极限编程 XP</strong> （eXtreme Programming ）</p>
+<ul>
+<li>是敏捷软件开发中，使用最广泛的一种方法</li>
+<li>XP使用面向对象方法作为推荐的开发范型</li>
+<li>XP包含了 策划、设计、编码和测试 4个框架活动的规则和实践</li>
+</ul>
+<p>用设计模式的好处</p>
+<ul>
+<li><p>Reuse Design 重用设计    </p>
+<p>设计方案的重用比代码的重用更有意义，它会自动带来代码重用</p>
+</li>
+<li><p>Common Vocabulary 为设计提供共同的词汇</p>
+<p>每个模式名就是一个设计词汇，其概念使得程序员间的交流更加方便</p>
+</li>
+<li><p>Easy Documentation 编写开发文档更加容易</p>
+<p>在开发文档中采用模式词汇可以让其他人更容易理解设计师的想法，理解设计师为什么这么做？做了些什么？</p>
+</li>
+<li><p>Easy refactor 应用设计模式可以让重构系统变得容易</p>
+<p>为其他应用程序提供很好的系统架构</p>
+<p>设计模式与编程语言无关</p>
+</li>
+</ul>
+<p>每一个gof pattern都是grasp原则的具体应用</p>
+<h2 id="9-7-统一过程-UP-unified-process"><a href="#9-7-统一过程-UP-unified-process" class="headerlink" title="9.7 统一过程 UP unified process"></a>9.7 统一过程 UP unified process</h2><p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106130451.png" alt="image-20220106130450487"></p>
+<p>inception、elaboration、construction、transition</p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106133111.png" alt="image-20220106133109531"></p>
+<p><img src="https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/20220106133203.png" alt="image-20220106133202705"></p>
+<h2 id="9-8-迭代"><a href="#9-8-迭代" class="headerlink" title="9.8 迭代"></a>9.8 迭代</h2><p>开发在迭代中进行 </p>
+<p>固定长度（有时基于目标） </p>
+<p>每次迭代以测试和部分可执行文件结束</p>
+<p>每个新的迭代都建立在以前的基础上，并可能改进以前的 </p>
+<p>每次迭代都以重新评估需求和可能的改进而告终 </p>
+<p>每次迭代的结果是一个可执行但不完整的系统</p>
+<p>迭代的输出不是实验或一次性原型，迭代开发也不是原型设计。 相反，输出是最终系统的生产级子集</p>
+</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/zcy530">Github</a></li><li><a href="mailto:zhangcaiyii@163.com">Mail</a></li><li><a href="/13896796126">Wechat</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Course-Note/">Course Note</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programing-Language/">Programing Language</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/">web development</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functional-Programing/" rel="tag">Functional Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOAD/" rel="tag">OOAD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Parallel-Programing/" rel="tag">Parallel Programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software-Testing/" rel="tag">Software Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button" href="/2022/02/18/Functional-Programing/">Functional Programing 函数式语言程序设计</a><a class="next-button" href="/2022/01/03/Software-Testing-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E9%AA%8C%E8%AF%81/">Software Testing 软件测试与验证</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>
