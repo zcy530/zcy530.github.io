@@ -1,0 +1,6 @@
+body {
+    background-color: #f0f0f0; /* 修改为你想要的颜色 */
+    background-image: url('/images/IMG_9094.JPG'); /* 添加背景图片 */
+    background-size: cover; /* 确保背景图片覆盖整个背景 */
+    background-position: center; /* 图片居中 */
+}
