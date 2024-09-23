@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on My Channel</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://zcy530.github.io/posts/</link>
     <description>Recent content in Posts on My Channel</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Sep 2024 23:43:13 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zcy530.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Me</title>
-      <link>http://localhost:1313/resume/</link>
+      <link>https://zcy530.github.io/resume/</link>
       <pubDate>Mon, 23 Sep 2024 23:43:13 +0800</pubDate>
-      <guid>http://localhost:1313/resume/</guid>
+      <guid>https://zcy530.github.io/resume/</guid>
       <description></description>
     </item>
     <item>
       <title>Operation</title>
-      <link>http://localhost:1313/posts/operation/</link>
+      <link>https://zcy530.github.io/posts/operation/</link>
       <pubDate>Sat, 21 Sep 2024 01:39:47 +0800</pubDate>
-      <guid>http://localhost:1313/posts/operation/</guid>
+      <guid>https://zcy530.github.io/posts/operation/</guid>
       <description>&lt;p&gt;333&lt;/p&gt;</description>
     </item>
     <item>
       <title>Database</title>
-      <link>http://localhost:1313/posts/database/</link>
+      <link>https://zcy530.github.io/posts/database/</link>
       <pubDate>Sat, 21 Sep 2024 01:36:47 +0800</pubDate>
-      <guid>http://localhost:1313/posts/database/</guid>
+      <guid>https://zcy530.github.io/posts/database/</guid>
       <description>&lt;p&gt;2222&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>https://zcy530.github.io/posts/my-first-post/</link>
       <pubDate>Sat, 21 Sep 2024 00:32:51 +0800</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>https://zcy530.github.io/posts/my-first-post/</guid>
       <description>&lt;p&gt;111&lt;/p&gt;
 &lt;p&gt;试一下中文好看吗&lt;/p&gt;</description>
     </item>
