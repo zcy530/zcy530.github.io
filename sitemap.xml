@@ -2,13 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zcy530.github.io/resume/</loc>
-    <lastmod>2024-09-23T23:43:13+08:00</lastmod>
+    <loc>https://zcy530.github.io/tags/cs-basic-knowledge/</loc>
+    <lastmod>2024-09-24T00:32:51+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/</loc>
-    <lastmod>2024-09-23T23:43:13+08:00</lastmod>
+    <lastmod>2024-09-24T00:32:51+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/posts/operating-system/</loc>
+    <lastmod>2024-09-24T00:32:51+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/tags/operating-systems/</loc>
+    <lastmod>2024-09-24T00:32:51+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/posts/</loc>
+    <lastmod>2024-09-24T00:32:51+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/tags/</loc>
+    <lastmod>2024-09-24T00:32:51+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/resume/</loc>
     <lastmod>2024-09-23T23:43:13+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/archives/</loc>
@@ -21,24 +33,5 @@
     <lastmod>2024-09-21T01:36:47+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/categories/</loc>
-    <lastmod>2024-09-21T00:32:51+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/tags/hugo/</loc>
-    <lastmod>2024-09-21T00:32:51+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/posts/my-first-post/</loc>
-    <lastmod>2024-09-21T00:32:51+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/categories/programming/</loc>
-    <lastmod>2024-09-21T00:32:51+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/tags/</loc>
-    <lastmod>2024-09-21T00:32:51+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/categories/tech/</loc>
-    <lastmod>2024-09-21T00:32:51+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/tags/tutorial/</loc>
-    <lastmod>2024-09-21T00:32:51+08:00</lastmod>
   </url>
 </urlset>
