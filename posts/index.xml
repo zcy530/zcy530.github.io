@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on My Channel</title>
-    <link>https://zcy530.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on My Channel</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0800</lastBuildDate>
-    <atom:link href="https://zcy530.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Node.js Express Quick Learning</title>
-      <link>https://zcy530.github.io/posts/express/</link>
+      <link>http://localhost:1313/posts/express/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/posts/express/</guid>
+      <guid>http://localhost:1313/posts/express/</guid>
       <description>&lt;h1 id=&#34;express&#34;&gt;Express&lt;/h1&gt;
 &lt;p&gt;CSDN &lt;a href=&#34;https://blog.csdn.net/weixin_44070254/article/details/118480069&#34;&gt;https://blog.csdn.net/weixin_44070254/article/details/118480069&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;javascript 标准 &lt;a href=&#34;http://javascript.ruanyifeng.com/nodejs/express.html#toc3&#34;&gt;http://javascript.ruanyifeng.com/nodejs/express.html#toc3&lt;/a&gt;&lt;/p&gt;
@@ -62,9 +62,9 @@
     </item>
     <item>
       <title>Python Fast API</title>
-      <link>https://zcy530.github.io/posts/fast-api/</link>
+      <link>http://localhost:1313/posts/fast-api/</link>
       <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/posts/fast-api/</guid>
+      <guid>http://localhost:1313/posts/fast-api/</guid>
       <description>&lt;h1 id=&#34;fast-api&#34;&gt;Fast API&lt;/h1&gt;
 &lt;h1 id=&#34;配置项目的python环境&#34;&gt;配置项目的python环境&lt;/h1&gt;
 &lt;p&gt;可以 install python 所需的所有环境，不用一个一个的 pip install&lt;/p&gt;
@@ -134,9 +134,9 @@
     </item>
     <item>
       <title>Python Programing Basic</title>
-      <link>https://zcy530.github.io/posts/python/</link>
+      <link>http://localhost:1313/posts/python/</link>
       <pubDate>Sat, 03 Jul 2021 08:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/posts/python/</guid>
+      <guid>http://localhost:1313/posts/python/</guid>
       <description>&lt;h1 id=&#34;python&#34;&gt;Python&lt;/h1&gt;
 &lt;p&gt;强类型语言：C/C++/java&lt;/p&gt;
 &lt;p&gt;弱类型语言：js/python&lt;/p&gt;
@@ -193,9 +193,9 @@ c = tuple([21,32,43,54])
     </item>
     <item>
       <title>Computer Network</title>
-      <link>https://zcy530.github.io/posts/computer-network/</link>
+      <link>http://localhost:1313/posts/computer-network/</link>
       <pubDate>Sun, 20 Sep 2020 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/posts/computer-network/</guid>
+      <guid>http://localhost:1313/posts/computer-network/</guid>
       <description>&lt;h1 id=&#34;计算机网络引言&#34;&gt;计算机网络引言&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -274,9 +274,9 @@ c = tuple([21,32,43,54])
     </item>
     <item>
       <title>Operating System</title>
-      <link>https://zcy530.github.io/posts/operating-system/</link>
+      <link>http://localhost:1313/posts/operating-system/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/posts/operating-system/</guid>
+      <guid>http://localhost:1313/posts/operating-system/</guid>
       <description>&lt;p&gt;用于记录大二的操作系统课程笔记&lt;/p&gt;
 &lt;h1 id=&#34;1-操作系统结构&#34;&gt;1. 操作系统结构&lt;/h1&gt;
 &lt;ul&gt;
@@ -346,9 +346,9 @@ c = tuple([21,32,43,54])
     </item>
     <item>
       <title>Java Language Basic</title>
-      <link>https://zcy530.github.io/posts/java-basic/</link>
+      <link>http://localhost:1313/posts/java-basic/</link>
       <pubDate>Sun, 12 Jul 2020 08:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/posts/java-basic/</guid>
+      <guid>http://localhost:1313/posts/java-basic/</guid>
       <description>&lt;h1 id=&#34;java-初级&#34;&gt;Java 初级&lt;/h1&gt;
 &lt;p&gt;面向对象的三大基本特性：封装、继承、多态&lt;/p&gt;
 &lt;h1 id=&#34;第二章-java环境搭建&#34;&gt;&lt;strong&gt;第二章 java环境搭建&lt;/strong&gt;&lt;/h1&gt;
@@ -387,9 +387,9 @@ c = tuple([21,32,43,54])
     </item>
     <item>
       <title>Resume</title>
-      <link>https://zcy530.github.io/resume/</link>
+      <link>http://localhost:1313/resume/</link>
       <pubDate>Mon, 02 Sep 2019 08:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/resume/</guid>
+      <guid>http://localhost:1313/resume/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Fast API | My Channel</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="https://zcy530.github.io/tags/fast-api/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c19fa24aeda1f967c7965da8d1b63e4ea726e51c084492015d0a99f4ab8c1c9c.css" integrity="sha256-wZ&#43;iSu2h&#43;WfHll2o0bY&#43;Tqcm5RwIRJIBXQqZ9KuMHJw=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://zcy530.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://zcy530.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://zcy530.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://zcy530.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://zcy530.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/tags/fast-api/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d93b80aef53f6b507c9f1dd339e25789468022d153e9f93fb76e3958241a81c0.css" integrity="sha256-2TuArvU/a1B8nx3TOeJXiUaAItFT6fk/t245WCQagcA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://zcy530.github.io/tags/fast-api/index.xml">
-<link rel="alternate" hreflang="en" href="https://zcy530.github.io/tags/fast-api/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/fast-api/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/fast-api/">
 <noscript>
     <style>
         #theme-toggle,
@@ -28,15 +28,7 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Fast API" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://zcy530.github.io/tags/fast-api/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Fast API"/>
-<meta name="twitter:description" content=""/>
-
+</noscript>
 </head>
 
 <body class="list" id="top">
@@ -44,28 +36,28 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://zcy530.github.io/" accesskey="h" title="My Channel (Alt + H)">My Channel</a>
+            <a href="http://localhost:1313/" accesskey="h" title="My Channel (Alt + H)">My Channel</a>
             <div class="logo-switches">
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://zcy530.github.io/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://zcy530.github.io/resume/" title="Resume">
+                <a href="http://localhost:1313/resume/" title="Resume">
                     <span>Resume</span>
                 </a>
             </li>
             <li>
-                <a href="https://zcy530.github.io/archives/" title="Archives">
+                <a href="http://localhost:1313/archives/" title="Archives">
                     <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://zcy530.github.io/tags/" title="Tag">
+                <a href="http://localhost:1313/tags/" title="Tag">
                     <span>Tag</span>
                 </a>
             </li>
@@ -89,12 +81,12 @@
 pip freeze &gt; piplist.txt pip install -r piplist.txt 创建 fastapi from fastapi import FastAPI app = FastAPI() app.add_middleware( CORSMiddleware, allow_origins=[&#34;*&#34;], allow_credentials=True, allow_methods=[&#34;*&#34;], allow_headers=[&#39;Content-Type&#39;,&#39;application/xml&#39;], ) @app.get(&#34;/gettest&#34;) async def gettest(): return {&#34;hello world&#34;} @app.post(&#34;/posttest&#34;) async def posttest(json_data: Dict): # 传进 JSON_DATA 注意 尾行不留空格 # { # &#34;investdate&#34;: &#34;2022-03-04&#34;, # &#34;weights&#34;:[ # { # &#34;id&#34;: &#34;AMD&#34;, # &#34;weight&#34;: -0.344 # }, # { # &#34;id&#34;: &#34;AMZN&#34;, # &#34;weight&#34;: 0.699 # }, # { # &#34;id&#34;: &#34;ZM&#34;, # &#34;weight&#34;: 0.499 # } # ] # } # 如何处理 json 数据 investdate = json_data[&#39;investdate&#39;] weight = json_data[&#39;weights&#39;] # 如何把 json 数组转化成 dict input_weght = dict() for data in weight: id = data[&#34;id&#34;] weight = data[&#34;weight&#34;] input_weght[id] = weight # 接口里定义的函数 逻辑部分 def inquirie_for_customer(investdate, weight: dict)： return return_json # 如何把结果传回去 result = inquirie_for_customer(investdate,input_weght) return JSONResponse(status_code=200, content=result) 运行 fastapi py fastapi_server.py ...</p>
   </div>
   <footer class="entry-footer"><span title='2022-07-23 00:00:00 +0800 CST'>July 23, 2022</span>&nbsp;·&nbsp;Caiyi</footer>
-  <a class="entry-link" aria-label="post link to Python Fast API" href="https://zcy530.github.io/posts/fast-api/"></a>
+  <a class="entry-link" aria-label="post link to Python Fast API" href="http://localhost:1313/posts/fast-api/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="https://zcy530.github.io/">My Channel</a></span> · 
+        <span>&copy; 2024 <a href="http://localhost:1313/">My Channel</a></span> · 
 
     <span>
         Powered by
