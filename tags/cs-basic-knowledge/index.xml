@@ -6,15 +6,96 @@
     <description>Recent content in CS Basic Knowledge on My Channel</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Sep 2024 00:32:51 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://zcy530.github.io/tags/cs-basic-knowledge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computer Network</title>
+      <link>https://zcy530.github.io/posts/computer-network/</link>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://zcy530.github.io/posts/computer-network/</guid>
+      <description>&lt;h1 id=&#34;计算机网络引言&#34;&gt;计算机网络引言&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;OSI 七层模型&lt;/p&gt;
+&lt;p&gt;OSI参考模型的三个主要概念：服务、协议、接口&lt;/p&gt;
+&lt;p&gt;OSI七层模型（Open System Interconnection）参考模型，是国际标准化组织（ISO）制定的一个用于计算机或通信系统间互联的标准体系。它是一个七层的、抽象的模型体，不仅包括一系列抽象的术语或概念，也包括具体的协议&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;Computer%20Network%20ffd4b703f34a46f3bdd48931e955b53a/Untitled.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;七层模型传输数据过程：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;Computer%20Network%20ffd4b703f34a46f3bdd48931e955b53a/Untitled%201.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TCP/IP 四层模型&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;Computer%20Network%20ffd4b703f34a46f3bdd48931e955b53a/Untitled%202.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;物理层&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;物理层规定:为传输数据所需要的物理链路创建、维持、拆除，而提供具有机械的，电子的，功能的和规范的特性，确保原始的数据可在各种物理媒体上传输，为设备之间的数据通信提供传输媒体及互连设备，为数据传输提供可靠的环境。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;数据链路层&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;链路控制（同步，异步，二进制，HDLC）&lt;/li&gt;
+&lt;li&gt;差错控制（重发机制）&lt;/li&gt;
+&lt;li&gt;流量控制（窗口机制）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;网络层&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;提供阻塞控制，路由选择（静态路由，动态路由）等&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IP：网际协议。IP协议提供不可靠、无连接的传送服务。IP协议的主要功能有：无连接数据报传输、数据报路由选择和差错控制。IP地址是重要概念&lt;/li&gt;
+&lt;li&gt;ARP：地址解析协议。基本功能就是通过目标设备的IP地址，查询目标设备的MAC地址，以保证通信的顺利进行。以太网中的数据帧从一个主机到达网内的另一台主机是根据48位的以太网地址（硬件地址）来确定接口的，而不是根据32位的IP地址。内核必须知道目的端的硬件地址才能发送数据。P2P的连接是不需要ARP的&lt;/li&gt;
+&lt;li&gt;RARP：反向地址转换协议。允许局域网的物理机器从网关服务器的 ARP 表或者缓存上请求其 IP 地址。局域网网关路由器中存有一个表以映射MAC和与其对应的 IP 地址。当设置一台新的机器时，其 RARP 客户机程序需要向路由器上的 RARP 服务器请求相应的 IP 地址。假设在路由表中已经设置了一个记录，RARP 服务器将会返回 IP 地址给机器。&lt;/li&gt;
+&lt;li&gt;IGMP：组播协议包括组成员管理协议和组播路由协议。组成员管理协议用于管理组播组成员的加入和离开，组播路由协议负责在路由器之间交互信息来建立组播树。IGMP属于前者，是组播路由器用来维护组播组成员信息的协议，运行于主机和和组播路由器之间。IGMP 信息封装在IP报文中，其IP的协议号为2&lt;/li&gt;
+&lt;li&gt;ICMP：Internet控制报文协议。用于在IP主机、路由器之间传递控制消息。控制消息是指网络通不通、主机是否可达、路由是否可用等网络本身的消息。这些控制消息虽然并不传输用户数据，但是对于用户数据的传递起着重要的作用。&lt;/li&gt;
+&lt;li&gt;BGP: 边界网关协议。处理像因特网大小的网络和不相关路由域间的多路连接。&lt;/li&gt;
+&lt;li&gt;RIP：路由信息协议。是一种分布式的基于距离矢量的路由选择协议。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;传输层&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;提供分割与重组数据，按端口号寻址，连接管理差错控制和流量控制,纠错的功能。传输层要向会话层提供通信服务的可靠性，避免报文的出错、丢失、延迟时间紊乱、重复、乱序等差错。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TCP: 一种面向连接的、可靠的、基于字节流的传输层通信协议。&lt;/li&gt;
+&lt;li&gt;UDP: 用户数据报协议，一种无连接的传输层协议，提供面向事务的简单不可靠信息传送服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;应用层&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP：超文本传输协议，基于TCP，是用于从WWW服务器传输超文本到本地浏览器的传输协议。它可以使浏览器更加高效，使网络传输减少&lt;/li&gt;
+&lt;li&gt;SMTP：简单邮件传输协议,是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式&lt;/li&gt;
+&lt;li&gt;SNMP：简单网络管理协议，由一组网络管理的标准组成，包含一个应用层协议、数据库模型和一组资源对象。&lt;/li&gt;
+&lt;li&gt;FTP：文件传输协议，用于Internet上的控制文件的双向传输。同时也是一个应用程序。&lt;/li&gt;
+&lt;li&gt;Telnet：是Internet远程登陆服务的标准协议和主要方式。为用户提供了在本地计算机上完成远程主机工作的能力。在终端使用者的电脑上使用telnet程序，用它连接到服务器&lt;/li&gt;
+&lt;li&gt;SSH：安全外壳协议，为建立在应用层和传输层基础上的安全协议。SSH 是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议&lt;/li&gt;
+&lt;li&gt;NFS：网络文件系统，是FreeBSD支持的文件系统中的一种，允许网络中的计算机之间通过TCP/IP网络共享资源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;五层结构&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;应用层&lt;/strong&gt;：为用户的应用进程提供网络通信服务，例如，HTTP协议提供了Web文档的请求和传送，SMTP（邮件传送协议）提供了电子邮件的传送，还有DNS（域名解析协议）将http://202.108.22.5转换为对人友好的www.baidu.com。功能包括提供各种不同的应用协议以满足应用进程的需求，识别并证实目的通信方的可用性，使协同工作的应用进程之间进行同步，为通信过程申请资源&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;传输层&lt;/strong&gt;：为相互通信的应用进程提供了逻辑通信，提供端到端的服务，即主机到主机。负责将应用层的报文向目的地传送，还要确保传输差错控制和流量控制。在因特网中，有两个传输协议，即TCP和UDP，可提供端到端的、可靠的或者不可靠的传输&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;网络层&lt;/strong&gt;：分组选择合适的路由，把分组从从一台主机移动到另一台主机，具体功能包括寻址、路由选择、连接建立、保持和终止等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据链路层&lt;/strong&gt;：将在网络层交下来的数据报组装成帧（frame)，两个相邻结点间的链路实现帧的传输，传输到下一个节点的目的主机的数据链路层又将数据报上传给网络层。功能包括：物理地址寻址、数据的成帧、流量控制、数据的检错、重发等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;物理层&lt;/strong&gt;：在物理媒介上正确地、透明地传输比特流，在物理层中的协议与链路相关，并且需要确保原始的数据可在各种物理媒体上传输。比如以太网的许多物理层协议有和双绞铜线、同轴电缆、光纤，等等相关&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;第五层-应用层&#34;&gt;第五层 应用层&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP 协议定义&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Operating System</title>
       <link>https://zcy530.github.io/posts/operating-system/</link>
-      <pubDate>Tue, 24 Sep 2024 00:32:51 +0800</pubDate>
+      <pubDate>Mon, 23 Sep 2024 00:32:51 +0800</pubDate>
       <guid>https://zcy530.github.io/posts/operating-system/</guid>
       <description>&lt;p&gt;用于记录大二的操作系统课程笔记&lt;/p&gt;
-&lt;h3 id=&#34;1-操作系统结构&#34;&gt;1. 操作系统结构&lt;/h3&gt;
+&lt;h1 id=&#34;1-操作系统结构&#34;&gt;1. 操作系统结构&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;操作系统的概念&lt;/p&gt;
@@ -74,7 +155,7 @@
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;2-进程&#34;&gt;2. 进程&lt;/h3&gt;
+&lt;h1 id=&#34;2-进程&#34;&gt;2. 进程&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;进程和进程实体的概念&lt;/p&gt;
