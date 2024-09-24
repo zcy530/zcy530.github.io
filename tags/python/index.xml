@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on My Channel</title>
+    <link>https://zcy530.github.io/tags/python/</link>
+    <description>Recent content in Python on My Channel</description>
+    <generator>Hugo -- 0.134.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Jul 2022 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://zcy530.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Fast API</title>
+      <link>https://zcy530.github.io/posts/fast-api/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/posts/fast-api/</guid>
+      <description>&lt;h1 id=&#34;fast-api&#34;&gt;Fast API&lt;/h1&gt;
+&lt;h1 id=&#34;配置项目的python环境&#34;&gt;配置项目的python环境&lt;/h1&gt;
+&lt;p&gt;可以 install python 所需的所有环境，不用一个一个的 pip install&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;freeze&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;piplist&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;txt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;r&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;piplist&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;txt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;创建-fastapi&#34;&gt;创建 fastapi&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; fastapi &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; FastAPI
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;app &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; FastAPI()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;app&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_middleware(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    CORSMiddleware,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    allow_origins&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    allow_credentials&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    allow_methods&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    allow_headers&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;application/xml&amp;#39;&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@app.get&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/gettest&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;gettest&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello world&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@app.post&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posttest&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;posttest&lt;/span&gt;(json_data: Dict):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;# 传进 JSON_DATA 注意 尾行不留空格&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;# {&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#     &amp;#34;investdate&amp;#34;: &amp;#34;2022-03-04&amp;#34;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#     &amp;#34;weights&amp;#34;:[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#         {&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#             &amp;#34;id&amp;#34;: &amp;#34;AMD&amp;#34;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#             &amp;#34;weight&amp;#34;: -0.344&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#         },&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#         {&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#             &amp;#34;id&amp;#34;: &amp;#34;AMZN&amp;#34;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#             &amp;#34;weight&amp;#34;: 0.699&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#         },&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#         {&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#             &amp;#34;id&amp;#34;: &amp;#34;ZM&amp;#34;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#             &amp;#34;weight&amp;#34;: 0.499&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#         }&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;#     ]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;# }&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 如何处理 json 数据&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		investdate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json_data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;investdate&amp;#39;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    weight &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json_data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;weights&amp;#39;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 如何把 json 数组转化成 dict&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    input_weght &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dict()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; data &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; weight:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        id &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        weight &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;weight&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        input_weght[id] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; weight
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 接口里定义的函数 逻辑部分&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;inquirie_for_customer&lt;/span&gt;(investdate, weight: dict)&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; return_json
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#75715e&#34;&gt;# 如何把结果传回去&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; inquirie_for_customer(investdate,input_weght)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; JSONResponse(status_code&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;, content&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;result)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;运行-fastapi&#34;&gt;运行 fastapi&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;py&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fastapi_server&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;Fast%20API%201118a2a5f576468f9ad750757fd02a1b/Untitled.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python Programing Basic</title>
+      <link>https://zcy530.github.io/posts/python/</link>
+      <pubDate>Sat, 03 Jul 2021 08:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/posts/python/</guid>
+      <description>&lt;h1 id=&#34;python&#34;&gt;Python&lt;/h1&gt;
+&lt;p&gt;强类型语言：C/C++/java&lt;/p&gt;
+&lt;p&gt;弱类型语言：js/python&lt;/p&gt;
+&lt;h3 id=&#34;数据结构&#34;&gt;&lt;strong&gt;数据结构&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;常用数据结构 序列、集合、字典&lt;/p&gt;
+&lt;p&gt;python中的数据结构主要有：序列（字符串，元组，列表，范围，字节序列），集合，字典&lt;/p&gt;
+&lt;p&gt;序列：可迭代，元素有序，可以重复出现&lt;/p&gt;
+&lt;p&gt;集合：可迭代，元素无序，不能重复出现&lt;/p&gt;
+&lt;p&gt;字典：可迭代，可变，的K-V对&lt;/p&gt;
+&lt;p&gt;Python没有数组，可以用列表(序列)代替&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字符串 str&lt;/p&gt;
+&lt;p&gt;索引：a[0]表示第一个，最后一个元素是a[-1]，不能超出范围会有IndexError&lt;/p&gt;
+&lt;p&gt;获取长度函数len()，max返回最后一个元素，min返回第一个元素&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210713111630675.png&#34; alt=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210713111630675.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;加法和乘法：＋ 把两个字符串连接起来，* 把字符串重复多次&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210713111834377.png&#34; alt=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210713111834377.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210713111846797.png&#34; alt=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210713111846797.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;序列切分：从序列中且分出小的序列&lt;/p&gt;
+&lt;p&gt;[start : end]：包括start，不包括end&lt;/p&gt;
+&lt;p&gt;[start : end : step]&lt;/p&gt;
+&lt;p&gt;[0 : 0 : -1]：倒置&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210713112908830.png&#34; alt=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210713112908830.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;元组 tuple&lt;/p&gt;
+&lt;p&gt;不可变序列，一旦创建就不能修改&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = (21,32,43,45)
+b = (&amp;#39;hello&amp;#39;,&amp;#39;world&amp;#39;)
+c = tuple([21,32,43,54])
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果只有一个元素，后面一定要加逗号隔开&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210714005401494.png&#34; alt=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210714005401494.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;元组访问和分片，左闭右开：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210714005508923.png&#34; alt=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210714005508923.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;元组拆包：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210714005648819.png&#34; alt=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210714005648819.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;也可以用*n表示后面剩下所有元素形成一个list列表赋值给n&lt;/p&gt;
+&lt;p&gt;也可以用下划线表示不取哪些元素&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210714005737512.png&#34; alt=&#34;https://caiyiimg.oss-cn-shanghai.aliyuncs.com/typora/image-20210714005737512.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;遍历元组：&lt;/p&gt;
+&lt;p&gt;for循环里的item，只是取出每个元素值&lt;/p&gt;
+&lt;p&gt;但有时需要在遍 历过程中同 获取索引，用到 enumerate() 函数可以获得元组对象，该元组对象有两个元素，一个是索引值，一个是元素值，所以（i, item)  是元组拆包过程&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

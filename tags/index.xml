@@ -6,27 +6,90 @@
     <description>Recent content in Tags on My Channel</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://zcy530.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Express</title>
+      <link>https://zcy530.github.io/tags/express/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/express/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frontend Development</title>
+      <link>https://zcy530.github.io/tags/frontend-development/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/frontend-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://zcy530.github.io/tags/javascript/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node.js</title>
+      <link>https://zcy530.github.io/tags/node.js/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/node.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backend Development</title>
+      <link>https://zcy530.github.io/tags/backend-development/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/backend-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fast API</title>
+      <link>https://zcy530.github.io/tags/fast-api/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/fast-api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://zcy530.github.io/tags/python/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programing Launguage</title>
+      <link>https://zcy530.github.io/tags/programing-launguage/</link>
+      <pubDate>Sat, 03 Jul 2021 08:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/programing-launguage/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Computer Network</title>
       <link>https://zcy530.github.io/tags/computer-network/</link>
-      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0800</pubDate>
       <guid>https://zcy530.github.io/tags/computer-network/</guid>
       <description></description>
     </item>
     <item>
       <title>CS Basic Knowledge</title>
       <link>https://zcy530.github.io/tags/cs-basic-knowledge/</link>
-      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0800</pubDate>
       <guid>https://zcy530.github.io/tags/cs-basic-knowledge/</guid>
       <description></description>
     </item>
     <item>
       <title>Operating Systems</title>
       <link>https://zcy530.github.io/tags/operating-systems/</link>
-      <pubDate>Mon, 23 Sep 2024 00:32:51 +0800</pubDate>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0800</pubDate>
       <guid>https://zcy530.github.io/tags/operating-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://zcy530.github.io/tags/java/</link>
+      <pubDate>Sun, 12 Jul 2020 08:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/java/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Python Fast API | My Channel</title>
+<meta name="keywords" content="Backend Development, Fast API, Python">
+<meta name="description" content="Fast API
+配置项目的python环境
+可以 install python 所需的所有环境，不用一个一个的 pip install
+pip freeze &gt; piplist.txt
+pip install -r piplist.txt
+创建 fastapi
+from fastapi import FastAPI
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[&#34;*&#34;],
+    allow_credentials=True,
+    allow_methods=[&#34;*&#34;],
+    allow_headers=[&#39;Content-Type&#39;,&#39;application/xml&#39;],
+)
+
+@app.get(&#34;/gettest&#34;)
+async def gettest():
+		return {&#34;hello world&#34;}
+
+@app.post(&#34;/posttest&#34;)
+async def posttest(json_data: Dict):
+
+		# 传进 JSON_DATA 注意 尾行不留空格
+		# {
+		#     &#34;investdate&#34;: &#34;2022-03-04&#34;,
+		#     &#34;weights&#34;:[
+		#         {
+		#             &#34;id&#34;: &#34;AMD&#34;,
+		#             &#34;weight&#34;: -0.344
+		#         },
+		#         {
+		#             &#34;id&#34;: &#34;AMZN&#34;,
+		#             &#34;weight&#34;: 0.699
+		#         },
+		#         {
+		#             &#34;id&#34;: &#34;ZM&#34;,
+		#             &#34;weight&#34;: 0.499
+		#         }
+		#     ]
+		# }
+
+    # 如何处理 json 数据
+		investdate = json_data[&#39;investdate&#39;]
+    weight = json_data[&#39;weights&#39;]
+
+    # 如何把 json 数组转化成 dict
+    input_weght = dict()
+    for data in weight:
+        id = data[&#34;id&#34;]
+        weight = data[&#34;weight&#34;]
+        input_weght[id] = weight
+  
+    # 接口里定义的函数 逻辑部分
+		def inquirie_for_customer(investdate, weight: dict)：
+				return return_json
+		
+		# 如何把结果传回去
+		result = inquirie_for_customer(investdate,input_weght)
+    return JSONResponse(status_code=200, content=result)
+运行 fastapi
+py fastapi_server.py
+
+">
+<meta name="author" content="Caiyi">
+<link rel="canonical" href="https://zcy530.github.io/posts/fast-api/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c19fa24aeda1f967c7965da8d1b63e4ea726e51c084492015d0a99f4ab8c1c9c.css" integrity="sha256-wZ&#43;iSu2h&#43;WfHll2o0bY&#43;Tqcm5RwIRJIBXQqZ9KuMHJw=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://zcy530.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zcy530.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zcy530.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zcy530.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zcy530.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://zcy530.github.io/posts/fast-api/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Python Fast API" />
+<meta property="og:description" content="Fast API
+配置项目的python环境
+可以 install python 所需的所有环境，不用一个一个的 pip install
+pip freeze &gt; piplist.txt
+pip install -r piplist.txt
+创建 fastapi
+from fastapi import FastAPI
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[&#34;*&#34;],
+    allow_credentials=True,
+    allow_methods=[&#34;*&#34;],
+    allow_headers=[&#39;Content-Type&#39;,&#39;application/xml&#39;],
+)
+
+@app.get(&#34;/gettest&#34;)
+async def gettest():
+		return {&#34;hello world&#34;}
+
+@app.post(&#34;/posttest&#34;)
+async def posttest(json_data: Dict):
+
+		# 传进 JSON_DATA 注意 尾行不留空格
+		# {
+		#     &#34;investdate&#34;: &#34;2022-03-04&#34;,
+		#     &#34;weights&#34;:[
+		#         {
+		#             &#34;id&#34;: &#34;AMD&#34;,
+		#             &#34;weight&#34;: -0.344
+		#         },
+		#         {
+		#             &#34;id&#34;: &#34;AMZN&#34;,
+		#             &#34;weight&#34;: 0.699
+		#         },
+		#         {
+		#             &#34;id&#34;: &#34;ZM&#34;,
+		#             &#34;weight&#34;: 0.499
+		#         }
+		#     ]
+		# }
+
+    # 如何处理 json 数据
+		investdate = json_data[&#39;investdate&#39;]
+    weight = json_data[&#39;weights&#39;]
+
+    # 如何把 json 数组转化成 dict
+    input_weght = dict()
+    for data in weight:
+        id = data[&#34;id&#34;]
+        weight = data[&#34;weight&#34;]
+        input_weght[id] = weight
+  
+    # 接口里定义的函数 逻辑部分
+		def inquirie_for_customer(investdate, weight: dict)：
+				return return_json
+		
+		# 如何把结果传回去
+		result = inquirie_for_customer(investdate,input_weght)
+    return JSONResponse(status_code=200, content=result)
+运行 fastapi
+py fastapi_server.py
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zcy530.github.io/posts/fast-api/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-23T00:00:00+08:00" />
+<meta property="article:modified_time" content="2022-07-23T00:00:00+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Fast API"/>
+<meta name="twitter:description" content="Fast API
+配置项目的python环境
+可以 install python 所需的所有环境，不用一个一个的 pip install
+pip freeze &gt; piplist.txt
+pip install -r piplist.txt
+创建 fastapi
+from fastapi import FastAPI
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[&#34;*&#34;],
+    allow_credentials=True,
+    allow_methods=[&#34;*&#34;],
+    allow_headers=[&#39;Content-Type&#39;,&#39;application/xml&#39;],
+)
+
+@app.get(&#34;/gettest&#34;)
+async def gettest():
+		return {&#34;hello world&#34;}
+
+@app.post(&#34;/posttest&#34;)
+async def posttest(json_data: Dict):
+
+		# 传进 JSON_DATA 注意 尾行不留空格
+		# {
+		#     &#34;investdate&#34;: &#34;2022-03-04&#34;,
+		#     &#34;weights&#34;:[
+		#         {
+		#             &#34;id&#34;: &#34;AMD&#34;,
+		#             &#34;weight&#34;: -0.344
+		#         },
+		#         {
+		#             &#34;id&#34;: &#34;AMZN&#34;,
+		#             &#34;weight&#34;: 0.699
+		#         },
+		#         {
+		#             &#34;id&#34;: &#34;ZM&#34;,
+		#             &#34;weight&#34;: 0.499
+		#         }
+		#     ]
+		# }
+
+    # 如何处理 json 数据
+		investdate = json_data[&#39;investdate&#39;]
+    weight = json_data[&#39;weights&#39;]
+
+    # 如何把 json 数组转化成 dict
+    input_weght = dict()
+    for data in weight:
+        id = data[&#34;id&#34;]
+        weight = data[&#34;weight&#34;]
+        input_weght[id] = weight
+  
+    # 接口里定义的函数 逻辑部分
+		def inquirie_for_customer(investdate, weight: dict)：
+				return return_json
+		
+		# 如何把结果传回去
+		result = inquirie_for_customer(investdate,input_weght)
+    return JSONResponse(status_code=200, content=result)
+运行 fastapi
+py fastapi_server.py
+
+"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://zcy530.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Python Fast API",
+      "item": "https://zcy530.github.io/posts/fast-api/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Python Fast API",
+  "name": "Python Fast API",
+  "description": "Fast API 配置项目的python环境 可以 install python 所需的所有环境，不用一个一个的 pip install\npip freeze \u0026gt; piplist.txt pip install -r piplist.txt 创建 fastapi from fastapi import FastAPI app = FastAPI() app.add_middleware( CORSMiddleware, allow_origins=[\u0026#34;*\u0026#34;], allow_credentials=True, allow_methods=[\u0026#34;*\u0026#34;], allow_headers=[\u0026#39;Content-Type\u0026#39;,\u0026#39;application/xml\u0026#39;], ) @app.get(\u0026#34;/gettest\u0026#34;) async def gettest(): return {\u0026#34;hello world\u0026#34;} @app.post(\u0026#34;/posttest\u0026#34;) async def posttest(json_data: Dict): # 传进 JSON_DATA 注意 尾行不留空格 # { # \u0026#34;investdate\u0026#34;: \u0026#34;2022-03-04\u0026#34;, # \u0026#34;weights\u0026#34;:[ # { # \u0026#34;id\u0026#34;: \u0026#34;AMD\u0026#34;, # \u0026#34;weight\u0026#34;: -0.344 # }, # { # \u0026#34;id\u0026#34;: \u0026#34;AMZN\u0026#34;, # \u0026#34;weight\u0026#34;: 0.699 # }, # { # \u0026#34;id\u0026#34;: \u0026#34;ZM\u0026#34;, # \u0026#34;weight\u0026#34;: 0.499 # } # ] # } # 如何处理 json 数据 investdate = json_data[\u0026#39;investdate\u0026#39;] weight = json_data[\u0026#39;weights\u0026#39;] # 如何把 json 数组转化成 dict input_weght = dict() for data in weight: id = data[\u0026#34;id\u0026#34;] weight = data[\u0026#34;weight\u0026#34;] input_weght[id] = weight # 接口里定义的函数 逻辑部分 def inquirie_for_customer(investdate, weight: dict)： return return_json # 如何把结果传回去 result = inquirie_for_customer(investdate,input_weght) return JSONResponse(status_code=200, content=result) 运行 fastapi py fastapi_server.py ",
+  "keywords": [
+    "Backend Development", "Fast API", "Python"
+  ],
+  "articleBody": "Fast API 配置项目的python环境 可以 install python 所需的所有环境，不用一个一个的 pip install\npip freeze \u003e piplist.txt pip install -r piplist.txt 创建 fastapi from fastapi import FastAPI app = FastAPI() app.add_middleware( CORSMiddleware, allow_origins=[\"*\"], allow_credentials=True, allow_methods=[\"*\"], allow_headers=['Content-Type','application/xml'], ) @app.get(\"/gettest\") async def gettest(): return {\"hello world\"} @app.post(\"/posttest\") async def posttest(json_data: Dict): # 传进 JSON_DATA 注意 尾行不留空格 # { # \"investdate\": \"2022-03-04\", # \"weights\":[ # { # \"id\": \"AMD\", # \"weight\": -0.344 # }, # { # \"id\": \"AMZN\", # \"weight\": 0.699 # }, # { # \"id\": \"ZM\", # \"weight\": 0.499 # } # ] # } # 如何处理 json 数据 investdate = json_data['investdate'] weight = json_data['weights'] # 如何把 json 数组转化成 dict input_weght = dict() for data in weight: id = data[\"id\"] weight = data[\"weight\"] input_weght[id] = weight # 接口里定义的函数 逻辑部分 def inquirie_for_customer(investdate, weight: dict)： return return_json # 如何把结果传回去 result = inquirie_for_customer(investdate,input_weght) return JSONResponse(status_code=200, content=result) 运行 fastapi py fastapi_server.py 调试 fastapi http://127.0.0.1:8888/docs 然后就可以输入 request body\nReact 中调用 fastapi GET\n传图片 base64格式 @app.post(\"/main\", response_model=ResposeModel, description=\"收到请求并返回图片数据(Base64格式)\") def test(request: RequestModel): time.sleep(1) return { \"img\": { \"weight\": convert2Base64(\"./imgs/weight.png\"), \"AMD\": convert2Base64(\"./imgs/AMD.png\"), \"AMZN\": convert2Base64(\"./imgs/AMZN.png\"), \"ZM\": convert2Base64(\"./imgs/ZM.png\") }, \"img_dl\": { \"weight\": convert2Base64(\"./imgs/weight_dl.png\"), \"AMD\": convert2Base64(\"./imgs/AMD_dl.png\"), \"AMZN\": convert2Base64(\"./imgs/AMZN_dl.png\"), \"ZM\": convert2Base64(\"./imgs/ZM_dl.png\") } } \u003cimg src={\"data:image/Jpeg;base64,\".concat(imgUrl)}/ 报错 422 Unprocessable Entity\n检查是不是都用的双引号 行尾不能有多的逗号 正确的写法如下 { \"investdate\": \"2022-03-04\", \"weights\":[ { \"id\": \"AMD\", \"weight\": -0.344 }, { \"id\": \"AMZN\", \"weight\": 0.699 }, { \"id\": \"ZM\", \"weight\": 0.499 } ] } ",
+  "wordCount" : "220",
+  "inLanguage": "en",
+  "datePublished": "2022-07-23T00:00:00+08:00",
+  "dateModified": "2022-07-23T00:00:00+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "Caiyi"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zcy530.github.io/posts/fast-api/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Channel",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zcy530.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://zcy530.github.io/" accesskey="h" title="My Channel (Alt + H)">My Channel</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://zcy530.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://zcy530.github.io/resume/" title="Resume">
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://zcy530.github.io/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://zcy530.github.io/tags/" title="Tag">
+                    <span>Tag</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Python Fast API
+    </h1>
+    <div class="post-meta"><span title='2022-07-23 00:00:00 +0800 CST'>July 23, 2022</span>&nbsp;·&nbsp;Caiyi
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#fast-api" aria-label="Fast API">Fast API</a></li>
+                <li>
+                    <a href="#%e9%85%8d%e7%bd%ae%e9%a1%b9%e7%9b%ae%e7%9a%84python%e7%8e%af%e5%a2%83" aria-label="配置项目的python环境">配置项目的python环境</a></li>
+                <li>
+                    <a href="#%e5%88%9b%e5%bb%ba-fastapi" aria-label="创建 fastapi">创建 fastapi</a></li>
+                <li>
+                    <a href="#%e8%bf%90%e8%a1%8c-fastapi" aria-label="运行 fastapi">运行 fastapi</a></li>
+                <li>
+                    <a href="#%e8%b0%83%e8%af%95-fastapi" aria-label="调试 fastapi">调试 fastapi</a></li>
+                <li>
+                    <a href="#react-%e4%b8%ad%e8%b0%83%e7%94%a8-fastapi" aria-label="React 中调用 fastapi">React 中调用 fastapi</a></li>
+                <li>
+                    <a href="#%e4%bc%a0%e5%9b%be%e7%89%87-base64%e6%a0%bc%e5%bc%8f" aria-label="传图片 base64格式">传图片 base64格式</a></li>
+                <li>
+                    <a href="#%e6%8a%a5%e9%94%99" aria-label="报错">报错</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="fast-api">Fast API<a hidden class="anchor" aria-hidden="true" href="#fast-api">#</a></h1>
+<h1 id="配置项目的python环境">配置项目的python环境<a hidden class="anchor" aria-hidden="true" href="#配置项目的python环境">#</a></h1>
+<p>可以 install python 所需的所有环境，不用一个一个的 pip install</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#a6e22e">pip</span> <span style="color:#a6e22e">freeze</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">piplist</span>.<span style="color:#a6e22e">txt</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pip</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">r</span> <span style="color:#a6e22e">piplist</span>.<span style="color:#a6e22e">txt</span>
+</span></span></code></pre></div><h1 id="创建-fastapi">创建 fastapi<a hidden class="anchor" aria-hidden="true" href="#创建-fastapi">#</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> fastapi <span style="color:#f92672">import</span> FastAPI
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#f92672">=</span> FastAPI()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app<span style="color:#f92672">.</span>add_middleware(
+</span></span><span style="display:flex;"><span>    CORSMiddleware,
+</span></span><span style="display:flex;"><span>    allow_origins<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;*&#34;</span>],
+</span></span><span style="display:flex;"><span>    allow_credentials<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>    allow_methods<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;*&#34;</span>],
+</span></span><span style="display:flex;"><span>    allow_headers<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Content-Type&#39;</span>,<span style="color:#e6db74">&#39;application/xml&#39;</span>],
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@app.get</span>(<span style="color:#e6db74">&#34;/gettest&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gettest</span>():
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;hello world&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@app.post</span>(<span style="color:#e6db74">&#34;/posttest&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">posttest</span>(json_data: Dict):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e"># 传进 JSON_DATA 注意 尾行不留空格</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e"># {</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#     &#34;investdate&#34;: &#34;2022-03-04&#34;,</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#     &#34;weights&#34;:[</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#         {</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#             &#34;id&#34;: &#34;AMD&#34;,</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#             &#34;weight&#34;: -0.344</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#         },</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#         {</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#             &#34;id&#34;: &#34;AMZN&#34;,</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#             &#34;weight&#34;: 0.699</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#         },</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#         {</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#             &#34;id&#34;: &#34;ZM&#34;,</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#             &#34;weight&#34;: 0.499</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#         }</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">#     ]</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e"># }</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 如何处理 json 数据</span>
+</span></span><span style="display:flex;"><span>		investdate <span style="color:#f92672">=</span> json_data[<span style="color:#e6db74">&#39;investdate&#39;</span>]
+</span></span><span style="display:flex;"><span>    weight <span style="color:#f92672">=</span> json_data[<span style="color:#e6db74">&#39;weights&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 如何把 json 数组转化成 dict</span>
+</span></span><span style="display:flex;"><span>    input_weght <span style="color:#f92672">=</span> dict()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> data <span style="color:#f92672">in</span> weight:
+</span></span><span style="display:flex;"><span>        id <span style="color:#f92672">=</span> data[<span style="color:#e6db74">&#34;id&#34;</span>]
+</span></span><span style="display:flex;"><span>        weight <span style="color:#f92672">=</span> data[<span style="color:#e6db74">&#34;weight&#34;</span>]
+</span></span><span style="display:flex;"><span>        input_weght[id] <span style="color:#f92672">=</span> weight
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 接口里定义的函数 逻辑部分</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inquirie_for_customer</span>(investdate, weight: dict)<span style="color:#960050;background-color:#1e0010">：</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> return_json
+</span></span><span style="display:flex;"><span>		
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e"># 如何把结果传回去</span>
+</span></span><span style="display:flex;"><span>		result <span style="color:#f92672">=</span> inquirie_for_customer(investdate,input_weght)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> JSONResponse(status_code<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>, content<span style="color:#f92672">=</span>result)
+</span></span></code></pre></div><h1 id="运行-fastapi">运行 fastapi<a hidden class="anchor" aria-hidden="true" href="#运行-fastapi">#</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#a6e22e">py</span> <span style="color:#a6e22e">fastapi_server</span>.<span style="color:#a6e22e">py</span>
+</span></span></code></pre></div><p><img loading="lazy" src="Fast%20API%201118a2a5f576468f9ad750757fd02a1b/Untitled.png" alt="Untitled"  />
+</p>
+<h1 id="调试-fastapi">调试 fastapi<a hidden class="anchor" aria-hidden="true" href="#调试-fastapi">#</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#a6e22e">http</span><span style="color:#f92672">:</span><span style="color:#75715e">//127.0.0.1:8888/docs
+</span></span></span></code></pre></div><p>然后就可以输入 request body</p>
+<p><img loading="lazy" src="Fast%20API%201118a2a5f576468f9ad750757fd02a1b/Untitled%201.png" alt="Untitled"  />
+</p>
+<h1 id="react-中调用-fastapi">React 中调用 fastapi<a hidden class="anchor" aria-hidden="true" href="#react-中调用-fastapi">#</a></h1>
+<p>GET</p>
+<p><img loading="lazy" src="Fast%20API%201118a2a5f576468f9ad750757fd02a1b/Untitled%202.png" alt="Untitled"  />
+</p>
+<h1 id="传图片-base64格式">传图片 base64格式<a hidden class="anchor" aria-hidden="true" href="#传图片-base64格式">#</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@app.post</span>(<span style="color:#e6db74">&#34;/main&#34;</span>, response_model<span style="color:#f92672">=</span>ResposeModel, description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;收到请求并返回图片数据(Base64格式)&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>(request: RequestModel):
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;img&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;weight&#34;</span>: convert2Base64(<span style="color:#e6db74">&#34;./imgs/weight.png&#34;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;AMD&#34;</span>: convert2Base64(<span style="color:#e6db74">&#34;./imgs/AMD.png&#34;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;AMZN&#34;</span>: convert2Base64(<span style="color:#e6db74">&#34;./imgs/AMZN.png&#34;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;ZM&#34;</span>: convert2Base64(<span style="color:#e6db74">&#34;./imgs/ZM.png&#34;</span>)
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;img_dl&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;weight&#34;</span>: convert2Base64(<span style="color:#e6db74">&#34;./imgs/weight_dl.png&#34;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;AMD&#34;</span>: convert2Base64(<span style="color:#e6db74">&#34;./imgs/AMD_dl.png&#34;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;AMZN&#34;</span>: convert2Base64(<span style="color:#e6db74">&#34;./imgs/AMZN_dl.png&#34;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;ZM&#34;</span>: convert2Base64(<span style="color:#e6db74">&#34;./imgs/ZM_dl.png&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>img src<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;data:image/Jpeg;base64,&#34;</span><span style="color:#f92672">.</span>concat(imgUrl)}<span style="color:#f92672">/</span>
+</span></span></code></pre></div><h1 id="报错">报错<a hidden class="anchor" aria-hidden="true" href="#报错">#</a></h1>
+<p><strong>422 Unprocessable Entity</strong></p>
+<ol>
+<li>检查是不是都用的双引号</li>
+<li>行尾不能有多的逗号</li>
+<li>正确的写法如下</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;investdate&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2022-03-04&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;weights&#34;</span><span style="color:#f92672">:</span>[
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;AMD&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;weight&#34;</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.344</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;AMZN&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;weight&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.699</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ZM&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;weight&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.499</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://zcy530.github.io/tags/backend-development/">Backend Development</a></li>
+      <li><a href="https://zcy530.github.io/tags/fast-api/">Fast API</a></li>
+      <li><a href="https://zcy530.github.io/tags/python/">Python</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://zcy530.github.io/">My Channel</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
