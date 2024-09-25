@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Python on My Channel</title>
-    <link>http://localhost:1313/tags/python/</link>
+    <link>https://zcy530.github.io/tags/python/</link>
     <description>Recent content in Python on My Channel</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Jul 2022 00:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zcy530.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Fast API</title>
-      <link>http://localhost:1313/posts/fast-api/</link>
+      <link>https://zcy530.github.io/posts/fast-api/</link>
       <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/fast-api/</guid>
+      <guid>https://zcy530.github.io/posts/fast-api/</guid>
       <description>&lt;h1 id=&#34;fast-api&#34;&gt;Fast API&lt;/h1&gt;
 &lt;h1 id=&#34;配置项目的python环境&#34;&gt;配置项目的python环境&lt;/h1&gt;
 &lt;p&gt;可以 install python 所需的所有环境，不用一个一个的 pip install&lt;/p&gt;
@@ -82,9 +82,9 @@
     </item>
     <item>
       <title>Python Programing Basic</title>
-      <link>http://localhost:1313/posts/python/</link>
+      <link>https://zcy530.github.io/posts/python/</link>
       <pubDate>Sat, 03 Jul 2021 08:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/python/</guid>
+      <guid>https://zcy530.github.io/posts/python/</guid>
       <description>&lt;h1 id=&#34;python&#34;&gt;Python&lt;/h1&gt;
 &lt;p&gt;强类型语言：C/C++/java&lt;/p&gt;
 &lt;p&gt;弱类型语言：js/python&lt;/p&gt;
