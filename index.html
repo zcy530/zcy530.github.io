@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://zcy530.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.fad5edb8d9fefb8001458e0482f83f0b7d9c56cdf9b1998419903516336ea3e9.css" integrity="sha256-&#43;tXtuNn&#43;&#43;4ABRY4Egvg/C32cVs35sZmEGZA1FjNuo&#43;k=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.140a887aa5250f0faa7b821afc014f9c4bb6c82ccd6d6105cfceb8eca15a9ca5.css" integrity="sha256-FAqIeqUlDw&#43;qe4Ia/AFPnEu2yCzNbWEFz8647KFanKU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://zcy530.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://zcy530.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://zcy530.github.io/favicon-32x32.png">
@@ -71,13 +71,18 @@
                 </a>
             </li>
             <li>
+                <a href="https://zcy530.github.io/archives/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://zcy530.github.io/resume/" title="Resume">
                     <span>Resume</span>
                 </a>
             </li>
             <li>
-                <a href="https://zcy530.github.io/archives/" title="Archives">
-                    <span>Archives</span>
+                <a href="https://zcy530.github.io/project/" title="Project">
+                    <span>Project</span>
                 </a>
             </li>
             <li>
@@ -134,6 +139,30 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Project
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p></p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-25 21:46:39 +0800 CST'>September 25, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Project" href="https://zcy530.github.io/project/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Travel
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p></p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-25 21:45:59 +0800 CST'>September 25, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Travel" href="https://zcy530.github.io/travel/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Node.js Express Quick Learning
     </h2>
   </header>
@@ -155,57 +184,6 @@ var express = require(&#39;express&#39;); var app = express(); app.listen(3000);
   </div>
   <footer class="entry-footer"><span title='2022-08-01 00:00:00 +0800 CST'>August 1, 2022</span>&nbsp;·&nbsp;Caiyi</footer>
   <a class="entry-link" aria-label="post link to Node.js Express Quick Learning" href="https://zcy530.github.io/posts/express/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Python Fast API
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Fast API 配置项目的python环境 可以 install python 所需的所有环境，不用一个一个的 pip install
-pip freeze &gt; piplist.txt pip install -r piplist.txt 创建 fastapi from fastapi import FastAPI app = FastAPI() app.add_middleware( CORSMiddleware, allow_origins=[&#34;*&#34;], allow_credentials=True, allow_methods=[&#34;*&#34;], allow_headers=[&#39;Content-Type&#39;,&#39;application/xml&#39;], ) @app.get(&#34;/gettest&#34;) async def gettest(): return {&#34;hello world&#34;} @app.post(&#34;/posttest&#34;) async def posttest(json_data: Dict): # 传进 JSON_DATA 注意 尾行不留空格 # { # &#34;investdate&#34;: &#34;2022-03-04&#34;, # &#34;weights&#34;:[ # { # &#34;id&#34;: &#34;AMD&#34;, # &#34;weight&#34;: -0.344 # }, # { # &#34;id&#34;: &#34;AMZN&#34;, # &#34;weight&#34;: 0.699 # }, # { # &#34;id&#34;: &#34;ZM&#34;, # &#34;weight&#34;: 0.499 # } # ] # } # 如何处理 json 数据 investdate = json_data[&#39;investdate&#39;] weight = json_data[&#39;weights&#39;] # 如何把 json 数组转化成 dict input_weght = dict() for data in weight: id = data[&#34;id&#34;] weight = data[&#34;weight&#34;] input_weght[id] = weight # 接口里定义的函数 逻辑部分 def inquirie_for_customer(investdate, weight: dict)： return return_json # 如何把结果传回去 result = inquirie_for_customer(investdate,input_weght) return JSONResponse(status_code=200, content=result) 运行 fastapi py fastapi_server.py ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-07-23 00:00:00 +0800 CST'>July 23, 2022</span>&nbsp;·&nbsp;Caiyi</footer>
-  <a class="entry-link" aria-label="post link to Python Fast API" href="https://zcy530.github.io/posts/fast-api/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Python Programing Basic
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Python 强类型语言：C/C&#43;&#43;/java
-弱类型语言：js/python
-数据结构 常用数据结构 序列、集合、字典
-python中的数据结构主要有：序列（字符串，元组，列表，范围，字节序列），集合，字典
-序列：可迭代，元素有序，可以重复出现
-集合：可迭代，元素无序，不能重复出现
-字典：可迭代，可变，的K-V对
-Python没有数组，可以用列表(序列)代替
-字符串 str
-索引：a[0]表示第一个，最后一个元素是a[-1]，不能超出范围会有IndexError
-获取长度函数len()，max返回最后一个元素，min返回第一个元素
-加法和乘法：＋ 把两个字符串连接起来，* 把字符串重复多次
-序列切分：从序列中且分出小的序列
-[start : end]：包括start，不包括end
-[start : end : step]
-[0 : 0 : -1]：倒置
-元组 tuple
-不可变序列，一旦创建就不能修改
-a = (21,32,43,45) b = (&#39;hello&#39;,&#39;world&#39;) c = tuple([21,32,43,54]) 如果只有一个元素，后面一定要加逗号隔开
-元组访问和分片，左闭右开：
-元组拆包：
-也可以用*n表示后面剩下所有元素形成一个list列表赋值给n
-也可以用下划线表示不取哪些元素
-遍历元组：
-for循环里的item，只是取出每个元素值
-但有时需要在遍 历过程中同 获取索引，用到 enumerate() 函数可以获得元组对象，该元组对象有两个元素，一个是索引值，一个是元素值，所以（i, item) 是元组拆包过程
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-07-03 08:00:00 +0800 CST'>July 3, 2021</span>&nbsp;·&nbsp;Caiyi</footer>
-  <a class="entry-link" aria-label="post link to Python Programing Basic" href="https://zcy530.github.io/posts/python/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
