@@ -16,11 +16,25 @@
       <description></description>
     </item>
     <item>
-      <title>Travel</title>
-      <link>https://zcy530.github.io/travel/</link>
+      <title>Hangzhou</title>
+      <link>https://zcy530.github.io/life/hangzhou/</link>
       <pubDate>Wed, 25 Sep 2024 21:45:59 +0800</pubDate>
-      <guid>https://zcy530.github.io/travel/</guid>
-      <description></description>
+      <guid>https://zcy530.github.io/life/hangzhou/</guid>
+      <description>&lt;p&gt;123345&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shanghai</title>
+      <link>https://zcy530.github.io/life/changsha/</link>
+      <pubDate>Wed, 25 Sep 2024 21:45:59 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/changsha/</guid>
+      <description>&lt;p&gt;123345&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shanghai</title>
+      <link>https://zcy530.github.io/life/shanghai/</link>
+      <pubDate>Wed, 25 Sep 2024 21:45:59 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/shanghai/</guid>
+      <description>&lt;p&gt;123345&lt;/p&gt;</description>
     </item>
     <item>
       <title>Node.js Express Quick Learning</title>
