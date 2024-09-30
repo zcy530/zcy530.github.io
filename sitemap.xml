@@ -2,19 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zcy530.github.io/</loc>
-    <lastmod>2024-09-25T21:46:39+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/posts/</loc>
-    <lastmod>2024-09-25T21:46:39+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/project/</loc>
-    <lastmod>2024-09-25T21:46:39+08:00</lastmod>
-  </url><url>
     <loc>https://zcy530.github.io/life/hangzhou/</loc>
     <lastmod>2024-09-25T21:45:59+08:00</lastmod>
   </url><url>
+    <loc>https://zcy530.github.io/life/hangzhou1/</loc>
+    <lastmod>2024-09-25T21:45:59+08:00</lastmod>
+  </url><url>
     <loc>https://zcy530.github.io/life/</loc>
+    <lastmod>2024-09-25T21:45:59+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/</loc>
     <lastmod>2024-09-25T21:45:59+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/life/changsha/</loc>
@@ -22,6 +19,9 @@
   </url><url>
     <loc>https://zcy530.github.io/life/shanghai/</loc>
     <lastmod>2024-09-25T21:45:59+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/blogs/</loc>
+    <lastmod>2022-08-01T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/tags/express/</loc>
     <lastmod>2022-08-01T00:00:00+08:00</lastmod>
@@ -87,5 +87,7 @@
     <lastmod>2019-09-01T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/categories/</loc>
+  </url><url>
+    <loc>https://zcy530.github.io/project/</loc>
   </url>
 </urlset>
