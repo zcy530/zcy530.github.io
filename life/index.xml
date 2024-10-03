@@ -1,39 +1,81 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Life on My Channel</title>
+    <title>Life &amp; Travel on Caiyi&#39;s Website</title>
     <link>https://zcy530.github.io/life/</link>
-    <description>Recent content in Life on My Channel</description>
+    <description>Recent content in Life &amp; Travel on Caiyi&#39;s Website</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Sep 2024 21:45:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Sep 2024 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://zcy530.github.io/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hangzhou</title>
-      <link>https://zcy530.github.io/life/hangzhou/</link>
-      <pubDate>Wed, 25 Sep 2024 21:45:59 +0800</pubDate>
-      <guid>https://zcy530.github.io/life/hangzhou/</guid>
-      <description>&lt;p&gt;123345&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hangzhou</title>
-      <link>https://zcy530.github.io/life/hangzhou1/</link>
-      <pubDate>Wed, 25 Sep 2024 21:45:59 +0800</pubDate>
-      <guid>https://zcy530.github.io/life/hangzhou1/</guid>
-      <description>&lt;p&gt;123345&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Shanghai</title>
-      <link>https://zcy530.github.io/life/changsha/</link>
-      <pubDate>Wed, 25 Sep 2024 21:45:59 +0800</pubDate>
-      <guid>https://zcy530.github.io/life/changsha/</guid>
-      <description>&lt;p&gt;123345&lt;/p&gt;</description>
+      <title>Tailand</title>
+      <link>https://zcy530.github.io/life/tailand/</link>
+      <pubDate>Sun, 29 Sep 2024 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/tailand/</guid>
+      <description></description>
     </item>
     <item>
       <title>Shanghai</title>
       <link>https://zcy530.github.io/life/shanghai/</link>
-      <pubDate>Wed, 25 Sep 2024 21:45:59 +0800</pubDate>
+      <pubDate>Sat, 28 Sep 2024 21:45:59 +0800</pubDate>
       <guid>https://zcy530.github.io/life/shanghai/</guid>
+      <description>&lt;p&gt;123345&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ningbo, Gouqi Island</title>
+      <link>https://zcy530.github.io/life/ningbo/</link>
+      <pubDate>Fri, 27 Sep 2024 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/ningbo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hangzhou, West Lake</title>
+      <link>https://zcy530.github.io/life/hangzhou/</link>
+      <pubDate>Thu, 26 Sep 2024 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/hangzhou/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fuzhou, Pingtan Island</title>
+      <link>https://zcy530.github.io/life/fuzhou/</link>
+      <pubDate>Wed, 25 Sep 2024 21:45:59 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/fuzhou/</guid>
+      <description>&lt;p&gt;123345&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Changsha, Songya Lake</title>
+      <link>https://zcy530.github.io/life/changsha2024/</link>
+      <pubDate>Tue, 24 Sep 2024 21:45:59 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/changsha2024/</guid>
+      <description>&lt;p&gt;123345&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Changsha</title>
+      <link>https://zcy530.github.io/life/changsha/</link>
+      <pubDate>Mon, 23 Sep 2024 21:45:59 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/changsha/</guid>
+      <description>&lt;p&gt;123345&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shanghai, Anfu road</title>
+      <link>https://zcy530.github.io/life/shanghai2021/</link>
+      <pubDate>Mon, 23 Sep 2024 21:45:59 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/shanghai2021/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Beijing</title>
+      <link>https://zcy530.github.io/life/beijing/</link>
+      <pubDate>Sun, 22 Sep 2024 00:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/life/beijing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>America Seattle</title>
+      <link>https://zcy530.github.io/life/america/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zcy530.github.io/life/america/</guid>
       <description>&lt;p&gt;123345&lt;/p&gt;</description>
     </item>
   </channel>

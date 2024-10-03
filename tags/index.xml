@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on My Channel</title>
+    <title>Tags on Caiyi&#39;s Website</title>
     <link>https://zcy530.github.io/tags/</link>
-    <description>Recent content in Tags on My Channel</description>
+    <description>Recent content in Tags on Caiyi&#39;s Website</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://zcy530.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Express</title>
-      <link>https://zcy530.github.io/tags/express/</link>
+      <title>Frontend</title>
+      <link>https://zcy530.github.io/tags/frontend/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/tags/express/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Frontend Development</title>
-      <link>https://zcy530.github.io/tags/frontend-development/</link>
-      <pubDate>Mon, 01 Aug 2022 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/tags/frontend-development/</guid>
+      <guid>https://zcy530.github.io/tags/frontend/</guid>
       <description></description>
     </item>
     <item>
@@ -37,17 +30,10 @@
       <description></description>
     </item>
     <item>
-      <title>Backend Development</title>
-      <link>https://zcy530.github.io/tags/backend-development/</link>
+      <title>Backend</title>
+      <link>https://zcy530.github.io/tags/backend/</link>
       <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/tags/backend-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fast API</title>
-      <link>https://zcy530.github.io/tags/fast-api/</link>
-      <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/tags/fast-api/</guid>
+      <guid>https://zcy530.github.io/tags/backend/</guid>
       <description></description>
     </item>
     <item>
@@ -55,6 +41,13 @@
       <link>https://zcy530.github.io/tags/python/</link>
       <pubDate>Sat, 23 Jul 2022 00:00:00 +0800</pubDate>
       <guid>https://zcy530.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Course Notes</title>
+      <link>https://zcy530.github.io/tags/course-notes/</link>
+      <pubDate>Sat, 03 Jul 2021 08:00:00 +0800</pubDate>
+      <guid>https://zcy530.github.io/tags/course-notes/</guid>
       <description></description>
     </item>
     <item>
@@ -69,13 +62,6 @@
       <link>https://zcy530.github.io/tags/computer-network/</link>
       <pubDate>Sun, 20 Sep 2020 00:00:00 +0800</pubDate>
       <guid>https://zcy530.github.io/tags/computer-network/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CS Basic Knowledge</title>
-      <link>https://zcy530.github.io/tags/cs-basic-knowledge/</link>
-      <pubDate>Sun, 20 Sep 2020 00:00:00 +0800</pubDate>
-      <guid>https://zcy530.github.io/tags/cs-basic-knowledge/</guid>
       <description></description>
     </item>
     <item>

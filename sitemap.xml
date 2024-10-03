@@ -2,28 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zcy530.github.io/life/hangzhou/</loc>
-    <lastmod>2024-09-25T21:45:59+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/life/hangzhou1/</loc>
-    <lastmod>2024-09-25T21:45:59+08:00</lastmod>
+    <loc>https://zcy530.github.io/</loc>
+    <lastmod>2024-09-29T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/life/</loc>
-    <lastmod>2024-09-25T21:45:59+08:00</lastmod>
+    <lastmod>2024-09-29T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://zcy530.github.io/</loc>
-    <lastmod>2024-09-25T21:45:59+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/life/changsha/</loc>
-    <lastmod>2024-09-25T21:45:59+08:00</lastmod>
+    <loc>https://zcy530.github.io/life/tailand/</loc>
+    <lastmod>2024-09-29T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/life/shanghai/</loc>
+    <lastmod>2024-09-28T21:45:59+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/life/ningbo/</loc>
+    <lastmod>2024-09-27T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/life/hangzhou/</loc>
+    <lastmod>2024-09-26T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/life/fuzhou/</loc>
     <lastmod>2024-09-25T21:45:59+08:00</lastmod>
   </url><url>
-    <loc>https://zcy530.github.io/tags/express/</loc>
-    <lastmod>2022-08-01T00:00:00+08:00</lastmod>
+    <loc>https://zcy530.github.io/life/changsha2024/</loc>
+    <lastmod>2024-09-24T21:45:59+08:00</lastmod>
   </url><url>
-    <loc>https://zcy530.github.io/tags/frontend-development/</loc>
+    <loc>https://zcy530.github.io/life/changsha/</loc>
+    <lastmod>2024-09-23T21:45:59+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/life/shanghai2021/</loc>
+    <lastmod>2024-09-23T21:45:59+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/life/beijing/</loc>
+    <lastmod>2024-09-22T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/tags/frontend/</loc>
     <lastmod>2022-08-01T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/tags/javascript/</loc>
@@ -41,10 +53,7 @@
     <loc>https://zcy530.github.io/tags/</loc>
     <lastmod>2022-08-01T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://zcy530.github.io/tags/backend-development/</loc>
-    <lastmod>2022-07-23T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/tags/fast-api/</loc>
+    <loc>https://zcy530.github.io/tags/backend/</loc>
     <lastmod>2022-07-23T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/tags/python/</loc>
@@ -52,6 +61,9 @@
   </url><url>
     <loc>https://zcy530.github.io/posts/fast-api/</loc>
     <lastmod>2022-07-23T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/tags/course-notes/</loc>
+    <lastmod>2021-07-03T08:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/tags/programing-launguage/</loc>
     <lastmod>2021-07-03T08:00:00+08:00</lastmod>
@@ -63,9 +75,6 @@
     <lastmod>2020-09-20T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/posts/computer-network/</loc>
-    <lastmod>2020-09-20T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://zcy530.github.io/tags/cs-basic-knowledge/</loc>
     <lastmod>2020-09-20T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/posts/operating-system/</loc>
@@ -80,11 +89,13 @@
     <loc>https://zcy530.github.io/posts/java-basic/</loc>
     <lastmod>2020-07-12T08:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://zcy530.github.io/resume/</loc>
+    <loc>https://zcy530.github.io/home/</loc>
     <lastmod>2019-09-02T08:00:00+08:00</lastmod>
   </url><url>
     <loc>https://zcy530.github.io/archives/</loc>
     <lastmod>2019-09-01T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://zcy530.github.io/life/america/</loc>
   </url><url>
     <loc>https://zcy530.github.io/categories/</loc>
   </url><url>
